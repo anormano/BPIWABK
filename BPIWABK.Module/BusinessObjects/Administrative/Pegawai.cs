@@ -10,7 +10,7 @@ using DevExpress.Persistent.Validation;
 using DevExpress.Xpo;
 using System;
 using System.ComponentModel;
-//JustTest
+
 namespace BPIWABK.Module.BusinessObjects.Administrative
 {
     [DefaultClassOptions]
