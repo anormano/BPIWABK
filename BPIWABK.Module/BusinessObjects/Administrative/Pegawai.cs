@@ -281,6 +281,23 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
             set => SetPropertyValue(nameof(NomorNPWP), ref nomorNPWP, value);
         }
 
+        string nomorRekening;
+        [Size(SizeAttribute.DefaultStringMappingFieldSize)]
+        [VisibleInListView(false)]
+        public string NomorRekening
+        {
+            get => nomorRekening;
+            set => SetPropertyValue(nameof(NomorRekening), ref nomorRekening, value);
+        }
+
+        Bank bank;
+        [VisibleInListView(false)]
+        public Bank Bank
+        {
+            get => bank;
+            set => SetPropertyValue(nameof(Bank), ref bank, value);
+        }
+
         DateTime tanggalPendaftaranSistem;
         [VisibleInListView(false)]
         public DateTime TanggalPendaftaranSistem
@@ -394,7 +411,7 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
 
         MediaDataObject kTP;
         [VisibleInListView(false)]
-        [ImageEditor(DetailViewImageEditorMode = ImageEditorMode.PopupPictureEdit, ListViewImageEditorMode = ImageEditorMode.PopupPictureEdit, ListViewImageEditorCustomHeight = 100, DetailViewImageEditorFixedHeight = 100, DetailViewImageEditorFixedWidth = 150)]
+        [ImageEditor(DetailViewImageEditorMode = ImageEditorMode.PictureEdit, ListViewImageEditorMode = ImageEditorMode.PopupPictureEdit, ListViewImageEditorCustomHeight = 100, DetailViewImageEditorFixedHeight = 150, DetailViewImageEditorFixedWidth = 250)]
         public MediaDataObject KTP
         {
             get => kTP;
@@ -403,11 +420,20 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
 
         MediaDataObject nPWP;
         [VisibleInListView(false)]
-        [ImageEditor(DetailViewImageEditorMode = ImageEditorMode.PopupPictureEdit, ListViewImageEditorMode = ImageEditorMode.PopupPictureEdit, ListViewImageEditorCustomHeight = 100, DetailViewImageEditorFixedHeight = 100, DetailViewImageEditorFixedWidth = 150)]
+        [ImageEditor(DetailViewImageEditorMode = ImageEditorMode.PictureEdit, ListViewImageEditorMode = ImageEditorMode.PopupPictureEdit, ListViewImageEditorCustomHeight = 100, DetailViewImageEditorFixedHeight = 150, DetailViewImageEditorFixedWidth = 250)]
         public MediaDataObject NPWP
         {
             get => nPWP;
             set => SetPropertyValue(nameof(NPWP), ref nPWP, value);
+        }
+
+        MediaDataObject rekeningKoran;
+        [VisibleInListView(false)]
+        [ImageEditor(DetailViewImageEditorMode = ImageEditorMode.PictureEdit, ListViewImageEditorMode = ImageEditorMode.PopupPictureEdit, ListViewImageEditorCustomHeight = 100, DetailViewImageEditorFixedHeight = 150, DetailViewImageEditorFixedWidth = 250)]
+        public MediaDataObject RekeningKoran
+        {
+            get => rekeningKoran;
+            set => SetPropertyValue(nameof(RekeningKoran), ref rekeningKoran, value);
         }
 
         [Association("Pegawai-SK"), DevExpress.Xpo.Aggregated]

@@ -215,6 +215,7 @@
     <Compile Include="BusinessObjects\Master\Kegiatan.cs" />
     <Compile Include="BusinessObjects\Master\SOP.cs" />
     <Compile Include="BusinessObjects\Reference\Alat.cs" />
+    <Compile Include="BusinessObjects\Reference\Bank.cs" />
     <Compile Include="BusinessObjects\Reference\DokumenTerkait.cs" />
     <Compile Include="BusinessObjects\Reference\Enums.cs" />
     <Compile Include="BusinessObjects\Reference\InputKegiatan.cs" />
