@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Pegawai_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors">
+            <LayoutGroup Id="Pegawai">
+              <LayoutGroup Id="Pegawai_col2">
+                <LayoutGroup Id="Autoc9fb930b-dbfe-4ccc-b5f2-41298623be2a">
+                  <LayoutGroup Id="Autoc324b826-dc25-4025-90f3-5cfd3a94e279">
+                    <LayoutItem Id="VerikasiDua" ViewItem="VerikasiDua" />
+                    <LayoutItem Id="VerivikasiSatu" ViewItem="VerivikasiSatu" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

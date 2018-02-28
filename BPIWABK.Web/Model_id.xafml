@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign>
+    <Actions>
+      <Action Id="Export" Caption="Ekpor ke" />
+      <Action Id="ExportAnalysis" Caption="Ekspor Analisis ke" />
+      <Action Id="ExportDashboard" Caption="Ekpor Ke" />
+      <Action Id="ExportModelDifferences" Caption="Ekpor Perbedaan Model" />
+      <Action Id="MyDetails" Caption="Detail Saya" />
+    </Actions>
+  </ActionDesign>
+  <Localization>
+    <LocalizationGroup Name="Captions">
+      <LocalizationItem Name="MyAccount" Value="Akun Saya" />
+    </LocalizationGroup>
+  </Localization>
+  <Views>
+    <DetailView Id="AuthenticationStandardLogonParameters_DetailView">
+      <Items>
+        <StaticText Id="LogonText" Text="Selamat datang! Silahkan masukkan user name dan password dibawah ini." />
+      </Items>
+    </DetailView>
+  </Views>
+</Application>

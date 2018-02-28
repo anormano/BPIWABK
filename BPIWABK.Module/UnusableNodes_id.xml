@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="DevExpress.ExpressApp.Security.ChangePasswordOnLogonParameters" Caption="Parameter Rubah Password Saat Logon">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="ConfirmPassword" Caption="Konfirmasi Password" />
+        <Member Name="NewPassword" Caption="Password Baru" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.ChangePasswordParameters" Caption="Parameter Rubah Password">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="OldPassword" Caption="Password Lama" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.EditModelPermission" Caption="Ijin Rubah Model" />
+    <Class Name="DevExpress.ExpressApp.Security.ObjectAccessPermission" Caption="Ijin Akses Objek">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="CreateAccess" Caption="Akses Buat" />
+        <Member Name="DeleteAccess" Caption="Akses Hapus" />
+        <Member Name="NavigateAccess" Caption="Akses Navigasi" />
+        <Member Name="ObjectType" Caption="Tipe Objek" />
+        <Member Name="ReadAccess" Caption="Akses Baca" />
+        <Member Name="WriteAccess" Caption="Akses Tulis" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <DetailView Id="ResetPasswordParameters_DetailView" Caption="Setel Ulang Password" />
+  </Views>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="ChangePasswordByUser" Caption="Rubah Password Ku" />
+      <Action Id="Deny_TypePermissionMatrixItem" Caption="Tolak">
+        <ChoiceActionItems Id="ChoiceActionItems">
+          <ChoiceActionItem Id="Create" Caption="Buat" />
+          <ChoiceActionItem Id="Delete" Caption="Hapus" />
+          <ChoiceActionItem Id="Deny All" Caption="Tolak Semua" />
+          <ChoiceActionItem Id="Deny Modification" Caption="Tolak Modifikasi" />
+          <ChoiceActionItem Id="Navigate" Caption="Menavigasi" />
+          <ChoiceActionItem Id="Read" Caption="Baca" />
+          <ChoiceActionItem Id="Write" Caption="Tulis" />
+        </ChoiceActionItems>
+      </Action>
+      <Action Id="DownloadReportAction" Caption="Unduh Laporan" />
+      <Action Id="Grant_TypePermissionMatrixItem" Caption="Ijinkan">
+        <ChoiceActionItems Id="ChoiceActionItems">
+          <ChoiceActionItem Id="Create" Caption="Buat" />
+          <ChoiceActionItem Id="Delete" Caption="Hapus" />
+          <ChoiceActionItem Id="Full Access" Caption="Akses Penuh" />
+          <ChoiceActionItem Id="Navigate" Caption="Menavigasi" />
+          <ChoiceActionItem Id="Read" Caption="Baca" />
+          <ChoiceActionItem Id="Read Only Access" Caption="Akses Baca Saja" />
+          <ChoiceActionItem Id="Write" Caption="Tulis" />
+        </ChoiceActionItems>
+      </Action>
+      <Action Id="MyDetails" Caption="Detail Ku" />
+      <Action Id="ResetPassword" Caption="Setel Ulang Password" ToolTip="Ciptakan password untuk user terpilih" />
+    </Actions>
+  </ActionDesign>
+  <Localization Id="Localization">
+    <LocalizationGroup Name="Enums">
+      <LocalizationGroup Name="DevExpress.ExpressApp.Security.ModelAccessModifier">
+        <LocalizationItem Name="Deny" Value="Tolak" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.Security.ObjectAccess">
+        <LocalizationItem Name="Create" Value="Buat" />
+        <LocalizationItem Name="Delete" Value="Hapus" />
+        <LocalizationItem Name="Navigate" Value="Menavigasi" />
+        <LocalizationItem Name="Read" Value="Baca" />
+        <LocalizationItem Name="Write" Value="Tulis" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.Security.ObjectAccessModifier">
+        <LocalizationItem Name="Deny" Value="Tolak" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+    <LocalizationGroup Name="Messages">
+      <LocalizationItem Name="Create" Value="Buat" />
+      <LocalizationItem Name="Delete" Value="Hapus" />
+      <LocalizationItem Name="Navigate" Value="Menavigasi" />
+      <LocalizationItem Name="Read" Value="Baca" />
+      <LocalizationItem Name="Write" Value="Tulis" />
+    </LocalizationGroup>
+  </Localization>
+</Application>

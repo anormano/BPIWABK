@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign>
+    <Actions>
+      <Action Id="Export" Caption="Ekspor ke" />
+      <Action Id="ExportAnalysis" Caption="Ekpor Analisis ke" />
+      <Action Id="ExportDashboard" Caption="Ekspor ke" />
+      <Action Id="ExportModelDifferences" Caption="Ekspor Perbedaan Model" />
+      <Action Id="MyDetails" Caption="Detail Saya" />
+    </Actions>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="DevExpress.ExpressApp.Security.AuthenticationStandardLogonParameters" Caption="Parameter Otentikasi Logon Standar" />
+    <Class Name="DevExpress.ExpressApp.Security.ChangePasswordOnLogonParameters" Caption="Parameter Rubah Password Saat Logon">
+      <OwnMembers>
+        <Member Name="ConfirmPassword" Caption="Konfirmasi Password" />
+        <Member Name="NewPassword" Caption="Password Baru" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.ChangePasswordParameters">
+      <OwnMembers>
+        <Member Name="OldPassword" Caption="Password Lama" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Localization>
+    <LocalizationGroup Name="Exceptions">
+      <LocalizationGroup Name="UserVisibleExceptions">
+        <LocalizationItem Name="LogonAttemptsAmountedToLimitWin" Value="Setelah tiga kali gagal login, aplikasi akan di tutup sekarang. Harap hubungi administrator mengenai detail login anda." />
+      </LocalizationGroup>
+    </LocalizationGroup>
+  </Localization>
+  <Views>
+    <DetailView Id="AuthenticationStandardLogonParameters_DetailView">
+      <Items>
+        <StaticText Id="LogonText" Text="Selamat datang! Silahkan masukkan user name dan password anda dibawah ini." />
+      </Items>
+    </DetailView>
+    <DetailView Id="ChangePasswordOnLogonParameters_DetailView" Caption="Rubah password saat pertama logon" />
+    <DetailView Id="ChangePasswordParameters_DetailView">
+      <Items>
+        <StaticText Id="ChangePasswordText" Text="Untuk merubah password anda, silahkan masukkan password lama dan baru anda di bawah ini." />
+        <PropertyEditor Id="ConfirmPassword" Caption="Konfirmasi Password" />
+        <PropertyEditor Id="NewPassword" Caption="Password Baru" />
+      </Items>
+    </DetailView>
+  </Views>
+</Application>

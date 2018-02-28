@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application ProtectedContentText="Konten Terproteksi">
+  <ActionDesign>
+    <Actions>
+      <Action Id="BindAnalysisData" Caption="Sambung Data Analisis" />
+      <Action Id="Cancel" Caption="Batal" ShortCaption="Batal" ToolTip="Batal" />
+      <Action Id="CloneObject" Caption="Salin..." ToolTip="Salin objek" />
+      <Action Id="CopyPredefinedReport" ShortCaption="Salin Laporan Standar" ToolTip="Salin Laporan Standar" Caption="Salin Laporan Standar" />
+      <Action Id="CreateDashboard" Caption="Buat Dasbor" ShortCaption="Buat Dasbor" ToolTip="Buat Dasbor" />
+      <Action Id="Delete" Caption="Hapus" ConfirmationMessage="Anda akan menghapus item yang terpilih. Apakah anda ingin meneruskan?" />
+      <Action Id="Delete Item" Caption="Hapus Item" ShortCaption="Hapus Item" ConfirmationMessage="Anda akan menghapus item yang terpilih. Apakah anda ingin meneruskan?" ToolTip="Hapus Item" />
+      <Action Id="DeleteDashboard" Caption="Hapus Dasbor" />
+      <Action Id="Diagnostic Info.Rules Info">
+        <ChoiceActionItems>
+          <ChoiceActionItem Id="Rules Info" Caption="Info Peraturan" />
+        </ChoiceActionItems>
+      </Action>
+      <Action Id="DialogCancel" Caption="Batal" />
+      <Action Id="DialogClose" Caption="Tutup" />
+      <Action Id="FullTextSearch" Caption="Saring berdasarkan Text" ShortCaption="Cari" NullValuePrompt="Teks untuk dicari..." ToolTip="Saring rekor berdasarkan teks" />
+      <Action Id="HideItemsFromDashboard" Caption="Sembunyikan dari dasbor" ShortCaption="Sambunyikan dari dasbor" ToolTip="Sembunyikan item terpilih dari dasbor" />
+      <Action Id="Link" Caption="Hubungkan" />
+      <Action Id="ListViewShowObject" Caption="Buka" />
+      <Action Id="NavigateBack" Caption="Mundur" ToolTip="Menavigasi ke tampilan sebelumnya" />
+      <Action Id="NavigateForward" Caption="Maju" ToolTip="Menavigasi ke tampilan berikutnya" />
+      <Action Id="New" Caption="Baru" />
+      <Action Id="NextObject" Caption="Rekor Selanjutnya" />
+      <Action Id="OrganizeDashboard" Caption="Organisir Dasbor" ShortCaption="Organisir Dasbor" ToolTip="Organisir Dasbor" />
+      <Action Id="PreviewReportV2" Caption="Pratampil" />
+      <Action Id="PreviousObject" Caption="Rekor Sebelumnya" />
+      <Action Id="Refresh" Caption="Segarkan" />
+      <Action Id="ReportViewerDialogControllerV2_Close" Caption="Tutup" />
+      <Action Id="ResetViewSettings" Caption="Setel Ulang Tampilan" ConfirmationMessage="Anda akan mensetel ulang selurung setlan untuk tampilan &quot;{0}&quot;. Anda ingin melanjutkan?" ShortCaption="Setel Ulang Tampilan" ToolTip="Setel ulang seluruh setelan yang telah diterapkan pada tampilan &#xD;&#xA;&quot;{0}&quot;." />
+      <Action Id="Save" Caption="Simpan" />
+      <Action Id="SaveAndClose" Caption="Simpan dan Tutup" />
+      <Action Id="SaveAndNew" Caption="Simpan dan Baru" />
+      <Action Id="SetFilter" Caption="Saring" />
+      <Action Id="ShowAllContexts" Caption="Validasi" />
+      <Action Id="ShowInReportV2" Caption="Tampilkan di Laporan" ToolTip="Tampilkan rekor terpilih dalam laporan" />
+      <Action Id="ShowItemsOnDashboard" Caption="Tampilkan di dasbor" ToolTip="Tampilan item terpilih di dasbor" />
+      <Action Id="ShowNavigationItem" Caption="Navigasi" />
+      <Action Id="UnbindAnalysisData" Caption="Lepas Data Analisis" />
+      <Action Id="Unlink" Caption="Putuskan" ConfirmationMessage="Anda akan memutuskan hubungan rekor yang dipilih. Anda ingin meneruskan?" />
+    </Actions>
+    <DisableReasons>
+      <Reason Id="ByContext_RequireMultipleObjects" Caption="Memerlukan setidaknya satu objek terpilih" />
+      <Reason Id="ByContext_RequireSingleObject" Caption="Memerlukan satu objek terpilih" />
+      <Reason Id="Security" Caption="Izin ditolak" />
+    </DisableReasons>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="BPIWABK.Module.BusinessObjects.Administrative.Peran">
+      <OwnMembers>
+        <Member Name="CanExport" Caption="Bisa Expor" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Editors.CriteriaProvider" Caption="Penyedia Kriteria">
+      <OwnMembers>
+        <Member Name="FilteredObjectsType" Caption="Tipe Objek Tersaring" />
+        <Member Name="FilterString" Caption="Saring String" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.ReportsV2.NewReportWizardParameters" Caption="Parameter Wizar Laporan Baru">
+      <OwnMembers>
+        <Member Name="DataType" Caption="Tipe Data" />
+        <Member Name="DisplayName" Caption="Nama Tampilan" />
+        <Member Name="ReportType" Caption="Tipe Laporan" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.AboutInfo">
+      <OwnMembers>
+        <Member Name="Description" Caption="Deskripsi" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.ActionContainerDashboardOrganizationItem" Caption="Kontainer Aksi" />
+    <Class Name="DevExpress.ExpressApp.SystemModule.DashboardCreationInfo" Caption="Wizar Pembuatan Dasbor">
+      <OwnMembers>
+        <Member Name="DashboardName" Caption="Nama" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.DashboardName" Caption="Pilih Dasbor untuk di Hapus">
+      <OwnMembers>
+        <Member Name="Name" Caption="Nama" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.DashboardOrganizationItem" Caption="Item Organisasi Dasbor" />
+    <Class Name="DevExpress.ExpressApp.SystemModule.DashboardOrganizer" Caption="Pengorganisir Dasbor" />
+    <Class Name="DevExpress.ExpressApp.SystemModule.DashboardViewItemDescriptor" Caption="Deskriptor Item Tampilan Dasbor" />
+    <Class Name="DevExpress.ExpressApp.SystemModule.DiagnosticInfoObject">
+      <OwnMembers>
+        <Member Name="AsText" Caption="Sebagai Teks" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.StaticImageDashboardOrganizationItem" Caption="Gambar Statis">
+      <OwnMembers>
+        <Member Name="Preview" Caption="Pratampil" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.StaticTextDashboardOrganizationItem" Caption="Teks Statis">
+      <OwnMembers>
+        <Member Name="Text" Caption="Teks" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.ViewDashboardOrganizationItem">
+      <OwnMembers>
+        <Member Name="Criteria" Caption="Kriteria" />
+        <Member Name="ObjectType" Caption="Tipe Objek" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Validation.AllContextsView.ContextValidationResult">
+      <OwnMembers>
+        <Member Name="BrokenRules" Caption="Aturan yang dilanggar" />
+        <Member Name="Context" Caption="Konteks" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Validation.AllContextsView.DisplayableValidationResultItem" Caption="Detail Validasi">
+      <OwnMembers>
+        <Member Name="ErrorMessage" Caption="Pesan Kesalahan" />
+        <Member Name="Rule" Caption="Aturan" />
+        <Member Name="RuleName" Caption="Nama Aturan" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Validation.AllContextsView.ValidationResults" Caption="Hasil Validasi">
+      <OwnMembers>
+        <Member Name="HighlightErrors" Caption="Sorot Permasalahan" />
+        <Member Name="Results" Caption="Hasil-hasil" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.AuditTrail.BaseAuditedObjectWeakReference">
+      <OwnMembers>
+        <Member Name="DisplayName" Caption="Nama Tampilan" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.Analysis" Caption="Analisis">
+      <OwnMembers>
+        <Member Name="Criteria" Caption="Kriteria" />
+        <Member Name="DataType" Caption="Tipe Data" />
+        <Member Name="Name" Caption="Nama" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.AuditDataItemPersistent">
+      <OwnMembers>
+        <Member Name="Description" Caption="Deskripsi" />
+        <Member Name="ModifiedOn" Caption="Dimondifikasi Pada" />
+        <Member Name="NewValue" Caption="Nilai Baru" />
+        <Member Name="OldValue" Caption="Nilai Lama" />
+        <Member Name="PropertyName" Caption="Nama Propert" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.DashboardData" Caption="Dasbor">
+      <OwnMembers>
+        <Member Name="SynchronizeTitle" Caption="Sinkronkan Judul" />
+        <Member Name="Title" Caption="Judul" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.FileAttachmentBase">
+      <OwnMembers>
+        <Member Name="File" Caption="Berkas" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.FileData" Caption="Data Berkas">
+      <OwnMembers>
+        <Member Name="FileName" Caption="Nama Berkas" />
+        <Member Name="Size" Caption="Ukuran" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.HCategory">
+      <OwnMembers>
+        <Member Name="Name" Caption="Nama" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.ModelDifferenceAspect">
+      <OwnMembers>
+        <Member Name="DisplayName" Caption="Nama Tampilan" />
+        <Member Name="Name" Caption="Nama" />
+        <Member Name="Owner" Caption="Pemilik" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyMemberPermissionsObject" Caption="Ijin Operasi Anggota">
+      <OwnMembers>
+        <Member Name="Criteria" Caption="Kriteria" />
+        <Member Name="Members" Caption="Anggota" />
+        <Member Name="ReadState" Caption="Baca" />
+        <Member Name="TypePermissionObject" Caption="Objek Tipe Ijin" />
+        <Member Name="WriteState" Caption="Tulis" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyNavigationPermissionObject" Caption="Ijin Item Navigasi">
+      <OwnMembers>
+        <Member Name="ItemPath" Caption="Item Navigasi" />
+        <Member Name="NavigateState" Caption="Menavigasi" />
+        <Member Name="Role" Caption="Peran" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyObjectPermissionsObject" Caption="Ijin Operasi Objek">
+      <OwnMembers>
+        <Member Name="Criteria" Caption="Kriteria" />
+        <Member Name="DeleteState" Caption="Hapus" />
+        <Member Name="NavigateState" Caption="Menavigasi" />
+        <Member Name="ReadState" Caption="Baca" />
+        <Member Name="TypePermissionObject" Caption="Objek Tipe Ijin" />
+        <Member Name="WriteState" Caption="Tulis" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyRole" Caption="Peran">
+      <OwnMembers>
+        <Member Name="Users" Caption="Para Pengguna" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyRoleBase">
+      <OwnMembers>
+        <Member Name="CanEditModel" Caption="Bisa Sunting Model" />
+        <Member Name="IsAdministrative" Caption="Adalah Administratif" />
+        <Member Name="Name" Caption="Nama" />
+        <Member Name="NavigationPermissions" Caption="Ijin Navigasi" />
+        <Member Name="PermissionPolicy" Caption="Kebijakan Perjinan" />
+        <Member Name="TypePermissions" Caption="Ijin Tipe" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyTypePermissionObject" Caption="Ijin Operasi Tipe">
+      <OwnMembers>
+        <Member Name="CreateState" Caption="Buat" />
+        <Member Name="DeleteState" Caption="Hapus" />
+        <Member Name="MemberPermissions" Caption="Ijin Anggota" />
+        <Member Name="NavigateState" Caption="Menavigasi" />
+        <Member Name="ObjectPermissions" Caption="Ijin Object" />
+        <Member Name="ReadState" Caption="Baca" />
+        <Member Name="Role" Caption="Peran" />
+        <Member Name="TargetType" Caption="Tipe Target" />
+        <Member Name="WriteState" Caption="Tulis" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser">
+      <OwnMembers>
+        <Member Name="ChangePasswordOnFirstLogon" Caption="Rubah Password Saat Pertama Logon" />
+        <Member Name="IsActive" Caption="Adalah Aktif" />
+        <Member Name="Roles" Caption="Peran" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.ReportDataV2" Caption="Laporan">
+      <OwnMembers>
+        <Member Name="DataTypeCaption" Caption="Tipe Data" />
+        <Member Name="DisplayName" Caption="Nama Tampilan" />
+        <Member Name="IsInplaceReport" Caption="Adalah Laporan di Tempat" />
+        <Member Name="IsPredefined" Caption="Adalah Terdefinisi" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleBaseProperties">
+      <OwnMembers>
+        <Member Name="InvertResult" Caption="Balik Hasil" />
+        <Member Name="Name" Caption="Nama" />
+        <Member Name="ResultType" Caption="Tipe Hasil" />
+        <Member Name="SkipNullOrEmptyValues" Caption="Lewatkan nilai Null atau Kosong" />
+        <Member Name="TargetCriteria" Caption="Kriteria Target" />
+        <Member Name="TargetType" Caption="Tipe Target" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleCriteriaProperties">
+      <OwnMembers>
+        <Member Name="Criteria" Caption="Kriteria" />
+        <Member Name="UsedProperties" Caption="Properti yang Digunakan" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleFromBoolPropertyProperties">
+      <OwnMembers>
+        <Member Name="UsedProperties" Caption="Properti yang Digunakan" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleIsReferencedProperties">
+      <OwnMembers>
+        <Member Name="LooksFor" Caption="Cari Untuk" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleObjectExistsProperties">
+      <OwnMembers>
+        <Member Name="Criteria" Caption="Kriteria" />
+        <Member Name="LooksFor" Caption="Cari Untuk" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleRangeProperties">
+      <OwnMembers>
+        <Member Name="MaximumValue" Caption="Nilai Maksimum" />
+        <Member Name="MaximumValueExpression" Caption="Ekspresi Nilai Maksimum" />
+        <Member Name="MinimumValue" Caption="Nilai Minimum" />
+        <Member Name="MinimumValueExpression" Caption="Ekspresi Nilai Minimum" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleRegularExpressionProperties">
+      <OwnMembers>
+        <Member Name="Pattern" Caption="Pola" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleRequiredFieldProperties">
+      <OwnMembers>
+        <Member Name="SkipNullOrEmptyValues" Caption="Lewatkan nilai Null atau Kosong" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleBaseProperties">
+      <OwnMembers>
+        <Member Name="InvertResult" Caption="Balik Hasil" />
+        <Member Name="Name" Caption="Nama" />
+        <Member Name="ResultType" Caption="Tipe Hasil" />
+        <Member Name="SkipNullOrEmptyValues" Caption="Lewatkan nilai Null atau Kosong" />
+        <Member Name="TargetCriteria" Caption="Kriteria Target" />
+        <Member Name="TargetType" Caption="Tipe Target" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleCriteriaProperties">
+      <OwnMembers>
+        <Member Name="Criteria" Caption="Kriteria" />
+        <Member Name="UsedProperties" Caption="Properti yang Digunakan" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleFromBoolPropertyProperties">
+      <OwnMembers>
+        <Member Name="UsedProperties" Caption="Properti yang Digunakan" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleIsReferencedProperties">
+      <OwnMembers>
+        <Member Name="LooksFor" Caption="Cari Untuk" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleObjectExistsProperties">
+      <OwnMembers>
+        <Member Name="Criteria" Caption="Kriteria" />
+        <Member Name="LooksFor" Caption="Cari Untuk" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleRangeProperties">
+      <OwnMembers>
+        <Member Name="MaximumValue" Caption="Nilai Maksimum" />
+        <Member Name="MaximumValueExpression" Caption="Ekspresi Nilai Maksimum" />
+        <Member Name="MinimumValue" Caption="Nilai Minimum" />
+        <Member Name="MinimumValueExpression" Caption="Ekspresi Nilai Minimum" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleRegularExpressionProperties">
+      <OwnMembers>
+        <Member Name="Pattern" Caption="Pola" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleSetValidationResult" Caption="Hasil Validasi">
+      <OwnMembers>
+        <Member Name="Results" Caption="Hasil-hasil" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleSetValidationResultItem" Caption="Detail Validasi">
+      <OwnMembers>
+        <Member Name="ErrorMessage" Caption="Pesan Kesalahan" />
+        <Member Name="Rule" Caption="Aturan" />
+        <Member Name="RuleName" Caption="Nama Aturan" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Localization>
+    <LocalizationGroup Name="Captions">
+      <LocalizationItem Name="EditCriteria" Value="Kriteria Sunting" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="ChartModule">
+      <LocalizationItem Name="ClearSettings" Value="Bersihkan setelan" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="DashboardOrganizationItems">
+      <LocalizationItem Name="StaticImage" Value="Gambar" />
+      <LocalizationItem Name="StaticText" Value="Teks" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="DialogButtons">
+      <LocalizationItem Name="Abort" Value="B&amp;atal" />
+      <LocalizationItem Name="Add" Value="Tambah" />
+      <LocalizationItem Name="Apply" Value="Terapkan" />
+      <LocalizationItem Name="Back" Value="&lt; Kembali" />
+      <LocalizationItem Name="Cancel" Value="Batal" />
+      <LocalizationItem Name="Clear" Value="Bersihkan" />
+      <LocalizationItem Name="Close" Value="Tutup" />
+      <LocalizationItem Name="Delete" Value="Hapus" />
+      <LocalizationItem Name="Find" Value="Cari" />
+      <LocalizationItem Name="Ignore" Value="Aba&amp;ikan" />
+      <LocalizationItem Name="Next" Value="Lanjut &gt;" />
+      <LocalizationItem Name="No" Value="&amp;Tidak" />
+      <LocalizationItem Name="Remove" Value="Hapus" />
+      <LocalizationItem Name="Retry" Value="Cobaulang" />
+      <LocalizationItem Name="Yes" Value="&amp;Ya" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="Enums">
+      <LocalizationGroup Name="DevExpress.ExpressApp.Editors.ViewItemVisibility">
+        <LocalizationItem Name="Hide" Value="Sembunyikan" />
+        <LocalizationItem Name="Show" Value="Tampilkan" />
+        <LocalizationItem Name="ShowEmptySpace" Value="Tampilkan ruang kosong" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.ModelDifferenceCopyBehavior">
+        <LocalizationItem Name="Overwrite" Value="Tulisulang" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.ReportsV2.ReportType">
+        <LocalizationItem Name="Standard" Value="Standar" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.ExpressApp.Templates.ActionsToolbarVisibility">
+        <LocalizationItem Name="Hide" Value="Sembunyikan" />
+        <LocalizationItem Name="Show" Value="Tampilkan" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Base.SecurityPermissionPolicy" Value="Kebijakan Ijin Keamanan">
+        <LocalizationItem Name="AllowAllByDefault" Value="Ijinkan semua secara default" />
+        <LocalizationItem Name="DenyAllByDefault" Value="Tolak semua secara default" />
+        <LocalizationItem Name="ReadOnlyAllByDefault" Value="Hanya baca semua secara default" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="DevExpress.Persistent.Base.SecurityPermissionState">
+        <LocalizationItem Name="Allow" Value="Ijinkan" />
+        <LocalizationItem Name="Deny" Value="Tolak" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+    <LocalizationGroup Name="Exceptions">
+      <LocalizationGroup Name="SystemExceptions">
+        <LocalizationItem Name="PermissionIsDenied" Value="Perijinan di tolak" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="UserVisibleExceptions">
+        <LocalizationGroup Name="Validation">
+          <LocalizationItem Name="ActionErrorMessageHeaderFormat" Value="Permasalahan terdeksi pada saat validasi data. Harap baca informasi dibawah ini untuk mengetahui permasalahannya dan bagaimana anda dapat memperbaikinya." />
+          <LocalizationItem Name="AllContextsErrorMessageHeader" Value="Permasalahan terdeksi pada saat validasi data. Harap baca informasi dibawah ini untuk mengetahui permasalahannya dan bagaimana anda dapat memperbaikinya." />
+          <LocalizationItem Name="DeleteErrorMessageHeader" Value="Permasalahan terdeksi pada saat validasi data. Harap baca informasi dibawah ini untuk mengetahui permasalahannya dan bagaimana anda dapat memperbaikinya." />
+          <LocalizationItem Name="SaveErrorMessageHeader" Value="Permasalahan terdeksi pada saat validasi data. Harap baca informasi dibawah ini untuk mengetahui permasalahannya dan bagaimana anda dapat memperbaikinya." />
+          <LocalizationItem Name="ValidationSucceededMessageHeader" Value="Tidak ada permasalahan ditemukan." />
+        </LocalizationGroup>
+      </LocalizationGroup>
+    </LocalizationGroup>
+    <LocalizationGroup Name="Namespaces">
+      <LocalizationItem Name="BPIWABK.Module.BusinessObjects.Administrative" Value="Administratif" />
+    </LocalizationGroup>
+  </Localization>
+  <NavigationItems RelatedAnalysisGroupCaption="Analisis">
+    <Items>
+      <Item Id="Reports" Caption="Laporan">
+        <Items>
+          <Item Id="ReportsV2" Caption="Laporan" />
+          <Item Id="Dashboards" Caption="Dasbor" />
+        </Items>
+      </Item>
+      <Item Id="Default" Caption="Administrasi" />
+    </Items>
+  </NavigationItems>
+  <Validation>
+    <Contexts>
+      <ValidationContext Id="Accept" Caption="Terima" />
+      <ValidationContext Id="Save" Caption="Simpan" />
+    </Contexts>
+    <ErrorMessageTemplates>
+      <RuleCombinationOfPropertiesIsUnique MessageTemplateFoundObjects="Objek berikut ini ditemukan:" />
+      <RuleIsReferenced MessageTemplateFoundObjects="Objek berikut ini ditemukan:" />
+      <RuleObjectExists MessageTemplateMustExist="Harus ada Objek yang memenuhi kriteria &quot;{Criteria}&quot;." MessageTemplateFoundObjects="Objek berikut ini ditemukan:" />
+      <RuleRange MessageTemplateMustBeInRange="&quot;{TargetPropertyName}&quot; harus antara &quot;{MinimumValue}&quot; dan &quot;{MaximumValue}&quot;, termasuk batasannya." />
+      <RuleRegularExpression MessageTemplateMustMatchPattern="&quot;{TargetPropertyName}&quot; harus sesuai dengan pola berikut: &quot;{Pattern}&quot;." />
+      <RuleRequiredField MessageTemplateMustNotBeEmpty="&quot;{TargetPropertyName}&quot; tidak boleh kosong." />
+      <RuleSearchObject MessageTemplateFoundObjects="Objek berikut ini ditemukan:" />
+      <RuleStringComparison MessageTemplateMustContain="&quot;{TargetPropertyName}&quot; harus mengandung &quot;{OperandValue}&quot;." MessageTemplateMustBeginWith="&quot;{TargetPropertyName}&quot; harus mulai dengan &quot;{OperandValue}&quot;." MessageTemplateMustEndWith="&quot;{TargetPropertyName}&quot; harus berakhir dengan &quot;{OperandValue}&quot;." MessageTemplateMustBeEqual="&quot;{TargetPropertyName}&quot; harus sama dengan &quot;{OperandValue}&quot;." />
+      <RuleUniqueValue MessageTemplateMustBeUnique="Sudah ada objek yang bernilai sama untuk &quot;{TargetPropertyName}&quot;. nilai &quot;{TargetPropertyName}&quot; harus unik." />
+      <RuleValueComparison MessageTemplateMustBeEqualToOperand="&quot;{TargetPropertyName}&quot; harus sama dengan &quot;{RightOperand}&quot;." MessageTemplateMustBeGreaterThanOperand="&quot;{TargetPropertyName}&quot; harus lebih besar dari &quot;{RightOperand}&quot;." MessageTemplateMustBeGreaterThanOrEqualToOperand="&quot;{TargetPropertyName}&quot; harus lebih besar atau sama dengan &quot;{RightOperand}&quot;." MessageTemplateMustBeLessThanOperand="&quot;{TargetPropertyName}&quot; harus lebih kecil dari &quot;{RightOperand}&quot;." MessageTemplateMustBeLessThanOrEqualToOperand="&quot;{TargetPropertyName}&quot; harus lebih kecil dan sama dengan  &quot;{RightOperand}&quot;." />
+    </ErrorMessageTemplates>
+  </Validation>
+  <Views>
+    <DetailView Id="ActionContainerDashboardOrganizationItem_DetailView" Caption="Kontainer Aksi">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ActionContainerDashboardOrganizationItem" Caption="Kontainer Aksi" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ActionContainerDashboardOrganizationItem_ListView" Caption="Kontainer Aksi" />
+    <ListView Id="ActionContainerDashboardOrganizationItem_LookupListView" Caption="Kontainer Aksi" />
+    <DetailView Id="Analysis_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Analysis" Caption="Analisis" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ModelDifference_Aspects_ListView">
+      <Columns>
+        <ColumnInfo Id="DisplayName" Caption="Nama" />
+      </Columns>
+    </ListView>
+    <DetailView Id="PermissionPolicyNavigationPermissionObject_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="PermissionPolicyNavigationPermissionObject" Caption="Menavigasi" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="RuleSetValidationResult_ByTarget_Error_DetailView">
+      <Items>
+        <StaticText Id="ValidationResultsText" Text="Permasalahan terdeksi pada saat validasi data. Harap baca informasi dibawah ini untuk mengetahui permasalahannya dan bagaimana anda dapat memperbaikinya." />
+      </Items>
+    </DetailView>
+    <ListView Id="RuleSetValidationResultItem_ByTarget_ListView">
+      <Columns>
+        <ColumnInfo Id="ContextCaption" Caption="Konteks" />
+        <ColumnInfo Id="ErrorMessage" Caption="Deskripsi" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ValidationResults_Error_DetailView">
+      <Items>
+        <StaticText Id="ValidationResultsText" Text="Permasalahan terdeksi pada saat validasi data. Harap baca informasi dibawah ini untuk mengetahui permasalahannya dan bagaimana anda dapat memperbaikinya." />
+      </Items>
+    </DetailView>
+    <DetailView Id="ValidationResults_Passed_DetailView">
+      <Items>
+        <StaticText Id="ValidationResultsText" Text="Tidak ada permasalahan ditemukan." />
+      </Items>
+    </DetailView>
+  </Views>
+</Application>

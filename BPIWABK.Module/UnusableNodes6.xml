@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Pegawai_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors">
+            <LayoutGroup Id="Pegawai">
+              <LayoutGroup Id="Pegawai_col2">
+                <LayoutGroup Id="Autoc9fb930b-dbfe-4ccc-b5f2-41298623be2a">
+                  <LayoutGroup Id="Auto7ef2ab18-4788-4296-b579-e6ed28939579">
+                    <LayoutItem Id="TanggalVerifikasiTiga" ViewItem="TanggalVerifikasiTiga" />
+                    <LayoutItem Id="TanggalVerifikasiDua" ViewItem="TanggalVerifikasiDua" />
+                    <LayoutItem Id="TanggalVerifikasiSatu" ViewItem="TanggalVerifikasiSatu" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Autoc324b826-dc25-4025-90f3-5cfd3a94e279">
+                    <LayoutItem Id="VerifikasiTiga" ViewItem="VerifikasiTiga" />
+                    <LayoutItem Id="VerifikasiDua" ViewItem="VerifikasiDua" />
+                    <LayoutItem Id="VerifikasiSatu" ViewItem="VerifikasiSatu" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>
