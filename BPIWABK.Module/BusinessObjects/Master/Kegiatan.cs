@@ -65,7 +65,7 @@ namespace BPIWABK.Module.BusinessObjects.Master
         }
 
         int urutan;
-        [RuleValueComparison(ValueComparisonType.GreaterThan,0)]
+        [RuleValueComparison(ValueComparisonType.GreaterThan, 0)]
         public int Urutan
         {
             get
@@ -92,18 +92,27 @@ namespace BPIWABK.Module.BusinessObjects.Master
             }
         }
 
-        InputKegiatan input;
-        public InputKegiatan Input
+        string kelengkapan;
+        [Size(SizeAttribute.Unlimited)]
+        [EditorAlias(EditorAliases.HtmlPropertyEditor)]
+        public string Kelengkapan
         {
-            get
-            {
-                return input;
-            }
-            set
-            {
-                SetPropertyValue("Input", ref input, value);
-            }
+            get => kelengkapan;
+            set => SetPropertyValue(nameof(Kelengkapan), ref kelengkapan, value);
         }
+
+        //InputKegiatan input;
+        //public InputKegiatan Input
+        //{
+        //    get
+        //    {
+        //        return input;
+        //    }
+        //    set
+        //    {
+        //        SetPropertyValue("Input", ref input, value);
+        //    }
+        //}
 
         OutputKegiatan output;
         public OutputKegiatan Output
@@ -117,7 +126,6 @@ namespace BPIWABK.Module.BusinessObjects.Master
                 SetPropertyValue("Output", ref output, value);
             }
         }
-
 
         string deskripsiKegiatan;
         [Size(SizeAttribute.Unlimited)]
@@ -134,20 +142,17 @@ namespace BPIWABK.Module.BusinessObjects.Master
             }
         }
 
-        UnitKerja pelaksanaKerja;
-        public UnitKerja PelaksanaKerja
+        [Association("UnitKerja-Kegiatan")]
+        public XPCollection<UnitKerja> PelaksanaKerja
         {
             get
             {
-                return pelaksanaKerja;
-            }
-            set
-            {
-                SetPropertyValue("PelaksanaKerja", ref pelaksanaKerja, value);
+                return GetCollection<UnitKerja>(nameof(PelaksanaKerja));
             }
         }
 
         int waktu;
+        [VisibleInListView(false), VisibleInLookupListView(false)]
         public int Waktu
         {
             get
@@ -160,7 +165,8 @@ namespace BPIWABK.Module.BusinessObjects.Master
             }
         }
 
-        public string waktuKegiatan;
+        string waktuKegiatan;
+        [VisibleInDetailView(false)]
         public string WaktuKegiatan
         {
             get
@@ -211,12 +217,12 @@ namespace BPIWABK.Module.BusinessObjects.Master
         }
 
         SatuanWaktu satuanWaktu;
+        [VisibleInListView(false)]
         public SatuanWaktu SatuanWaktu
         {
             get => satuanWaktu;
             set => SetPropertyValue(nameof(SatuanWaktu), ref satuanWaktu, value);
         }
-
 
         string keterangan;
         [Size(SizeAttribute.Unlimited)]

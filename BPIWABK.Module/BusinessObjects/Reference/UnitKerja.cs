@@ -112,12 +112,20 @@ namespace BPIWABK.Module.BusinessObjects.Reference
             get => new XPCollection<SOP>(Session, CriteriaOperator.Parse("[Kegiatan][[PelaksanaKerja.Oid] = ?]", Oid));
         }
 
-
+        [Association("UnitKerja-Kegiatan")]
         public XPCollection<Kegiatan> Kegiatan
         {
-            get => new XPCollection<Kegiatan>(Session, CriteriaOperator.Parse("PelaksanaKerja.Oid=?", Oid));
-            
+            get
+            {
+                return GetCollection<Kegiatan>(nameof(Kegiatan));
+            }
         }
+
+        //public XPCollection<Kegiatan> Kegiatan
+        //{
+        //    get => new XPCollection<Kegiatan>(Session, CriteriaOperator.Parse("PelaksanaKerja.Oid=?", Oid));
+        //    
+        //}
 
         [Association("SOP-KorelasiJabatan")]
         public XPCollection<SOP> KorelasiSOP
