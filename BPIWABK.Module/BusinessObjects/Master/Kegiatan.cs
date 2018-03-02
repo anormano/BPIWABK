@@ -160,12 +160,63 @@ namespace BPIWABK.Module.BusinessObjects.Master
             }
         }
 
+        public string waktuKegiatan;
+        public string WaktuKegiatan
+        {
+            get
+            {
+                switch (SatuanWaktu)
+                {
+                    case SatuanWaktu.Hari:
+                        waktuKegiatan = string.Format("{0} Hari Kerja", Waktu);
+                        break;
+                    case SatuanWaktu.Jam:
+                        waktuKegiatan = string.Format("{0} Jam", Waktu);
+                        break;
+                    case SatuanWaktu.Menit:
+                        waktuKegiatan = string.Format("{0} Menit", Waktu);
+                        break;
+                    default:
+                        waktuKegiatan = string.Empty;
+                        break;
+                }
+
+                return waktuKegiatan;
+            }
+        }
+
+        int waktuMenit;
+        [VisibleInListView(false), VisibleInDetailView(false), VisibleInLookupListView(false)]
+        public int WaktuMenit
+        {
+            get
+            {
+                switch (SatuanWaktu)
+                {
+                    case SatuanWaktu.Hari:
+                        waktuMenit = Waktu * 1440;
+                        break;
+                    case SatuanWaktu.Jam:
+                        waktuMenit = Waktu * 60;
+                        break;
+                    case SatuanWaktu.Menit:
+                        waktuMenit = Waktu * 1;
+                        break;
+                    default:
+                        return 0;
+                }
+
+                return waktuMenit;
+            }
+        }
+
         SatuanWaktu satuanWaktu;
         public SatuanWaktu SatuanWaktu
         {
             get => satuanWaktu;
             set => SetPropertyValue(nameof(SatuanWaktu), ref satuanWaktu, value);
         }
+
 
         string keterangan;
         [Size(SizeAttribute.Unlimited)]

@@ -110,10 +110,10 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
 
         MediaDataObject referensi;
         [ImageEditor(DetailViewImageEditorMode = ImageEditorMode.PopupPictureEdit,
-    ListViewImageEditorMode = ImageEditorMode.PopupPictureEdit,
-    ListViewImageEditorCustomHeight = 100,
-    DetailViewImageEditorFixedHeight = 100,
-    DetailViewImageEditorFixedWidth = 150)]
+            ListViewImageEditorMode = ImageEditorMode.PopupPictureEdit,
+            ListViewImageEditorCustomHeight = 100,
+            DetailViewImageEditorFixedHeight = 100,
+            DetailViewImageEditorFixedWidth = 150)]
         public MediaDataObject Referensi
         {
             get => referensi;
