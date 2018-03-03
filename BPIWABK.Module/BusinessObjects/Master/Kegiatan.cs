@@ -101,30 +101,13 @@ namespace BPIWABK.Module.BusinessObjects.Master
             set => SetPropertyValue(nameof(Kelengkapan), ref kelengkapan, value);
         }
 
-        //InputKegiatan input;
-        //public InputKegiatan Input
-        //{
-        //    get
-        //    {
-        //        return input;
-        //    }
-        //    set
-        //    {
-        //        SetPropertyValue("Input", ref input, value);
-        //    }
-        //}
-
-        OutputKegiatan output;
-        public OutputKegiatan Output
+        string output;
+        [Size(SizeAttribute.Unlimited)]
+        [EditorAlias(EditorAliases.HtmlPropertyEditor)]
+        public string Output
         {
-            get
-            {
-                return output;
-            }
-            set
-            {
-                SetPropertyValue("Output", ref output, value);
-            }
+            get => output;
+            set => SetPropertyValue(nameof(Output), ref output, value);
         }
 
         string deskripsiKegiatan;
