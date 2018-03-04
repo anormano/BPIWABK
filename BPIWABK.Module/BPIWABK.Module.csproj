@@ -264,6 +264,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="FunctionalTests\sample.ets" />
+    <None Include="FunctionalTests\WinSample.ets" />
     <None Include="Images\ReadMe.txt" />
     <EmbeddedResource Include="Model.DesignedDiffs.Localization.id.xafml">
       <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
@@ -275,50 +276,18 @@
     <None Include="FunctionalTests\config.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="UnusableNodes_id.xml">
-      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="UnusableNodes1_id.xml">
-      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="UnusableNodes.xml">
-      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="UnusableNodes1.xml">
-      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="UnusableNodes2.xml">
-      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
-      <SubType>Designer</SubType>
-    </None>
     <EmbeddedResource Include="Images\BO_Education.png" />
     <EmbeddedResource Include="Images\BO_Education_32x32.png" />
-    <None Include="UnusableNodes3.xml">
-      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="UnusableNodes4.xml">
-      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="UnusableNodes6.xml">
-      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="UnusableNodes7.xml">
-      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
-      <SubType>Designer</SubType>
-    </None>
     <EmbeddedResource Include="Images\BO_Certificate.png" />
     <EmbeddedResource Include="Images\BO_Certificate_32x32.png" />
     <EmbeddedResource Include="Images\BO_Certificate_48x48.png" />
     <Content Include="Images\BO_Contract.png" />
     <Content Include="Images\BO_Contract_32x32.png" />
     <Content Include="Images\BO_Contract_48x48.png" />
+    <None Include="UnusableNodes.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Welcome.html" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

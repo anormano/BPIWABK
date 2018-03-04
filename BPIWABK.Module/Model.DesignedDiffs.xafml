@@ -2,7 +2,7 @@
 <Application Title="Sistem Informasi Ketatalaksanaan BPIW" PreferredLanguage="id" Company="Badan Pengawan Infrastruktur Wilayah" Copyright="Copyright &amp;copy; 2017 Badan Pengawan Infrastruktur Wilayah -  Kementerian PUPR">
   <NavigationItems>
     <Items>
-      <Item Id="Menu Utama" Index="0">
+      <Item Id="Menu Utama" Index="0" ImageName="">
         <Items>
           <Item Id="SOP_ListView" Index="0" />
           <Item Id="DetailSaya" Caption="Detail Saya" ObjectKey="@CurrentUserID" ViewId="Pegawai_DetailView" ImageName="BO_MyDetails" Index="1" IsNewNode="True" />

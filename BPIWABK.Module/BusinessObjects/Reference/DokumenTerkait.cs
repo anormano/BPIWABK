@@ -16,7 +16,9 @@ using BPIWABK.Module.BusinessObjects.Master;
 namespace BPIWABK.Module.BusinessObjects.Reference
 {
     [DefaultClassOptions]
-    //[ImageName("BO_Contact")]
+    [FileAttachment("Dokumen")]
+    [ImageName("BO_FileAttachment")]
+    [NavigationItem(false)]
     //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
     //[Persistent("DatabaseTableName")]

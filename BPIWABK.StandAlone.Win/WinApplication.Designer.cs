@@ -1,5 +1,5 @@
-﻿namespace BPIWABK.Win {
-    partial class BPIWABKWindowsFormsApplication {
+﻿namespace BPIWABK.StandAlone.Win {
+    partial class StandAloneWindowsFormsApplication {
         /// <summary> 
         /// Required designer variable.
         /// </summary>
@@ -26,8 +26,10 @@
             this.module1 = new DevExpress.ExpressApp.SystemModule.SystemModule();
             this.module2 = new DevExpress.ExpressApp.Win.SystemModule.SystemWindowsFormsModule();
             this.module3 = new BPIWABK.Module.BPIWABKModule();
-            this.module4 = new BPIWABK.Module.Win.BPIWABKWindowsFormsModule();
+            this.module4 = new BPIWABK.StandAlone.Module.Win.StandAloneWindowsFormsModule();
             this.securityModule1 = new DevExpress.ExpressApp.Security.SecurityModule();
+            this.securityStrategyComplex1 = new DevExpress.ExpressApp.Security.SecurityStrategyComplex();
+            this.authenticationStandard1 = new DevExpress.ExpressApp.Security.AuthenticationStandard();
             this.auditTrailModule = new DevExpress.ExpressApp.AuditTrail.AuditTrailModule();
             this.objectsModule = new DevExpress.ExpressApp.Objects.BusinessClassLibraryCustomizationModule();
             this.chartModule = new DevExpress.ExpressApp.Chart.ChartModule();
@@ -49,9 +51,18 @@
             this.validationModule = new DevExpress.ExpressApp.Validation.ValidationModule();
             this.validationWindowsFormsModule = new DevExpress.ExpressApp.Validation.Win.ValidationWindowsFormsModule();
             this.viewVariantsModule = new DevExpress.ExpressApp.ViewVariantsModule.ViewVariantsModule();
-            this.securityStrategyComplex1 = new DevExpress.ExpressApp.Security.SecurityStrategyComplex();
-            this.authenticationStandard1 = new DevExpress.ExpressApp.Security.AuthenticationStandard();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            // 
+            // securityStrategyComplex1
+            // 
+            this.securityStrategyComplex1.Authentication = this.authenticationStandard1;
+            this.securityStrategyComplex1.RoleType = typeof(BPIWABK.Module.BusinessObjects.Administrative.Peran);
+            this.securityStrategyComplex1.SupportNavigationPermissionsForTypes = false;
+            this.securityStrategyComplex1.UserType = typeof(BPIWABK.Module.BusinessObjects.Administrative.Pegawai);
+            // 
+            // authenticationStandard1
+            // 
+            this.authenticationStandard1.LogonParametersType = typeof(DevExpress.ExpressApp.Security.AuthenticationStandardLogonParameters);
             // 
             // auditTrailModule
             // 
@@ -81,17 +92,7 @@
             this.validationModule.AllowValidationDetailsAccess = true;
             this.validationModule.IgnoreWarningAndInformationRules = false;
             // 
-            // securityStrategyComplex1
-            // 
-            this.securityStrategyComplex1.Authentication = this.authenticationStandard1;
-            this.securityStrategyComplex1.RoleType = typeof(BPIWABK.Module.BusinessObjects.Administrative.Peran);
-            this.securityStrategyComplex1.UserType = typeof(BPIWABK.Module.BusinessObjects.Administrative.Pegawai);
-            // 
-            // authenticationStandard1
-            // 
-            this.authenticationStandard1.LogonParametersType = typeof(DevExpress.ExpressApp.Security.AuthenticationStandardLogonParameters);
-            // 
-            // BPIWABKWindowsFormsApplication
+            // StandAloneWindowsFormsApplication
             // 
             this.ApplicationName = "BPIWABK";
             this.CheckCompatibilityType = DevExpress.ExpressApp.CheckCompatibilityType.DatabaseSchema;
@@ -123,8 +124,8 @@
             this.Modules.Add(this.securityModule1);
             this.Security = this.securityStrategyComplex1;
             this.UseOldTemplates = false;
-            this.DatabaseVersionMismatch += new System.EventHandler<DevExpress.ExpressApp.DatabaseVersionMismatchEventArgs>(this.BPIWABKWindowsFormsApplication_DatabaseVersionMismatch);
-            this.CustomizeLanguagesList += new System.EventHandler<DevExpress.ExpressApp.CustomizeLanguagesListEventArgs>(this.BPIWABKWindowsFormsApplication_CustomizeLanguagesList);
+            this.DatabaseVersionMismatch += new System.EventHandler<DevExpress.ExpressApp.DatabaseVersionMismatchEventArgs>(this.StandAloneWindowsFormsApplication_DatabaseVersionMismatch);
+            this.CustomizeLanguagesList += new System.EventHandler<DevExpress.ExpressApp.CustomizeLanguagesListEventArgs>(this.StandAloneWindowsFormsApplication_CustomizeLanguagesList);
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -134,8 +135,10 @@
         private DevExpress.ExpressApp.SystemModule.SystemModule module1;
         private DevExpress.ExpressApp.Win.SystemModule.SystemWindowsFormsModule module2;
         private BPIWABK.Module.BPIWABKModule module3;
-        private BPIWABK.Module.Win.BPIWABKWindowsFormsModule module4;
+        private BPIWABK.StandAlone.Module.Win.StandAloneWindowsFormsModule module4;
         private DevExpress.ExpressApp.Security.SecurityModule securityModule1;
+        private DevExpress.ExpressApp.Security.SecurityStrategyComplex securityStrategyComplex1;
+        private DevExpress.ExpressApp.Security.AuthenticationStandard authenticationStandard1;
         private DevExpress.ExpressApp.AuditTrail.AuditTrailModule auditTrailModule;
         private DevExpress.ExpressApp.Objects.BusinessClassLibraryCustomizationModule objectsModule;
         private DevExpress.ExpressApp.Chart.ChartModule chartModule;
@@ -157,7 +160,5 @@
         private DevExpress.ExpressApp.Validation.ValidationModule validationModule;
         private DevExpress.ExpressApp.Validation.Win.ValidationWindowsFormsModule validationWindowsFormsModule;
         private DevExpress.ExpressApp.ViewVariantsModule.ViewVariantsModule viewVariantsModule;
-        private DevExpress.ExpressApp.Security.SecurityStrategyComplex securityStrategyComplex1;
-        private DevExpress.ExpressApp.Security.AuthenticationStandard authenticationStandard1;
     }
 }
