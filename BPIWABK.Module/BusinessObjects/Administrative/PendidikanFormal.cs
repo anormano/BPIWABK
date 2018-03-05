@@ -68,6 +68,15 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
             set => SetPropertyValue(nameof(Pegawai), ref pegawai, value);
         }
 
+        string namaLembagaPendidikan;
+        [Size(SizeAttribute.DefaultStringMappingFieldSize)]
+        [RuleRequiredField]
+        public string NamaLembagaPendidikan
+        {
+            get => namaLembagaPendidikan;
+            set => SetPropertyValue(nameof(NamaLembagaPendidikan), ref namaLembagaPendidikan, value);
+        }
+
         JenjangPendidikan jenjangPendidikan;
         [RuleRequiredField]
         public JenjangPendidikan JenjangPendidikan
