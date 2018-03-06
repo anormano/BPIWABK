@@ -224,6 +224,7 @@
     <Compile Include="BusinessObjects\Reference\Jurusan.cs" />
     <Compile Include="BusinessObjects\Reference\Kabupaten.cs" />
     <Compile Include="BusinessObjects\Reference\Kecamatan.cs" />
+    <Compile Include="BusinessObjects\Reference\LembagaPendidikan.cs" />
     <Compile Include="BusinessObjects\Reference\OutputKegiatan.cs" />
     <Compile Include="BusinessObjects\Reference\PenggunaSOP.cs" />
     <Compile Include="BusinessObjects\Reference\Propinsi.cs" />

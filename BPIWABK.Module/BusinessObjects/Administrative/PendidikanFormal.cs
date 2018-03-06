@@ -68,22 +68,55 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
             set => SetPropertyValue(nameof(Pegawai), ref pegawai, value);
         }
 
-        string namaLembagaPendidikan;
-        [Size(SizeAttribute.DefaultStringMappingFieldSize)]
-        [RuleRequiredField]
-        public string NamaLembagaPendidikan
-        {
-            get => namaLembagaPendidikan;
-            set => SetPropertyValue(nameof(NamaLembagaPendidikan), ref namaLembagaPendidikan, value);
-        }
-
         JenjangPendidikan jenjangPendidikan;
         [RuleRequiredField]
         public JenjangPendidikan JenjangPendidikan
         {
             get => jenjangPendidikan;
-            set => SetPropertyValue(nameof(JenjangPendidikan), ref jenjangPendidikan, value);
-            
+            set
+            {
+                SetPropertyValue(nameof(JenjangPendidikan), ref jenjangPendidikan, value);
+                RefreshLembagaCollection();
+            }
+        }
+
+        [VisibleInDetailView(false),VisibleInLookupListView(false), VisibleInListView(false)]
+        public string Jenjang
+        {
+            get
+            {
+                return Enum.GetName(typeof(JenjangPendidikan), JenjangPendidikan);
+            }
+        }
+
+        XPCollection<LembagaPendidikan> lembagaCollection;
+        [Browsable(false)]
+        public XPCollection<LembagaPendidikan> LembagaCollection
+        {
+            get
+            {
+                if (lembagaCollection == null)
+                {
+                    lembagaCollection = new XPCollection<LembagaPendidikan>(Session);
+                    RefreshLembagaCollection();
+                }
+                return lembagaCollection;
+            }
+        }
+
+        private void RefreshLembagaCollection()
+        {
+            if (lembagaCollection == null)
+                return;
+            lembagaCollection.Criteria = CriteriaOperator.Parse("Contains([Jenjang],?)", Jenjang);
+        }
+
+        LembagaPendidikan lembagaPendidikan;
+        [DataSourceProperty("LembagaCollection")]
+        public LembagaPendidikan LembagaPendidikan
+        {
+            get => lembagaPendidikan;
+            set => SetPropertyValue(nameof(LembagaPendidikan), ref lembagaPendidikan, value);
         }
 
         Jurusan jurusan;
