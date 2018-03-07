@@ -43,7 +43,7 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
 
         private MediaDataObject _foto;
 
-        [ImageEditor(ListViewImageEditorMode = ImageEditorMode.PictureEdit, DetailViewImageEditorMode = ImageEditorMode.PictureEdit, DetailViewImageEditorFixedHeight = 200, DetailViewImageEditorFixedWidth = 200, ListViewImageEditorCustomHeight = 100)]
+        [ImageEditor(ListViewImageEditorMode = ImageEditorMode.PictureEdit, DetailViewImageEditorMode = ImageEditorMode.PictureEdit, DetailViewImageEditorFixedHeight = 200, ListViewImageEditorCustomHeight = 100)]
         public MediaDataObject Foto
         {
             get => _foto;
@@ -411,7 +411,7 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
 
         MediaDataObject kTP;
         [VisibleInListView(false)]
-        [ImageEditor(DetailViewImageEditorMode = ImageEditorMode.PictureEdit, ListViewImageEditorMode = ImageEditorMode.PopupPictureEdit, ListViewImageEditorCustomHeight = 100, DetailViewImageEditorFixedHeight = 150, DetailViewImageEditorFixedWidth = 250)]
+        [ImageEditor(DetailViewImageEditorMode = ImageEditorMode.PictureEdit, ListViewImageEditorMode = ImageEditorMode.PopupPictureEdit, DetailViewImageEditorFixedHeight = 150)]
         public MediaDataObject KTP
         {
             get => kTP;
@@ -420,7 +420,7 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
 
         MediaDataObject nPWP;
         [VisibleInListView(false)]
-        [ImageEditor(DetailViewImageEditorMode = ImageEditorMode.PictureEdit, ListViewImageEditorMode = ImageEditorMode.PopupPictureEdit, ListViewImageEditorCustomHeight = 100, DetailViewImageEditorFixedHeight = 150, DetailViewImageEditorFixedWidth = 250)]
+        [ImageEditor(DetailViewImageEditorMode = ImageEditorMode.PictureEdit, ListViewImageEditorMode = ImageEditorMode.PopupPictureEdit, DetailViewImageEditorFixedHeight = 150)]
         public MediaDataObject NPWP
         {
             get => nPWP;
@@ -429,7 +429,7 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
 
         MediaDataObject rekeningKoran;
         [VisibleInListView(false)]
-        [ImageEditor(DetailViewImageEditorMode = ImageEditorMode.PictureEdit, ListViewImageEditorMode = ImageEditorMode.PopupPictureEdit, ListViewImageEditorCustomHeight = 100, DetailViewImageEditorFixedHeight = 150, DetailViewImageEditorFixedWidth = 250)]
+        [ImageEditor(DetailViewImageEditorMode = ImageEditorMode.PictureEdit, ListViewImageEditorMode = ImageEditorMode.PopupPictureEdit, DetailViewImageEditorFixedHeight = 150)]
         public MediaDataObject RekeningKoran
         {
             get => rekeningKoran;

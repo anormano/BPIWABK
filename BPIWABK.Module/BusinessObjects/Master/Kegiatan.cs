@@ -54,42 +54,24 @@ namespace BPIWABK.Module.BusinessObjects.Master
         [RuleRequiredField]
         public int Oid
         {
-            get
-            {
-                return oid;
-            }
-            set
-            {
-                SetPropertyValue("Oid", ref oid, value);
-            }
+            get => oid;
+            set => SetPropertyValue(nameof(Oid), ref oid, value);
         }
 
         int urutan;
         [RuleValueComparison(ValueComparisonType.GreaterThan, 0)]
         public int Urutan
         {
-            get
-            {
-                return urutan;
-            }
-            set
-            {
-                SetPropertyValue("Urutan", ref urutan, value);
-            }
+            get => urutan;
+            set => SetPropertyValue(nameof(Urutan), ref urutan, value);
         }
 
         SOP sOP;
         [Association("SOP-Kegiatan")]
         public SOP SOP
         {
-            get
-            {
-                return sOP;
-            }
-            set
-            {
-                SetPropertyValue("SOP", ref sOP, value);
-            }
+            get => sOP;
+            set => SetPropertyValue(nameof(SOP), ref sOP, value);
         }
 
         string kelengkapan;
@@ -115,37 +97,22 @@ namespace BPIWABK.Module.BusinessObjects.Master
         [EditorAlias(EditorAliases.HtmlPropertyEditor)]
         public string DeskripsiKegiatan
         {
-            get
-            {
-                return deskripsiKegiatan;
-            }
-            set
-            {
-                SetPropertyValue("DeskripsiKegiatan", ref deskripsiKegiatan, value);
-            }
+            get => deskripsiKegiatan;
+            set => SetPropertyValue(nameof(DeskripsiKegiatan), ref deskripsiKegiatan, value);
         }
 
         [Association("UnitKerja-Kegiatan")]
         public XPCollection<UnitKerja> PelaksanaKerja
         {
-            get
-            {
-                return GetCollection<UnitKerja>(nameof(PelaksanaKerja));
-            }
+            get => GetCollection<UnitKerja>(nameof(PelaksanaKerja));
         }
 
         int waktu;
         [VisibleInListView(false), VisibleInLookupListView(false)]
         public int Waktu
         {
-            get
-            {
-                return waktu;
-            }
-            set
-            {
-                SetPropertyValue("Waktu", ref waktu, value);
-            }
+            get => waktu;
+            set => SetPropertyValue(nameof(Waktu), ref waktu, value);
         }
 
         string waktuKegiatan;
@@ -212,14 +179,8 @@ namespace BPIWABK.Module.BusinessObjects.Master
         [EditorAlias(EditorAliases.HtmlPropertyEditor)]
         public string Keterangan
         {
-            get
-            {
-                return keterangan;
-            }
-            set
-            {
-                SetPropertyValue("Keterangan", ref keterangan, value);
-            }
+            get => keterangan;
+            set => SetPropertyValue(nameof(Keterangan), ref keterangan, value);
         }
     }
 }

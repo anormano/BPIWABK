@@ -161,12 +161,9 @@
               <LayoutGroup Id="Left" RelativeSize="50" ShowCaption="False" Index="0" IsNewNode="True">
                 <LayoutItem Id="NomorKTP" ViewItem="NomorKTP" Index="0" RelativeSize="28.07017543859649" IsNewNode="True" />
                 <LayoutItem Id="KTP" ViewItem="KTP" Index="1" RelativeSize="21.05263157894737" IsNewNode="True" />
-                <LayoutGroup Id="Auto9057331b-9911-4d35-aad1-a9bcd7f48325" ShowCaption="False" Caption="" Direction="Horizontal" Index="2" RelativeSize="21.05263157894737" IsNewNode="True">
-                  <LayoutItem Id="Bank" ViewItem="Bank" Index="0" RelativeSize="49.9001996007984" IsNewNode="True" />
-                  <LayoutItem Id="NomorRekening" ViewItem="NomorRekening" Index="1" RelativeSize="50.0998003992016" IsNewNode="True" />
-                </LayoutGroup>
-                <LayoutItem Id="RekeningKoran" ViewItem="RekeningKoran" Index="3" RelativeSize="21.05263157894737" IsNewNode="True" />
-                <LayoutItem Id="RekeningKorang" ViewItem="RekeningKorang" Index="4" RelativeSize="8.7719298245614041" IsNewNode="True" />
+                <LayoutItem Id="Bank" ViewItem="Bank" Index="2" RelativeSize="49.9001996007984" IsNewNode="True" />
+                <LayoutItem Id="NomorRekening" ViewItem="NomorRekening" Index="3" RelativeSize="50.0998003992016" IsNewNode="True" />
+                <LayoutItem Id="RekeningKoran" ViewItem="RekeningKoran" Index="4" RelativeSize="21.05263157894737" IsNewNode="True" />
               </LayoutGroup>
               <LayoutGroup Id="Right" RelativeSize="50" ShowCaption="False" Index="1" IsNewNode="True">
                 <LayoutItem Id="NomorNPWP" ViewItem="NomorNPWP" Index="0" RelativeSize="28.07017543859649" IsNewNode="True" />
