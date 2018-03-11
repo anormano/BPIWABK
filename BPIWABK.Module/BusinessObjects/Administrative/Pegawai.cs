@@ -340,7 +340,7 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
             }
         }
 
-        [ModelDefault("Caption", "No SK Pengangkatan Pertama")]
+        [ModelDefault("Caption", "No SK Pengangkatan Awal")]
         [VisibleInListView(false)]
         public string SKPengangkatanPertama
         {
@@ -357,7 +357,7 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
             }
         }
 
-        [ModelDefault("Caption", "Tahun")]
+        [ModelDefault("Caption", "Tahun Awal")]
         [VisibleInListView(false)]
         //[ModelDefault("DisplayFormat", "{O:#}")]
         public int? TahunSKPengangkatanPertama
@@ -375,7 +375,7 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
             }
         }
 
-        [ModelDefault("Caption", "No SK Pengangkatan Terakhir")]
+        [ModelDefault("Caption", "No SK Pengangkatan Terkini")]
         [VisibleInListView(false)]
         public string SKPengangkatanTerakhir
         {
@@ -392,7 +392,7 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
             }
         }
 
-        [ModelDefault("Caption", "Tahun")]
+        [ModelDefault("Caption", "Tahun Terkini")]
         [VisibleInListView(false)]
         public int? TahunSKPengangkatanTerakhir
         {
