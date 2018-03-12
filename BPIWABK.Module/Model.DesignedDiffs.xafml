@@ -2,11 +2,12 @@
 <Application Title="Sistem Informasi Ketatalaksanaan BPIW" PreferredLanguage="id" Company="Badan Pengawan Infrastruktur Wilayah" Copyright="Copyright &amp;copy; 2017 Badan Pengawan Infrastruktur Wilayah -  Kementerian PUPR">
   <NavigationItems>
     <Items>
-      <Item Id="Menu Utama" Index="0" ImageName="">
+      <Item Id="Menu Utama" Index="0" ImageName="BO_Folder">
         <Items>
           <Item Id="SOP_ListView" Index="0" />
           <Item Id="DetailSaya" Caption="Detail Saya" ObjectKey="@CurrentUserID" ViewId="Pegawai_DetailView" ImageName="BO_MyDetails" Index="1" IsNewNode="True" />
           <DashboardNavigationItem Id="@6a6c8eaf-8e8f-49a4-bd17-229a384286da" DashboardTitle="Statistik Pegawai Non PNS" Caption="Statistik Pegawai Non PNS" IsNewNode="True" />
+          <Item Id="PegawainNonPNS" Caption="Pegawain Non-PNS" ViewId="Pegawai_ListView" IsNewNode="True" />
         </Items>
       </Item>
       <Item Id="Referensi" Index="1" />
