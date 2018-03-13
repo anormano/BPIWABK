@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="17.2.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v17.2, Version=17.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="xtraReport1" DisplayName="Daftar Nominatif Pegawai Non Pegawai Negeri Sipil" Landscape="true" Margins="25, 25, 25, 39" PaperKind="A4" PageWidth="1169" PageHeight="827" Version="17.2" FilterString="[TahunSKPengangkatanTerakhir] = ?TahunPengangkatan" DataSource="#Ref-0" Font="Arial, 6pt">
+  <Extensions>
+    <Item1 Ref="2" Key="DataSerializationExtension" Value="XtraReport" />
+    <Item2 Ref="3" Key="DataEditorExtension" Value="XtraReport" />
+    <Item3 Ref="4" Key="ParameterEditorExtension" Value="XtraReport" />
+  </Extensions>
+  <Parameters>
+    <Item1 Ref="6" Description="Tahun Pengangkatan" ValueInfo="2018" Name="TahunPengangkatan" />
+  </Parameters>
+  <CalculatedFields>
+    <Item1 Ref="7" Name="calculatedField1" Expression="[DataSource.CurrentRowIndex]" />
+  </CalculatedFields>
+  <Bands>
+    <Item1 Ref="8" ControlType="TopMarginBand" Name="topMarginBand1" HeightF="25" />
+    <Item2 Ref="9" ControlType="DetailBand" Name="detailBand1" HeightF="18">
+      <Controls>
+        <Item1 Ref="10" ControlType="XRTable" Name="table2" AnchorVertical="Both" SizeF="1119,18" LocationFloat="0, 0" Borders="Left">
+          <Rows>
+            <Item1 Ref="11" ControlType="XRTableRow" Name="tableRow4" Weight="1">
+              <Cells>
+                <Item1 Ref="12" ControlType="XRTableCell" Name="tableCell1" Weight="3.2661698870415687" CanGrow="false" Font="Arial, 6pt" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="13" Expression="[calculatedField1]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="14" UseFont="false" UsePadding="false" />
+                </Item1>
+                <Item2 Ref="15" ControlType="XRTableCell" Name="tableCell8" Weight="9.28013261814202" CanGrow="false" StyleName="DataField" Font="Arial, 6pt" Borders="Left">
+                  <ExpressionBindings>
+                    <Item1 Ref="16" Expression="[Jabatan.NamaJabatan]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="17" UseFont="false" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="18" ControlType="XRTableCell" Name="tableCell10" Weight="26.726408884213942" CanGrow="false" StyleName="DataField" Font="Arial, 6pt" Borders="Left">
+                  <ExpressionBindings>
+                    <Item1 Ref="19" Expression="[UnitKerja.NamaUnit]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="20" UseFont="false" UseBorders="false" />
+                </Item3>
+                <Item4 Ref="21" ControlType="XRTableCell" Name="tableCell12" Weight="18.395815298167122" CanGrow="false" Text="tableCell12" StyleName="DataField" Font="Arial, 6pt" Borders="Left">
+                  <ExpressionBindings>
+                    <Item1 Ref="22" Expression="[NamaLengkap]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="23" UseFont="false" UseBorders="false" />
+                </Item4>
+                <Item5 Ref="24" ControlType="XRTableCell" Name="tableCell14" Weight="8.3764627826783755" CanGrow="false" Text="tableCell14" StyleName="DataField" Font="Arial, 6pt" Borders="Left">
+                  <ExpressionBindings>
+                    <Item1 Ref="25" Expression="[TempatLahir]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="26" UseFont="false" UseBorders="false" />
+                </Item5>
+                <Item6 Ref="27" ControlType="XRTableCell" Name="tableCell16" Weight="5.5233179464304314" CanGrow="false" TextFormatString="{0:dd/MM/yyyy}" Text="tableCell16" StyleName="DataField" Font="Arial, 6pt" Borders="Left">
+                  <ExpressionBindings>
+                    <Item1 Ref="28" Expression="[TanggalLahir]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="29" UseFont="false" UseBorders="false" />
+                </Item6>
+                <Item7 Ref="30" ControlType="XRTableCell" Name="tableCell18" Weight="5.3460418258018834" CanGrow="false" Text="tableCell18" StyleName="DataField" Font="Arial, 6pt" Borders="Left">
+                  <ExpressionBindings>
+                    <Item1 Ref="31" Expression="[JenjangPendidikan]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="32" UseFont="false" UseBorders="false" />
+                </Item7>
+                <Item8 Ref="33" ControlType="XRTableCell" Name="tableCell20" Weight="18.724551975593" CanGrow="false" Text="tableCell20" StyleName="DataField" Font="Arial, 6pt" Borders="Left">
+                  <ExpressionBindings>
+                    <Item1 Ref="34" Expression="[SKPengangkatanPertama]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="35" UseFont="false" UseBorders="false" />
+                </Item8>
+                <Item9 Ref="36" ControlType="XRTableCell" Name="tableCell22" Weight="5.1669940440424273" CanGrow="false" StyleName="DataField" Font="Arial, 6pt" Borders="Left">
+                  <ExpressionBindings>
+                    <Item1 Ref="37" Expression="[TahunSKPengangkatanPertama]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="38" UseFont="false" UseBorders="false" />
+                </Item9>
+                <Item10 Ref="39" ControlType="XRTableCell" Name="tableCell24" Weight="20.823286516897543" CanGrow="false" StyleName="DataField" Font="Arial, 6pt" Borders="Left">
+                  <ExpressionBindings>
+                    <Item1 Ref="40" Expression="[SKPengangkatanTerakhir]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="41" UseFont="false" UseBorders="false" />
+                </Item10>
+                <Item11 Ref="42" ControlType="XRTableCell" Name="tableCell26" Weight="4.7708153175327119" CanGrow="false" Text="tableCell26" StyleName="DataField" Font="Arial, 6pt" Borders="Left, Right">
+                  <ExpressionBindings>
+                    <Item1 Ref="43" Expression="[TahunSKPengangkatanTerakhir]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="44" UseFont="false" UseBorders="false" />
+                </Item11>
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority Ref="45" UseBorders="false" />
+        </Item1>
+      </Controls>
+    </Item2>
+    <Item3 Ref="46" ControlType="BottomMarginBand" Name="bottomMarginBand1" HeightF="39.1249771" />
+    <Item4 Ref="47" ControlType="PageHeaderBand" Name="pageHeaderBand1" HeightF="150.399109">
+      <Controls>
+        <Item1 Ref="48" ControlType="XRPageInfo" Name="pageInfo1" TextFormatString="Halaman {0} dari {1} halaman" TextAlignment="TopRight" SizeF="168.5307,16.653492" LocationFloat="950.4693, 61.7456169" Font="Arial, 8pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="49" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="50" ControlType="XRLabel" Name="label1" Text="Daftar Nominatif Pegawai Non Pegawai Negeri Sipil" SizeF="638,20.49999" LocationFloat="67.2453461, 0" StyleName="Title" Font="Arial, 10pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="51" UseFont="false" />
+        </Item2>
+        <Item3 Ref="52" ControlType="XRLabel" Name="label2" Text="Unit Organisasi : Badan Pengembagan Infrastruktur Wilayah" SizeF="810.916565,18.41668" LocationFloat="67.2453461, 20.49997" StyleName="Title" Font="Arial, 10pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="53" UseFont="false" />
+        </Item3>
+        <Item4 Ref="54" ControlType="XRPictureBox" Name="pictureBox1" Image="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" Sizing="Squeeze" SizeF="52.77778,57.33336" LocationFloat="0, 0" />
+        <Item5 Ref="55" ControlType="XRLabel" Name="label3" Text="Tahun [Parameters.TahunPengangkatan]" SizeF="810.916565,18.41668" LocationFloat="67.2453461, 38.9166679" StyleName="Title" Font="Arial, 10pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="56" UseFont="false" />
+        </Item5>
+        <Item6 Ref="57" ControlType="XRTable" Name="table1" AnchorVertical="Bottom" SizeF="1119,71.99999" LocationFloat="0, 78.39912" Font="Arial, 8pt">
+          <Rows>
+            <Item1 Ref="58" ControlType="XRTableRow" Name="tableRow1" Weight="1">
+              <Cells>
+                <Item1 Ref="59" ControlType="XRTableCell" Name="tableCell3" Weight="3.2661700289394107" CanGrow="false" TextAlignment="MiddleCenter" Borders="Left, Top">
+                  <StylePriority Ref="60" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="61" ControlType="XRTableCell" Name="tableCell4" Weight="9.28013314755839" CanGrow="false" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" Borders="Left, Top">
+                  <StylePriority Ref="62" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="63" ControlType="XRTableCell" Name="tableCell5" Weight="26.726412339034308" CanGrow="false" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" Borders="Left, Top">
+                  <StylePriority Ref="64" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="65" ControlType="XRTableCell" Name="tableCell6" Weight="18.395810268442528" CanGrow="false" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" Borders="Left, Top">
+                  <StylePriority Ref="66" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item4>
+                <Item5 Ref="67" ControlType="XRTableCell" Name="tableCell27" Weight="13.899780912622372" CanGrow="false" Text="Data Kelahiran" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" Borders="Left, Top, Bottom">
+                  <StylePriority Ref="68" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item5>
+                <Item6 Ref="69" ControlType="XRTableCell" Name="tableCell29" Weight="5.3460484086612867" CanGrow="false" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" Borders="Left, Top">
+                  <StylePriority Ref="70" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item6>
+                <Item7 Ref="71" ControlType="XRTableCell" Name="tableCell33" Weight="49.48564797389875" CanGrow="false" Text="Data Pengangkatan" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" Borders="All">
+                  <StylePriority Ref="72" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item7>
+              </Cells>
+            </Item1>
+            <Item2 Ref="73" ControlType="XRTableRow" Name="tableRow3" Weight="1">
+              <Cells>
+                <Item1 Ref="74" ControlType="XRTableCell" Name="tableCell2" Weight="3.2661700289394107" CanGrow="false" Text="No" TextAlignment="MiddleCenter" Font="Arial, 8pt, style=Bold" Borders="Left, Bottom">
+                  <StylePriority Ref="75" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="76" ControlType="XRTableCell" Name="tableCell7" Weight="9.28013314755839" CanGrow="false" Text="Jabatan Non PNS" TextAlignment="MiddleCenter" StyleName="FieldCaption" Font="Arial, 8pt, style=Bold" Borders="Left, Bottom">
+                  <StylePriority Ref="77" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="78" ControlType="XRTableCell" Name="tableCell9" Weight="26.726412339034308" CanGrow="false" Text="Unit Kerja" TextAlignment="MiddleCenter" StyleName="FieldCaption" Font="Arial, 8pt, style=Bold" Borders="Left, Bottom">
+                  <StylePriority Ref="79" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="80" ControlType="XRTableCell" Name="tableCell11" Weight="18.395810268442528" CanGrow="false" Text="Nama" TextAlignment="MiddleCenter" StyleName="FieldCaption" Font="Arial, 8pt, style=Bold" Borders="Left, Bottom">
+                  <StylePriority Ref="81" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item4>
+                <Item5 Ref="82" ControlType="XRTableCell" Name="tableCell13" Weight="8.3764688719513352" CanGrow="false" Text="Tempat" TextAlignment="MiddleCenter" StyleName="FieldCaption" Font="Arial, 8pt, style=Bold" Borders="Left, Top, Bottom">
+                  <StylePriority Ref="83" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item5>
+                <Item6 Ref="84" ControlType="XRTableCell" Name="tableCell15" Weight="5.5233182864719748" CanGrow="false" Text="Tanggal" TextAlignment="MiddleCenter" StyleName="FieldCaption" Font="Arial, 8pt, style=Bold" Borders="Left, Top, Bottom">
+                  <StylePriority Ref="85" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item6>
+                <Item7 Ref="86" ControlType="XRTableCell" Name="tableCell17" Weight="5.3460421628603472" CanGrow="false" Text="Jenjang" TextAlignment="MiddleCenter" StyleName="FieldCaption" Font="Arial, 8pt, style=Bold" Borders="Left, Bottom">
+                  <StylePriority Ref="87" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item7>
+                <Item8 Ref="88" ControlType="XRTableCell" Name="tableCell19" Weight="18.724561104712375" CanGrow="false" Text="No SK Pengangkatan Pertama" TextAlignment="MiddleCenter" StyleName="FieldCaption" Font="Arial, 8pt, style=Bold" Borders="Left, Top, Bottom">
+                  <StylePriority Ref="89" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item8>
+                <Item9 Ref="90" ControlType="XRTableCell" Name="tableCell21" Weight="5.1669945330613043" CanGrow="false" Text="Tahun" TextAlignment="MiddleCenter" StyleName="FieldCaption" Font="Arial, 8pt, style=Bold" Borders="Left, Top, Bottom">
+                  <StylePriority Ref="91" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item9>
+                <Item10 Ref="92" ControlType="XRTableCell" Name="tableCell23" Weight="20.823282972148984" CanGrow="false" Text="SK Pengangkatan Terakhir" TextAlignment="MiddleCenter" StyleName="FieldCaption" Font="Arial, 8pt, style=Bold" Borders="Left, Top, Bottom">
+                  <StylePriority Ref="93" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item10>
+                <Item11 Ref="94" ControlType="XRTableCell" Name="tableCell25" Weight="4.7708093639760927" CanGrow="false" Text="Tahun" TextAlignment="MiddleCenter" StyleName="FieldCaption" Font="Arial, 8pt, style=Bold" Borders="All">
+                  <StylePriority Ref="95" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item11>
+              </Cells>
+            </Item2>
+          </Rows>
+          <StylePriority Ref="96" UseFont="false" />
+        </Item6>
+      </Controls>
+    </Item4>
+    <Item5 Ref="97" ControlType="ReportHeaderBand" Name="reportHeaderBand1" Expanded="false" HeightF="68.4768448" />
+    <Item6 Ref="98" ControlType="GroupFooterBand" Name="GroupFooter1" GroupUnion="WithLastDetail" RepeatEveryPage="true" HeightF="2.1929822">
+      <Controls>
+        <Item1 Ref="99" ControlType="XRLine" Name="line1" SizeF="1119,2.1929822" LocationFloat="0, 0" />
+      </Controls>
+    </Item6>
+  </Bands>
+  <StyleSheet>
+    <Item1 Ref="100" Name="Title" BorderStyle="Inset" Font="Times New Roman, 20pt, style=Bold" ForeColor="Maroon" BackColor="Transparent" BorderColor="Black" Sides="None" StringFormat="Near;Near;0;None;Character;Default" BorderWidthSerializable="1" />
+    <Item2 Ref="101" Name="FieldCaption" BorderStyle="Inset" Font="Arial, 10pt, style=Bold" ForeColor="Maroon" BackColor="Transparent" BorderColor="Black" Sides="None" StringFormat="Near;Near;0;None;Character;Default" BorderWidthSerializable="1" />
+    <Item3 Ref="102" Name="PageInfo" BorderStyle="Inset" Font="Times New Roman, 10pt, style=Bold" ForeColor="Black" BackColor="Transparent" BorderColor="Black" Sides="None" StringFormat="Near;Near;0;None;Character;Default" BorderWidthSerializable="1" />
+    <Item4 Ref="103" Name="DataField" BorderStyle="Inset" Padding="2,2,0,0,100" Font="Times New Roman, 10pt" ForeColor="Black" BackColor="Transparent" BorderColor="Black" Sides="None" StringFormat="Near;Near;0;None;Character;Default" BorderWidthSerializable="1" />
+  </StyleSheet>
+  <ComponentStorage>
+    <Item1 Ref="0" Name="collectionDataSource1" ObjectTypeName="BPIWABK.Module.BusinessObjects.Administrative.Pegawai" ObjectType="DevExpress.Persistent.Base.ReportsV2.CollectionDataSource,DevExpress.Persistent.Base.v17.2" TopReturnedRecords="0">
+      <Sorting Ref="104" />
+    </Item1>
+  </ComponentStorage>
+</XtraReportsLayoutSerializer>

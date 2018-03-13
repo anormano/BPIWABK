@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="17.2.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v17.2, Version=17.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="xtraReport1" DisplayName="Daftar Riwayat Hidup Non-PNS" Margins="20, 20, 20, 28" PaperKind="A4" PageWidth="827" PageHeight="1169" Version="17.2" DataSource="#Ref-0" Font="Arial, 11pt">
+  <Extensions>
+    <Item1 Ref="2" Key="DataSerializationExtension" Value="XtraReport" />
+    <Item2 Ref="3" Key="DataEditorExtension" Value="XtraReport" />
+    <Item3 Ref="4" Key="ParameterEditorExtension" Value="XtraReport" />
+  </Extensions>
+  <CalculatedFields>
+    <Item1 Ref="5" Name="Mulai" Expression="[BulanMulai] &amp; ' ' &amp; [TahunMulai]" DataMember="RiwayatPengalamanKerja" />
+    <Item2 Ref="6" Name="Selesai" Expression="[BulanSelesai] &amp; ' ' &amp; [TahunSelesai]" DataMember="RiwayatPengalamanKerja" />
+  </CalculatedFields>
+  <Bands>
+    <Item1 Ref="7" ControlType="TopMarginBand" Name="topMarginBand1" HeightF="20" />
+    <Item2 Ref="8" ControlType="DetailBand" Name="detailBand1" HeightF="550.3148" StyleName="DataField" Font="Arial, 11pt">
+      <Controls>
+        <Item1 Ref="9" ControlType="XRTable" Name="table3" SizeF="786.999939,125" LocationFloat="0, 425.31485" Borders="All">
+          <Rows>
+            <Item1 Ref="10" ControlType="XRTableRow" Name="tableRow12" Weight="1">
+              <Cells>
+                <Item1 Ref="11" ControlType="XRTableCell" Name="tableCell37" Weight="1" Text="Alamat Tempat Tinggal" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="12" UseFont="false" UseForeColor="false" UseBackColor="false" />
+                </Item1>
+                <Item2 Ref="13" ControlType="XRTableCell" Name="tableCell39" Weight="1" Text="Alamat Sesuai KTP" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="14" UseFont="false" UseForeColor="false" UseBackColor="false" />
+                </Item2>
+              </Cells>
+            </Item1>
+            <Item2 Ref="15" ControlType="XRTableRow" Name="tableRow13" Weight="1">
+              <Cells>
+                <Item1 Ref="16" ControlType="XRTableCell" Name="tableCell38" Weight="1" Text="tableCell38" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="17" Expression="[AlamatTinggal]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="18" UsePadding="false" />
+                </Item1>
+                <Item2 Ref="19" ControlType="XRTableCell" Name="tableCell40" Weight="1" Text="tableCell40" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="20" Expression="[Alamat]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="21" UsePadding="false" />
+                </Item2>
+              </Cells>
+            </Item2>
+            <Item3 Ref="22" ControlType="XRTableRow" Name="tableRow14" Weight="1">
+              <Cells>
+                <Item1 Ref="23" ControlType="XRTableCell" Name="tableCell43" Weight="0.5" Text="Propinsi" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="24" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" />
+                </Item1>
+                <Item2 Ref="25" ControlType="XRTableCell" Name="tableCell41" Weight="0.5" Text="tableCell41" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="26" Expression="[PropinsiTinggal].[Nama]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="27" UsePadding="false" />
+                </Item2>
+                <Item3 Ref="28" ControlType="XRTableCell" Name="tableCell44" Weight="0.5" Text="Propinsi" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="29" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" />
+                </Item3>
+                <Item4 Ref="30" ControlType="XRTableCell" Name="tableCell42" Weight="0.5" Text="tableCell42" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="31" Expression="[Propinsi].[Nama]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="32" UsePadding="false" />
+                </Item4>
+              </Cells>
+            </Item3>
+            <Item4 Ref="33" ControlType="XRTableRow" Name="tableRow15" Weight="1">
+              <Cells>
+                <Item1 Ref="34" ControlType="XRTableCell" Name="tableCell45" Weight="0.5" Text="Kabupaten" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="35" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" />
+                </Item1>
+                <Item2 Ref="36" ControlType="XRTableCell" Name="tableCell46" Weight="0.5" Text="tableCell46" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="37" Expression="[KabupatenTinggal].[Nama]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="38" UsePadding="false" />
+                </Item2>
+                <Item3 Ref="39" ControlType="XRTableCell" Name="tableCell47" Weight="0.5" Text="Kabupaten" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="40" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" />
+                </Item3>
+                <Item4 Ref="41" ControlType="XRTableCell" Name="tableCell48" Weight="0.5" Text="tableCell48" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="42" Expression="[Kabupaten].[Nama]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="43" UsePadding="false" />
+                </Item4>
+              </Cells>
+            </Item4>
+            <Item5 Ref="44" ControlType="XRTableRow" Name="tableRow16" Weight="1">
+              <Cells>
+                <Item1 Ref="45" ControlType="XRTableCell" Name="tableCell49" Weight="0.5" Text="Kecamatan" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="46" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" />
+                </Item1>
+                <Item2 Ref="47" ControlType="XRTableCell" Name="tableCell50" Weight="0.5" Text="tableCell50" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="48" Expression="[KecamatanTinggal].[Nama]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="49" UsePadding="false" />
+                </Item2>
+                <Item3 Ref="50" ControlType="XRTableCell" Name="tableCell51" Weight="0.5" Text="Kecamatan" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="51" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" />
+                </Item3>
+                <Item4 Ref="52" ControlType="XRTableCell" Name="tableCell52" Weight="0.5" Text="tableCell52" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="53" Expression="[Kecamatan].[Nama]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="54" UsePadding="false" />
+                </Item4>
+              </Cells>
+            </Item5>
+          </Rows>
+          <StylePriority Ref="55" UseBorders="false" />
+        </Item1>
+        <Item2 Ref="56" ControlType="XRLabel" Name="label6" Text="Infomasi Kontak" SizeF="787,36.7716827" LocationFloat="0, 388.543182" Font="Arial, 14pt, style=Bold" ForeColor="White" BackColor="Black" Padding="2,2,0,0,100" Borders="All">
+          <StylePriority Ref="57" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" />
+        </Item2>
+        <Item3 Ref="58" ControlType="XRTable" Name="table2" SizeF="786.999939,125" LocationFloat="0, 263.543243" Borders="All">
+          <Rows>
+            <Item1 Ref="59" ControlType="XRTableRow" Name="tableRow7" Weight="1">
+              <Cells>
+                <Item1 Ref="60" ControlType="XRTableCell" Name="tableCell16" Weight="0.80987962268637381" Text="Nomor Induk" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="61" UseFont="false" UseForeColor="false" UseBackColor="false" />
+                </Item1>
+                <Item2 Ref="62" ControlType="XRTableCell" Name="tableCell20" Weight="0.8300504249699111" Text="Status Kepegawaian" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="63" UseFont="false" UseForeColor="false" UseBackColor="false" />
+                </Item2>
+                <Item3 Ref="64" ControlType="XRTableCell" Name="tableCell71" Weight="0.779304322475977" Text="Jabatan" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="65" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" />
+                </Item3>
+                <Item4 Ref="66" ControlType="XRTableCell" Name="tableCell24" Weight="0.58076562986773828" Text="Jenjang Pendidikan" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="67" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" />
+                </Item4>
+              </Cells>
+            </Item1>
+            <Item2 Ref="68" ControlType="XRTableRow" Name="tableRow8" Weight="1">
+              <Cells>
+                <Item1 Ref="69" ControlType="XRTableCell" Name="tableCell25" Weight="0.80987962268637381" Text="tableCell25" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="70" Expression="[NomorInduk]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="71" UsePadding="false" />
+                </Item1>
+                <Item2 Ref="72" ControlType="XRTableCell" Name="tableCell26" Weight="0.83005042496991122" Text="tableCell26" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="73" Expression="[StatusKepegawaian]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="74" UsePadding="false" />
+                </Item2>
+                <Item3 Ref="75" ControlType="XRTableCell" Name="tableCell72" Weight="0.77930443880728761" Text="tableCell72" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="76" Expression="[Jabatan].[NamaJabatan]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="77" UsePadding="false" />
+                </Item3>
+                <Item4 Ref="78" ControlType="XRTableCell" Name="tableCell27" Weight="0.58076551353642758" Text="tableCell27" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="79" Expression="[JenjangPendidikan]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="80" UsePadding="false" />
+                </Item4>
+              </Cells>
+            </Item2>
+            <Item3 Ref="81" ControlType="XRTableRow" Name="tableRow9" Weight="1">
+              <Cells>
+                <Item1 Ref="82" ControlType="XRTableCell" Name="tableCell23" Weight="0.57560360245496289" Text="Unit Kerja" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="83" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" />
+                </Item1>
+                <Item2 Ref="84" ControlType="XRTableCell" Name="tableCell28" Weight="2.4243963975450371" Text="tableCell28" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="85" Expression="[UnitKerja].[NamaUnit]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="86" UsePadding="false" />
+                </Item2>
+              </Cells>
+            </Item3>
+            <Item4 Ref="87" ControlType="XRTableRow" Name="tableRow10" Weight="1">
+              <Cells>
+                <Item1 Ref="88" ControlType="XRTableCell" Name="tableCell29" Weight="0.57560360245496289" Text="SK Pertama" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="89" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" />
+                </Item1>
+                <Item2 Ref="90" ControlType="XRTableCell" Name="tableCell33" Weight="1.4448851914662142" Text="tableCell33" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="91" Expression="[SKPengangkatanPertama]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="92" UsePadding="false" />
+                </Item2>
+                <Item3 Ref="93" ControlType="XRTableCell" Name="tableCell34" Weight="0.37341210669256358" Text="Tahun" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="94" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" />
+                </Item3>
+                <Item4 Ref="95" ControlType="XRTableCell" Name="tableCell30" Weight="0.60609909938625928" Text="tableCell30" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="96" Expression="[TahunSKPengangkatanPertama]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="97" UsePadding="false" />
+                </Item4>
+              </Cells>
+            </Item4>
+            <Item5 Ref="98" ControlType="XRTableRow" Name="tableRow11" Weight="1">
+              <Cells>
+                <Item1 Ref="99" ControlType="XRTableCell" Name="tableCell31" Weight="0.57560360245496289" Text="SK Terkini" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="100" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" />
+                </Item1>
+                <Item2 Ref="101" ControlType="XRTableCell" Name="tableCell35" Weight="1.4448851914662142" Text="tableCell35" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="102" Expression="[SKPengangkatanTerakhir]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="103" UsePadding="false" />
+                </Item2>
+                <Item3 Ref="104" ControlType="XRTableCell" Name="tableCell36" Weight="0.37341210669256358" Text="Tahun" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="105" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" />
+                </Item3>
+                <Item4 Ref="106" ControlType="XRTableCell" Name="tableCell32" Weight="0.60609909938625928" Text="tableCell32" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="107" Expression="[TahunSKPengangkatanPertama]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="108" UsePadding="false" />
+                </Item4>
+              </Cells>
+            </Item5>
+          </Rows>
+          <StylePriority Ref="109" UseBorders="false" />
+        </Item3>
+        <Item4 Ref="110" ControlType="XRLabel" Name="label5" Text="Infomasi Kepegawaian" SizeF="787,36.7716827" LocationFloat="0, 226.771591" Font="Arial, 14pt, style=Bold" ForeColor="White" BackColor="Black" Padding="2,2,0,0,100" Borders="All">
+          <StylePriority Ref="111" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" />
+        </Item4>
+        <Item5 Ref="112" ControlType="XRTable" Name="table1" SizeF="636,189.999939" LocationFloat="151.000015, 36.77167" Borders="All">
+          <Rows>
+            <Item1 Ref="113" ControlType="XRTableRow" Name="tableRow1" Weight="1">
+              <Cells>
+                <Item1 Ref="114" ControlType="XRTableCell" Name="tableCell1" Weight="1.8805031446540881" Text="Nama Lengkap" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="115" UseFont="false" UseForeColor="false" UseBackColor="false" />
+                </Item1>
+                <Item2 Ref="116" ControlType="XRTableCell" Name="tableCell2" Weight="0.98951769175019666" Text="Tempat Lahir" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="117" UseFont="false" UseForeColor="false" UseBackColor="false" />
+                </Item2>
+                <Item3 Ref="118" ControlType="XRTableCell" Name="tableCell3" Weight="1.1299791635957153" Text="Tanggal Lahir" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="119" UseFont="false" UseForeColor="false" UseBackColor="false" />
+                </Item3>
+              </Cells>
+            </Item1>
+            <Item2 Ref="120" ControlType="XRTableRow" Name="tableRow2" Weight="1">
+              <Cells>
+                <Item1 Ref="121" ControlType="XRTableCell" Name="tableCell4" Weight="1.8805031446540881" Text="tableCell4" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="122" Expression="[NamaLengkap]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="123" UsePadding="false" />
+                </Item1>
+                <Item2 Ref="124" ControlType="XRTableCell" Name="tableCell5" Weight="0.98951769175019666" Text="tableCell5" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="125" Expression="[TempatLahir]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="126" UsePadding="false" />
+                </Item2>
+                <Item3 Ref="127" ControlType="XRTableCell" Name="tableCell6" Weight="1.1299791635957153" TextFormatString="{0:dd-MMMM-yyyy}" Text="tableCell6" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="128" Expression="[TanggalLahir]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="129" UsePadding="false" />
+                </Item3>
+              </Cells>
+            </Item2>
+            <Item3 Ref="130" ControlType="XRTableRow" Name="tableRow3" Weight="1">
+              <Cells>
+                <Item1 Ref="131" ControlType="XRTableCell" Name="tableCell14" Weight="0.940251572327044" Text="Agama" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="132" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" />
+                </Item1>
+                <Item2 Ref="133" ControlType="XRTableCell" Name="tableCell7" Weight="0.940251572327044" Text="Jenis Kelamin" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="134" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" />
+                </Item2>
+                <Item3 Ref="135" ControlType="XRTableCell" Name="tableCell8" Weight="0.98951769175019666" Text="Golongan Darah" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="136" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" />
+                </Item3>
+                <Item4 Ref="137" ControlType="XRTableCell" Name="tableCell9" Weight="1.1299791635957153" Text="Status Pernikahan" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="138" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" />
+                </Item4>
+              </Cells>
+            </Item3>
+            <Item4 Ref="139" ControlType="XRTableRow" Name="tableRow4" Weight="1">
+              <Cells>
+                <Item1 Ref="140" ControlType="XRTableCell" Name="tableCell13" Weight="0.940251572327044" Text="tableCell13" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="141" Expression="[Agama]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="142" UsePadding="false" />
+                </Item1>
+                <Item2 Ref="143" ControlType="XRTableCell" Name="tableCell10" Weight="0.940251572327044" Text="tableCell10" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="144" Expression="[JenisKelamin]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="145" UsePadding="false" />
+                </Item2>
+                <Item3 Ref="146" ControlType="XRTableCell" Name="tableCell11" Weight="0.98951769175019666" Text="tableCell11" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="147" Expression="[GolonganDarah]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="148" UsePadding="false" />
+                </Item3>
+                <Item4 Ref="149" ControlType="XRTableCell" Name="tableCell12" Weight="1.1299791635957153" Text="tableCell12" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="150" Expression="[StatusPernikahan]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="151" UsePadding="false" />
+                </Item4>
+              </Cells>
+            </Item4>
+            <Item5 Ref="152" ControlType="XRTableRow" Name="tableRow5" Weight="1">
+              <Cells>
+                <Item1 Ref="153" ControlType="XRTableCell" Name="tableCell15" Weight="1.8805031446540881" Text="Alamat Email" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="154" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" />
+                </Item1>
+                <Item2 Ref="155" ControlType="XRTableCell" Name="tableCell17" Weight="0.98951769175019677" Text="Nomor Telpon" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="156" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" />
+                </Item2>
+                <Item3 Ref="157" ControlType="XRTableCell" Name="tableCell18" Weight="1.1299791635957153" Text="Nomor Handphone" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100">
+                  <StylePriority Ref="158" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" />
+                </Item3>
+              </Cells>
+            </Item5>
+            <Item6 Ref="159" ControlType="XRTableRow" Name="tableRow6" Weight="1">
+              <Cells>
+                <Item1 Ref="160" ControlType="XRTableCell" Name="tableCell19" Weight="1.8805031446540881" Text="tableCell19" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="161" Expression="[Email]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="162" UsePadding="false" />
+                </Item1>
+                <Item2 Ref="163" ControlType="XRTableCell" Name="tableCell21" Weight="0.98951769175019688" Text="tableCell21" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="164" Expression="[Telepon]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="165" UsePadding="false" />
+                </Item2>
+                <Item3 Ref="166" ControlType="XRTableCell" Name="tableCell22" Weight="1.1299791635957153" Text="tableCell22" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="167" Expression="[Handphone]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="168" UsePadding="false" />
+                </Item3>
+              </Cells>
+            </Item6>
+          </Rows>
+          <StylePriority Ref="169" UseBorders="false" />
+        </Item5>
+        <Item6 Ref="170" ControlType="XRLabel" Name="label4" Text="Informasi Umum" SizeF="636,36.77167" LocationFloat="151.000015, 0" Font="Arial, 14pt, style=Bold" ForeColor="White" BackColor="Black" Padding="2,2,0,0,100" Borders="All">
+          <StylePriority Ref="171" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" />
+        </Item6>
+        <Item7 Ref="172" ControlType="XRPictureBox" Name="pictureBox2" SizeF="151,226.7716" LocationFloat="0, 0" Borders="All">
+          <ExpressionBindings>
+            <Item1 Ref="173" Expression="[Foto]" PropertyName="Image" EventName="BeforePrint" />
+          </ExpressionBindings>
+          <StylePriority Ref="174" UseBorders="false" />
+        </Item7>
+      </Controls>
+      <StylePriority Ref="175" UseFont="false" />
+    </Item2>
+    <Item3 Ref="176" ControlType="BottomMarginBand" Name="bottomMarginBand1" HeightF="28">
+      <Controls>
+        <Item1 Ref="177" ControlType="XRPageInfo" Name="pageInfo1" PageInfo="DateTime" SizeF="315,23" LocationFloat="5, 5" StyleName="PageInfo" Font="Arial, 10pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="178" UseFont="false" />
+        </Item1>
+        <Item2 Ref="179" ControlType="XRPageInfo" Name="pageInfo2" TextFormatString="Page {0} of {1}" TextAlignment="TopRight" SizeF="315,23" LocationFloat="471.999939, 4.999987" StyleName="PageInfo" Font="Arial, 10pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="180" UseFont="false" />
+        </Item2>
+      </Controls>
+    </Item3>
+    <Item4 Ref="181" ControlType="DetailReportBand" Name="DetailReport" Level="0" DataMember="SKPengangkatan" DataSource="#Ref-0">
+      <Bands>
+        <Item1 Ref="182" ControlType="DetailBand" Name="Detail" HeightF="25">
+          <Controls>
+            <Item1 Ref="183" ControlType="XRTable" Name="table4" SizeF="787,25" LocationFloat="0, 0">
+              <Rows>
+                <Item1 Ref="184" ControlType="XRTableRow" Name="tableRow17" Weight="11.5">
+                  <Cells>
+                    <Item1 Ref="185" ControlType="XRTableCell" Name="tableCell53" Weight="0.27949207588536784" Text="tableCell53" Padding="2,2,0,0,96" Borders="All">
+                      <ExpressionBindings>
+                        <Item1 Ref="186" Expression="[NOSK]" PropertyName="Text" EventName="BeforePrint" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="187" UseBorders="false" />
+                    </Item1>
+                    <Item2 Ref="188" ControlType="XRTableCell" Name="tableCell54" Weight="0.061223426669998429" Text="tableCell54" Padding="2,2,0,0,96" Borders="All">
+                      <ExpressionBindings>
+                        <Item1 Ref="189" Expression="[Tahun]" PropertyName="Text" EventName="BeforePrint" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="190" UseBorders="false" />
+                    </Item2>
+                  </Cells>
+                </Item1>
+              </Rows>
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="191" ControlType="GroupHeaderBand" Name="GroupHeader1" HeightF="61.77171">
+          <Controls>
+            <Item1 Ref="192" ControlType="XRTable" Name="table5" SizeF="786.999939,25" LocationFloat="0, 36.77171">
+              <Rows>
+                <Item1 Ref="193" ControlType="XRTableRow" Name="tableRow18" Weight="1">
+                  <Cells>
+                    <Item1 Ref="194" ControlType="XRTableCell" Name="tableCell55" Weight="2.4609281516885839" Text="Nomor SK" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100" Borders="All">
+                      <StylePriority Ref="195" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" />
+                    </Item1>
+                    <Item2 Ref="196" ControlType="XRTableCell" Name="tableCell57" Weight="0.53907184831141608" Text="Tahun" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100" Borders="All">
+                      <StylePriority Ref="197" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" />
+                    </Item2>
+                  </Cells>
+                </Item1>
+              </Rows>
+            </Item1>
+            <Item2 Ref="198" ControlType="XRLabel" Name="label7" Text="Riwayat SK Pengangkatan" SizeF="787,36.7716827" LocationFloat="0, 0" Font="Arial, 14pt, style=Bold" ForeColor="White" BackColor="Black" Padding="2,2,0,0,100" Borders="All">
+              <StylePriority Ref="199" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" />
+            </Item2>
+          </Controls>
+        </Item2>
+      </Bands>
+    </Item4>
+    <Item5 Ref="200" ControlType="DetailReportBand" Name="DetailReport1" Level="2" DataMember="RiwayatPendidikanFormal" DataSource="#Ref-0">
+      <Bands>
+        <Item1 Ref="201" ControlType="DetailBand" Name="Detail1" HeightF="25">
+          <Controls>
+            <Item1 Ref="202" ControlType="XRTable" Name="table6" SizeF="787,25" LocationFloat="0, 0" Borders="All">
+              <Rows>
+                <Item1 Ref="203" ControlType="XRTableRow" Name="tableRow19" Weight="11.5">
+                  <Cells>
+                    <Item1 Ref="204" ControlType="XRTableCell" Name="tableCell56" Weight="0.062619208769503665" Text="tableCell56" Padding="2,2,0,0,96">
+                      <ExpressionBindings>
+                        <Item1 Ref="205" Expression="[Jenjang]" PropertyName="Text" EventName="BeforePrint" />
+                      </ExpressionBindings>
+                    </Item1>
+                    <Item2 Ref="206" ControlType="XRTableCell" Name="tableCell64" Weight="0.24913962030204614" Text="tableCell64" Padding="2,2,0,0,100">
+                      <ExpressionBindings>
+                        <Item1 Ref="207" Expression="[LembagaPendidikan].[Nama]" PropertyName="Text" EventName="BeforePrint" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="208" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="209" ControlType="XRTableCell" Name="tableCell58" Weight="0.23840962234776991" Text="tableCell58" Padding="2,2,0,0,96">
+                      <ExpressionBindings>
+                        <Item1 Ref="210" Expression="[Jurusan].[NamaJurusan]" PropertyName="Text" EventName="BeforePrint" />
+                      </ExpressionBindings>
+                    </Item3>
+                    <Item4 Ref="211" ControlType="XRTableCell" Name="tableCell59" Weight="0.065847975685403057" Text="tableCell59" Padding="2,2,0,0,96">
+                      <ExpressionBindings>
+                        <Item1 Ref="212" Expression="[TahunLulus]" PropertyName="Text" EventName="BeforePrint" />
+                      </ExpressionBindings>
+                    </Item4>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="213" UseBorders="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="214" ControlType="GroupHeaderBand" Name="GroupHeader2" HeightF="61.77171">
+          <Controls>
+            <Item1 Ref="215" ControlType="XRLabel" Name="label8" Text="Riwayat Pendidikan Formal" SizeF="787,36.7716827" LocationFloat="0, 0" Font="Arial, 14pt, style=Bold" ForeColor="White" BackColor="Black" Padding="2,2,0,0,100" Borders="All">
+              <StylePriority Ref="216" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" />
+            </Item1>
+            <Item2 Ref="217" ControlType="XRTable" Name="table7" SizeF="786.999939,25" LocationFloat="0, 36.77171">
+              <Rows>
+                <Item1 Ref="218" ControlType="XRTableRow" Name="tableRow20" Weight="1">
+                  <Cells>
+                    <Item1 Ref="219" ControlType="XRTableCell" Name="tableCell62" Weight="0.30495555096951682" Text="Jenjang" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100" Borders="All">
+                      <StylePriority Ref="220" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorders="false" />
+                    </Item1>
+                    <Item2 Ref="221" ControlType="XRTableCell" Name="tableCell63" Weight="1.2133102679366012" Text="Lembaga Pendidikan" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100" Borders="All">
+                      <StylePriority Ref="222" UseFont="false" UseForeColor="false" UseBackColor="false" UsePadding="false" UseBorders="false" />
+                    </Item2>
+                    <Item3 Ref="223" ControlType="XRTableCell" Name="tableCell60" Weight="1.1610548248527421" Text="Jurusan" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100" Borders="All">
+                      <StylePriority Ref="224" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" />
+                    </Item3>
+                    <Item4 Ref="225" ControlType="XRTableCell" Name="tableCell61" Weight="0.32067935624113986" Text="Tahun" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100" Borders="All">
+                      <StylePriority Ref="226" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" />
+                    </Item4>
+                  </Cells>
+                </Item1>
+              </Rows>
+            </Item2>
+          </Controls>
+        </Item2>
+      </Bands>
+    </Item5>
+    <Item6 Ref="227" ControlType="DetailReportBand" Name="DetailReport2" Level="1" DataMember="RiwayatPengalamanKerja" DataSource="#Ref-0">
+      <Bands>
+        <Item1 Ref="228" ControlType="DetailBand" Name="Detail2" HeightF="25">
+          <Controls>
+            <Item1 Ref="229" ControlType="XRTable" Name="table8" SizeF="787,25" LocationFloat="0, 0" Borders="All">
+              <Rows>
+                <Item1 Ref="230" ControlType="XRTableRow" Name="tableRow21" Weight="11.5">
+                  <Cells>
+                    <Item1 Ref="231" ControlType="XRTableCell" Name="tableCell65" Weight="0.377508944333973" Text="tableCell65" Padding="2,2,0,0,96">
+                      <ExpressionBindings>
+                        <Item1 Ref="232" Expression="[NamaPerusahaan]" PropertyName="Text" EventName="BeforePrint" />
+                      </ExpressionBindings>
+                    </Item1>
+                    <Item2 Ref="233" ControlType="XRTableCell" Name="tableCell66" Weight="0.1140517973291523" Text="tableCell66" Padding="2,2,0,0,96">
+                      <ExpressionBindings>
+                        <Item1 Ref="234" Expression="[Mulai]" PropertyName="Text" EventName="BeforePrint" />
+                      </ExpressionBindings>
+                    </Item2>
+                    <Item3 Ref="235" ControlType="XRTableCell" Name="tableCell67" Weight="0.12445568544159746" Text="tableCell67" Padding="2,2,0,0,96">
+                      <ExpressionBindings>
+                        <Item1 Ref="236" Expression="[Selesai]" PropertyName="Text" EventName="BeforePrint" />
+                      </ExpressionBindings>
+                    </Item3>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="237" UseBorders="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="238" ControlType="GroupHeaderBand" Name="GroupHeader3" HeightF="61.77165">
+          <Controls>
+            <Item1 Ref="239" ControlType="XRLabel" Name="label9" Text="Riwayat Pengalaman Kerja" SizeF="787,36.7716827" LocationFloat="0, 0" Font="Arial, 14pt, style=Bold" ForeColor="White" BackColor="Black" Padding="2,2,0,0,100" Borders="All">
+              <StylePriority Ref="240" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" />
+            </Item1>
+            <Item2 Ref="241" ControlType="XRTable" Name="table9" SizeF="786.5,25" LocationFloat="0.500011444, 36.77165">
+              <Rows>
+                <Item1 Ref="242" ControlType="XRTableRow" Name="tableRow22" Weight="1">
+                  <Cells>
+                    <Item1 Ref="243" ControlType="XRTableCell" Name="tableCell68" Weight="1.8377302185563016" Text="Nama Perusahaan" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100" Borders="All">
+                      <StylePriority Ref="244" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" />
+                    </Item1>
+                    <Item2 Ref="245" ControlType="XRTableCell" Name="tableCell69" Weight="0.55578520157044675" Text="Mulai" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100" Borders="All">
+                      <StylePriority Ref="246" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" />
+                    </Item2>
+                    <Item3 Ref="247" ControlType="XRTableCell" Name="tableCell70" Weight="0.60648457987325177" Text="Selesai" Font="Arial, 11pt, style=Bold" ForeColor="White" BackColor="DarkGray" Padding="2,2,0,0,100" Borders="All">
+                      <StylePriority Ref="248" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorders="false" />
+                    </Item3>
+                  </Cells>
+                </Item1>
+              </Rows>
+            </Item2>
+          </Controls>
+        </Item2>
+      </Bands>
+    </Item6>
+    <Item7 Ref="249" ControlType="PageHeaderBand" Name="PageHeader" HeightF="90.33336">
+      <Controls>
+        <Item1 Ref="250" ControlType="XRLabel" Name="label3" Text="Daftar Riwayat Hidup Non-PNS" SizeF="507.3333,33" LocationFloat="100.000015, 54.3333359" StyleName="Title" Font="Times New Roman, 12pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="251" UseFont="false" />
+        </Item1>
+        <Item2 Ref="252" ControlType="XRPictureBox" Name="pictureBox1" Image="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" Sizing="ZoomImage" SizeF="80,82.16667" LocationFloat="0, 0" />
+        <Item3 Ref="253" ControlType="XRLabel" Name="label1" Text="Kementerian PUPR" SizeF="507.3333,33" LocationFloat="100.000015, 0" StyleName="Title" Padding="2,2,0,0,100" />
+        <Item4 Ref="254" ControlType="XRLabel" Name="label2" Text="Badan Pengembangan Infrastruktur Wilayah" SizeF="507.3333,21.33334" LocationFloat="100.000015, 32.9999924" StyleName="Title" Font="Times New Roman, 12pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="255" UseFont="false" />
+        </Item4>
+        <Item5 Ref="256" ControlType="XRLine" Name="line1" LineWidth="3" SizeF="787,3" LocationFloat="0, 84.3333359" />
+      </Controls>
+    </Item7>
+  </Bands>
+  <StyleSheet>
+    <Item1 Ref="257" Name="Title" BorderStyle="Inset" Font="Times New Roman, 20pt, style=Bold" ForeColor="Maroon" BackColor="Transparent" BorderColor="Black" Sides="None" StringFormat="Near;Near;0;None;Character;Default" BorderWidthSerializable="1" />
+    <Item2 Ref="258" Name="FieldCaption" BorderStyle="Inset" Font="Arial, 10pt, style=Bold" ForeColor="Maroon" BackColor="Transparent" BorderColor="Black" Sides="None" StringFormat="Near;Near;0;None;Character;Default" BorderWidthSerializable="1" />
+    <Item3 Ref="259" Name="PageInfo" BorderStyle="Inset" Font="Times New Roman, 10pt, style=Bold" ForeColor="Black" BackColor="Transparent" BorderColor="Black" Sides="None" StringFormat="Near;Near;0;None;Character;Default" BorderWidthSerializable="1" />
+    <Item4 Ref="260" Name="DataField" BorderStyle="Inset" Padding="2,2,0,0,100" Font="Times New Roman, 10pt" ForeColor="Black" BackColor="Transparent" BorderColor="Black" Sides="None" StringFormat="Near;Near;0;None;Character;Default" BorderWidthSerializable="1" />
+  </StyleSheet>
+  <ComponentStorage>
+    <Item1 Ref="0" Name="collectionDataSource1" ObjectTypeName="BPIWABK.Module.BusinessObjects.Administrative.Pegawai" ObjectType="DevExpress.Persistent.Base.ReportsV2.CollectionDataSource,DevExpress.Persistent.Base.v17.2" TopReturnedRecords="0">
+      <Sorting Ref="261" />
+    </Item1>
+  </ComponentStorage>
+</XtraReportsLayoutSerializer>

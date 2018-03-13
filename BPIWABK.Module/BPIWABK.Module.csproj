@@ -285,6 +285,9 @@
     <Content Include="Images\BO_Contract.png" />
     <Content Include="Images\BO_Contract_32x32.png" />
     <Content Include="Images\BO_Contract_48x48.png" />
+    <None Include="Reports\Daftar Nominatif Pegawai Non Pegawai Negeri Sipil.repx" />
+    <None Include="Reports\Daftar Riwayat Hidup Non-PNS.repx" />
+    <None Include="Reports\Formulir Beban Kerja Untuk Kebutuhan Pegawai.repx" />
     <None Include="UnusableNodes.xml">
       <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
       <SubType>Designer</SubType>

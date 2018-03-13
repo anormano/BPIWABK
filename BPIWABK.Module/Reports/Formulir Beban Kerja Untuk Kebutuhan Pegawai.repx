@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="17.2.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v17.2, Version=17.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="xtraReport1" DisplayName="Formulir Beban Kerja Untuk Kebutuhan Pegawai" Landscape="true" Margins="50, 50, 50, 50" PaperKind="A4" PageWidth="1169" PageHeight="827" Version="17.2" FilterString="[Kegiatan][[PelaksanaKerja] = ?parUnitKerja]" DataSource="#Ref-0" Font="Arial, 10pt">
+  <Extensions>
+    <Item1 Ref="2" Key="DataSerializationExtension" Value="XtraReport" />
+    <Item2 Ref="3" Key="DataEditorExtension" Value="XtraReport" />
+    <Item3 Ref="4" Key="ParameterEditorExtension" Value="XtraReport" />
+  </Extensions>
+  <Parameters>
+    <Item1 Ref="6" Description="Unit Kerja" ValueInfo="BPIWABK.Module.BusinessObjects.Reference.UnitKerja(3)" Name="parUnitKerja" Type="#Ref-5" />
+  </Parameters>
+  <CalculatedFields>
+    <Item1 Ref="7" Name="calculatedField1" FieldType="Double" Expression="[Kegiatan][[PelaksanaKerja] = [Parameters.parUnitKerja]].Sum([Waktu])" />
+    <Item2 Ref="8" Name="calculatedField2" FieldType="Double" Expression="([Kegiatan][[PelaksanaKerja] = [Parameters.parUnitKerja]].Sum([Waktu])) * [JumlahOutput] / [WaktuKerjaEfektif]" />
+    <Item3 Ref="9" Name="calculatedField3" FieldType="Int32" Expression="Ceiling([calculatedField2])" />
+    <Item4 Ref="10" Name="calculatedField4" />
+  </CalculatedFields>
+  <Bands>
+    <Item1 Ref="11" ControlType="TopMarginBand" Name="topMarginBand1" HeightF="50" />
+    <Item2 Ref="12" ControlType="DetailBand" Name="detailBand1" HeightF="18">
+      <Controls>
+        <Item1 Ref="13" ControlType="XRTable" Name="table2" AnchorVertical="Both" SizeF="1069,18" LocationFloat="0, 0" Borders="All">
+          <Rows>
+            <Item1 Ref="14" ControlType="XRTableRow" Name="tableRow4" Weight="1">
+              <Cells>
+                <Item1 Ref="15" ControlType="XRTableCell" Name="tableCell2" Weight="7.3574316110628235" CanGrow="false" Text="tableCell2" TextAlignment="TopRight" Padding="2,2,2,2,100" Borders="Left, Right, Bottom">
+                  <Summary Ref="16" Running="Report" Func="RecordNumber" />
+                  <StylePriority Ref="17" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="18" ControlType="XRTableCell" Name="tableCell8" Weight="87.531852971574622" CanGrow="false" Text="tableCell8" StyleName="DataField" Font="Arial, 10pt" Padding="2,2,2,2,100" Borders="Left, Right, Bottom">
+                  <ExpressionBindings>
+                    <Item1 Ref="19" Expression="[NamaSOP]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="20" UseFont="false" UsePadding="false" UseBorders="false" />
+                </Item2>
+                <Item3 Ref="21" ControlType="XRTableCell" Name="tableCell10" Weight="24.2297858531486" CanGrow="false" TextAlignment="TopLeft" StyleName="DataField" Font="Arial, 10pt" Padding="2,2,2,2,100" Borders="Left, Right, Bottom">
+                  <ExpressionBindings>
+                    <Item1 Ref="22" Expression="[SatuanHasil.Nama]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="23" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="24" ControlType="XRTableCell" Name="tableCell12" Weight="23.67657033024939" CanGrow="false" TextAlignment="TopRight" StyleName="DataField" Font="Arial, 10pt" Padding="2,2,2,2,100" Borders="Left, Right, Bottom">
+                  <ExpressionBindings>
+                    <Item1 Ref="25" Expression="[calculatedField1]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="26" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                </Item4>
+                <Item5 Ref="27" ControlType="XRTableCell" Name="tableCell14" Weight="19.543276621017093" CanGrow="false" Text="tableCell14" TextAlignment="TopRight" StyleName="DataField" Font="Arial, 10pt" Padding="2,2,2,2,100" Borders="Left, Right, Bottom">
+                  <ExpressionBindings>
+                    <Item1 Ref="28" Expression="[WaktuKerjaEfektif]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="29" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                </Item5>
+                <Item6 Ref="30" ControlType="XRTableCell" Name="tableCell16" Weight="15.801432724583574" CanGrow="false" Text="tableCell16" TextAlignment="TopRight" StyleName="DataField" Font="Arial, 10pt" Padding="2,2,2,2,100" Borders="Left, Right, Bottom">
+                  <ExpressionBindings>
+                    <Item1 Ref="31" Expression="[JumlahOutput]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="32" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                </Item6>
+                <Item7 Ref="33" ControlType="XRTableCell" Name="tableCell18" Weight="19.88228559165794" CanGrow="false" TextFormatString="{0:n5}" TextAlignment="TopRight" StyleName="DataField" Font="Arial, 10pt" Padding="2,2,2,2,100" Borders="Left, Right, Bottom">
+                  <ExpressionBindings>
+                    <Item1 Ref="34" Expression="[calculatedField2]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="35" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                </Item7>
+                <Item8 Ref="36" ControlType="XRTableCell" Name="tableCell20" Weight="14.503549724391881" CanGrow="false" StyleName="DataField" Font="Arial, 10pt" Padding="2,2,2,2,100" Borders="Left, Right, Bottom">
+                  <StylePriority Ref="37" UseFont="false" UsePadding="false" UseBorders="false" />
+                </Item8>
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority Ref="38" UseBorders="false" />
+        </Item1>
+      </Controls>
+    </Item2>
+    <Item3 Ref="39" ControlType="BottomMarginBand" Name="bottomMarginBand1" HeightF="50">
+      <Controls>
+        <Item1 Ref="40" ControlType="XRPageInfo" Name="pageInfo1" PageInfo="DateTime" SizeF="313,23" LocationFloat="0, 0" StyleName="PageInfo" Font="Arial, 10pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="41" UseFont="false" />
+        </Item1>
+        <Item2 Ref="42" ControlType="XRPageInfo" Name="pageInfo2" TextFormatString="Page {0} of {1}" TextAlignment="TopRight" SizeF="313,23" LocationFloat="756, 0" StyleName="PageInfo" Font="Arial, 10pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="43" UseFont="false" />
+        </Item2>
+      </Controls>
+    </Item3>
+    <Item4 Ref="44" ControlType="PageHeaderBand" Name="pageHeaderBand1" HeightF="55.5416756">
+      <Controls>
+        <Item1 Ref="45" ControlType="XRTable" Name="table1" AnchorVertical="Bottom" SizeF="1069,55.5416756" LocationFloat="0, 0" Borders="All">
+          <Rows>
+            <Item1 Ref="46" ControlType="XRTableRow" Name="tableRow3" Weight="1">
+              <Cells>
+                <Item1 Ref="47" ControlType="XRTableCell" Name="tableCell1" Weight="7.3574316069531625" CanGrow="false" Text="No" TextAlignment="MiddleCenter" Font="Arial, 9.75pt, style=Bold" Borders="All">
+                  <StylePriority Ref="48" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="49" ControlType="XRTableCell" Name="tableCell7" Weight="87.531851453191862" CanGrow="false" Text="Nama SOP" TextAlignment="MiddleCenter" StyleName="FieldCaption" Borders="All">
+                  <StylePriority Ref="50" UseBorders="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="51" ControlType="XRTableCell" Name="tableCell9" Weight="24.229787369992174" CanGrow="false" Text="Satuan Hasil" TextAlignment="MiddleCenter" StyleName="FieldCaption" Borders="All">
+                  <StylePriority Ref="52" UseBorders="false" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="53" ControlType="XRTableCell" Name="tableCell11" Weight="23.67657033028275" CanGrow="false" Text="Total Waktu" TextAlignment="MiddleCenter" StyleName="FieldCaption" Borders="All">
+                  <StylePriority Ref="54" UseBorders="false" UseTextAlignment="false" />
+                </Item4>
+                <Item5 Ref="55" ControlType="XRTableCell" Name="tableCell13" Weight="19.543275104654811" CanGrow="false" Text="Waktu Kerja Efektif" TextAlignment="MiddleCenter" StyleName="FieldCaption" Borders="All">
+                  <StylePriority Ref="56" UseBorders="false" UseTextAlignment="false" />
+                </Item5>
+                <Item6 Ref="57" ControlType="XRTableCell" Name="tableCell15" Weight="15.80143424168417" CanGrow="false" Text="Jumlah Output" TextAlignment="MiddleCenter" StyleName="FieldCaption" Borders="All">
+                  <StylePriority Ref="58" UseBorders="false" UseTextAlignment="false" />
+                </Item6>
+                <Item7 Ref="59" ControlType="XRTableCell" Name="tableCell17" Weight="19.882285591962443" CanGrow="false" Text="Pegawai Yang Dibutuhkan" TextAlignment="MiddleCenter" StyleName="FieldCaption" Borders="All">
+                  <StylePriority Ref="60" UseBorders="false" UseTextAlignment="false" />
+                </Item7>
+                <Item8 Ref="61" ControlType="XRTableCell" Name="tableCell19" Weight="14.503549724683872" CanGrow="false" Text="Ket" TextAlignment="MiddleCenter" StyleName="FieldCaption" Borders="All">
+                  <StylePriority Ref="62" UseBorders="false" UseTextAlignment="false" />
+                </Item8>
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority Ref="63" UseBorders="false" />
+        </Item1>
+      </Controls>
+    </Item4>
+    <Item5 Ref="64" ControlType="ReportHeaderBand" Name="reportHeaderBand1" HeightF="62.0000038">
+      <Controls>
+        <Item1 Ref="65" ControlType="XRLabel" Name="label2" Text="Nama Unit Kerja: [Parameters.parUnitKerja]" SizeF="755.838562,23" LocationFloat="6.000022, 38.9999924" Padding="2,2,0,0,100">
+          <Scripts Ref="66" OnBeforePrint="label2_BeforePrint" />
+        </Item1>
+        <Item2 Ref="67" ControlType="XRLabel" Name="label1" Text="Formulir Beban Kerja Untuk Kebutuhan Pegawai" TextAlignment="TopCenter" SizeF="755.838562,33" LocationFloat="156.580719, 6.000002" StyleName="Title" Font="Arial, 16pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="68" UseFont="false" UseTextAlignment="false" />
+        </Item2>
+      </Controls>
+    </Item5>
+    <Item6 Ref="69" ControlType="GroupFooterBand" Name="GroupFooter1" HeightF="59.375">
+      <Controls>
+        <Item1 Ref="70" ControlType="XRTable" Name="table3" SizeF="1069,50" LocationFloat="0, 0" Borders="Left, Right, Bottom">
+          <Rows>
+            <Item1 Ref="71" ControlType="XRTableRow" Name="tableRow1" Weight="1">
+              <Cells>
+                <Item1 Ref="72" ControlType="XRTableCell" Name="tableCell3" Weight="1.6764085018489827" Text="Total" TextAlignment="TopRight" Font="Arial, 10pt, style=Bold" Padding="2,2,2,2,100">
+                  <StylePriority Ref="73" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="74" ControlType="XRTableCell" Name="tableCell4" Weight="0.18710432775228014" TextFormatString="{0:n5}" TextAlignment="TopRight" Padding="2,2,2,2,100">
+                  <Summary Ref="75" Running="Group" />
+                  <ExpressionBindings>
+                    <Item1 Ref="76" Expression="sumSum([calculatedField2])" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="77" UsePadding="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="78" ControlType="XRTableCell" Name="tableCell5" Weight="0.13648717039873726" />
+              </Cells>
+            </Item1>
+            <Item2 Ref="79" ControlType="XRTableRow" Name="tableRow2" Weight="1">
+              <Cells>
+                <Item1 Ref="80" ControlType="XRTableCell" Name="tableCell6" Weight="1.6764085018489827" Text="Pembulatan" TextAlignment="TopRight" Font="Arial, 10pt, style=Bold" Padding="2,2,2,2,100">
+                  <StylePriority Ref="81" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="82" ControlType="XRTableCell" Name="tableCell21" Weight="0.18710432775228014" TextAlignment="TopRight" Padding="2,2,2,2,100">
+                  <Summary Ref="83" FormatString="{0:#,#}" />
+                  <ExpressionBindings>
+                    <Item1 Ref="84" Expression="[calculatedField3]" PropertyName="Text" EventName="BeforePrint" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="85" UsePadding="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="86" ControlType="XRTableCell" Name="tableCell22" Weight="0.13648717039873726" />
+              </Cells>
+            </Item2>
+          </Rows>
+          <StylePriority Ref="87" UseBorders="false" />
+        </Item1>
+      </Controls>
+    </Item6>
+  </Bands>
+  <Scripts Ref="88" OnParametersRequestSubmit="xtraReport1_ParametersRequestSubmit" OnBeforePrint="xtraReport1_BeforePrint" />
+  <StyleSheet>
+    <Item1 Ref="89" Name="Title" BorderStyle="Inset" Font="Times New Roman, 20pt, style=Bold" ForeColor="Maroon" BackColor="Transparent" BorderColor="Black" Sides="None" StringFormat="Near;Near;0;None;Character;Default" BorderWidthSerializable="1" />
+    <Item2 Ref="90" Name="FieldCaption" BorderStyle="Inset" Font="Arial, 10pt, style=Bold" ForeColor="Maroon" BackColor="Transparent" BorderColor="Black" Sides="None" StringFormat="Near;Near;0;None;Character;Default" BorderWidthSerializable="1" />
+    <Item3 Ref="91" Name="PageInfo" BorderStyle="Inset" Font="Times New Roman, 10pt, style=Bold" ForeColor="Black" BackColor="Transparent" BorderColor="Black" Sides="None" StringFormat="Near;Near;0;None;Character;Default" BorderWidthSerializable="1" />
+    <Item4 Ref="92" Name="DataField" BorderStyle="Inset" Padding="2,2,0,0,100" Font="Times New Roman, 10pt" ForeColor="Black" BackColor="Transparent" BorderColor="Black" Sides="None" StringFormat="Near;Near;0;None;Character;Default" BorderWidthSerializable="1" />
+  </StyleSheet>
+  <ComponentStorage>
+    <Item1 Ref="0" Name="collectionDataSource1" ObjectTypeName="BPIWABK.Module.BusinessObjects.Master.SOP" ObjectType="DevExpress.Persistent.Base.ReportsV2.CollectionDataSource,DevExpress.Persistent.Base.v17.2" TopReturnedRecords="0">
+      <Sorting Ref="93" />
+    </Item1>
+  </ComponentStorage>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v17.2" Ref="5" Content="BPIWABK.Module.BusinessObjects.Reference.UnitKerja" Type="System.Type" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>
