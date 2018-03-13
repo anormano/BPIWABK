@@ -33,28 +33,6 @@
     <SchemaModule Name="SystemModule" Version="17.2.6.0" IsNewNode="True" />
   </SchemaModules>
   <Views>
-    <DetailView Id="Kegiatan_DetailView">
-      <Layout>
-        <LayoutGroup Id="Main" RelativeSize="100">
-          <LayoutGroup Id="SimpleEditors" Direction="Vertical" RelativeSize="11.73469387755102">
-            <LayoutGroup Id="Kegiatan_col1" ShowCaption="False" Index="0" RelativeSize="100" Caption="Kegiatan_col1" IsNewNode="True">
-              <LayoutItem Id="Urutan" ViewItem="Urutan" Index="0" RelativeSize="34.782608695652172" IsNewNode="True" />
-              <LayoutItem Id="PelaksanaKerja" ViewItem="PelaksanaKerja" Index="1" RelativeSize="26.086956521739129" IsNewNode="True" />
-              <LayoutGroup Id="Auto2b5ba9e1-5561-4dcf-aac2-3adeff22021d" ShowCaption="False" Caption="Auto2b5ba9e1-5561-4dcf-aac2-3adeff22021d(6)" Direction="Horizontal" Index="2" RelativeSize="39.130434782608695" IsNewNode="True">
-                <LayoutItem Id="Input" ViewItem="Input" Index="0" RelativeSize="40" IsNewNode="True" />
-                <LayoutItem Id="Output" ViewItem="Output" Index="1" RelativeSize="40" IsNewNode="True" />
-                <LayoutItem Id="Waktu" ViewItem="Waktu" Index="2" RelativeSize="20" IsNewNode="True" />
-              </LayoutGroup>
-            </LayoutGroup>
-            <LayoutGroup Id="Kegiatan" Removed="True" />
-          </LayoutGroup>
-          <LayoutGroup Id="SizeableEditors" RelativeSize="88.265306122448976">
-            <LayoutItem Id="DeskripsiKegiatan" RelativeSize="49.855491329479769" />
-            <LayoutItem Id="Keterangan" RelativeSize="50.144508670520231" />
-          </LayoutGroup>
-        </LayoutGroup>
-      </Layout>
-    </DetailView>
     <ListView Id="Kegiatan_ListView" PreviewColumnName="DeskripsiKegiatan" />
     <ListView Id="Kegiatan_LookupListView" PreviewColumnName="DeskripsiKegiatan" />
     <DetailView Id="Pegawai_DetailView">
@@ -506,9 +484,6 @@
             <LayoutGroup Id="SOP" RelativeSize="100">
               <LayoutItem Id="SOP" RelativeSize="100" />
             </LayoutGroup>
-            <LayoutGroup Id="Kegiatan" RelativeSize="100">
-              <LayoutItem Id="Kegiatan" RelativeSize="100" />
-            </LayoutGroup>
             <LayoutGroup Id="KorelasiSOP" RelativeSize="100">
               <LayoutItem Id="KorelasiSOP" RelativeSize="100" />
             </LayoutGroup>
@@ -516,6 +491,5 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="UnitKerja_Kegiatan_ListView" PreviewColumnName="DeskripsiKegiatan" />
   </Views>
 </Application>

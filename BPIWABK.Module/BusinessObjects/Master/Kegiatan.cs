@@ -101,10 +101,11 @@ namespace BPIWABK.Module.BusinessObjects.Master
             set => SetPropertyValue(nameof(DeskripsiKegiatan), ref deskripsiKegiatan, value);
         }
 
-        [Association("UnitKerja-Kegiatan")]
-        public XPCollection<UnitKerja> PelaksanaKerja
+        UnitKerja pelaksanaKegiatan;
+        public UnitKerja PelaksanaKegiatan
         {
-            get => GetCollection<UnitKerja>(nameof(PelaksanaKerja));
+            get => pelaksanaKegiatan;
+            set => SetPropertyValue(nameof(PelaksanaKegiatan), ref pelaksanaKegiatan, value);
         }
 
         int waktu;

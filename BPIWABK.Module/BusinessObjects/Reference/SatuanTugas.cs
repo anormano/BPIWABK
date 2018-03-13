@@ -16,7 +16,7 @@ namespace BPIWABK.Module.BusinessObjects.Reference
 {
     [DefaultClassOptions]
     //[ImageName("BO_Contact")]
-    //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
+    [DefaultProperty("Nama")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
     //[Persistent("DatabaseTableName")]
     // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
@@ -115,32 +115,35 @@ namespace BPIWABK.Module.BusinessObjects.Reference
     {
         EselonIII eselonIII;
         protected override ITreeNode Induk => eselonIII;
-        protected override IBindingList Satuan => EselonV;
+        protected override IBindingList Satuan => StafPelaksana;
         public EselonIV(Session session) : base(session) { }
         public EselonIV(Session session, string nama) : base(session)
         {
             this.Nama = nama;
         }
+
         [Association("EselonIII-EselonIV")]
         public EselonIII EselonIII
         {
             get => eselonIII;
             set => SetPropertyValue(nameof(EselonIII), ref eselonIII, value);
         }
+
         [Association("EselonIV-EselonV"), Aggregated]
-        public XPCollection<EselonV> EselonV => GetCollection<EselonV>(nameof(EselonV));
+        public XPCollection<StafPelaksana> StafPelaksana => GetCollection<StafPelaksana>(nameof(StafPelaksana));
     }
 
-    public class EselonV : SatuanTugas
+    public class StafPelaksana : SatuanTugas
     {
         EselonIV eselonIV;
         protected override ITreeNode Induk => eselonIV;
         protected override IBindingList Satuan => new BindingList<Object>();
-        public EselonV(Session session) : base(session) { }
-        public EselonV(Session session, string nama) : base(session)
+        public StafPelaksana(Session session) : base(session) { }
+        public StafPelaksana(Session session, string nama) : base(session)
         {
             this.Nama = nama;
         }
+
         [Association("EselonIV-EselonV")]
         public EselonIV EselonIV
         {
