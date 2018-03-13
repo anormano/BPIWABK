@@ -12,6 +12,7 @@ using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
 using DevExpress.Persistent.Base.General;
 using DevExpress.ExpressApp.Editors;
+using BPIWABK.Module.BusinessObjects.Master;
 
 namespace BPIWABK.Module.BusinessObjects.Reference
 {
@@ -58,6 +59,18 @@ namespace BPIWABK.Module.BusinessObjects.Reference
         {
             get => desktripsi;
             set => SetPropertyValue(nameof(Desktripsi), ref desktripsi, value);
+        }
+
+        public XPCollection<SOP> SOP
+        {
+            get => new XPCollection<SOP>(Session, CriteriaOperator.Parse("[Kegiatan][[PelaksanaKerja.Oid] = ?]", Oid));
+        }
+
+
+        public XPCollection<Kegiatan> Kegiatan
+        {
+            get => new XPCollection<Kegiatan>(Session, CriteriaOperator.Parse("PelaksanaKerja.Oid=?", Oid));
+
         }
 
         #region ITreeNode

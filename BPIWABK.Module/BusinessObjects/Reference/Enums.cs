@@ -99,6 +99,8 @@ namespace BPIWABK.Module.BusinessObjects.Reference
     {
         Menit,
         Jam,
-        Hari
+        Hari,
+        Minggu,
+        Bulan
     }
 }
