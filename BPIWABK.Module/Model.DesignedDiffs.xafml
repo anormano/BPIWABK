@@ -377,32 +377,35 @@
     <DetailView Id="SOP_DetailView">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
-          <LayoutGroup Id="SimpleEditors" RelativeSize="26.202321724709783" Direction="Vertical">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="21.39352306182532" Direction="Vertical">
             <LayoutGroup Id="SOP_col1" ShowCaption="False" Index="0" RelativeSize="100" Caption="SOP_col1" IsNewNode="True">
-              <LayoutGroup Id="Auto52610752-f08e-4072-9055-91b2c0f8dc38" ShowCaption="False" Caption="" Direction="Horizontal" Index="0" RelativeSize="20.253164556962027" IsNewNode="True">
+              <LayoutGroup Id="Auto52610752-f08e-4072-9055-91b2c0f8dc38" ShowCaption="False" Caption="Auto52610752-f08e-4072-9055-91b2c0f8dc38(4)" Direction="Horizontal" Index="0" RelativeSize="18.348623853211009" IsNewNode="True">
                 <LayoutItem Id="NomorSOP" ViewItem="NomorSOP" Index="0" RelativeSize="50" IsNewNode="True" />
                 <LayoutItem Id="NamaSOP" ViewItem="NamaSOP" Index="1" RelativeSize="50" IsNewNode="True" />
               </LayoutGroup>
-              <LayoutGroup Id="Auto1b9245ab-753e-422f-8af2-e226a2682658" ShowCaption="False" Caption="" Index="1" RelativeSize="60.759493670886073" IsNewNode="True">
-                <LayoutItem Id="Pengguna" ViewItem="Pengguna" Index="0" RelativeSize="25" IsNewNode="True" />
-                <LayoutGroup Id="Auto6c7d8281-7ab2-4612-b55d-000b312280c8" ShowCaption="False" Caption="" Direction="Horizontal" Index="1" RelativeSize="25" IsNewNode="True">
+              <LayoutGroup Id="Auto1b9245ab-753e-422f-8af2-e226a2682658" ShowCaption="False" Caption="Auto1b9245ab-753e-422f-8af2-e226a2682658(7)" Index="1" RelativeSize="66.055045871559628" IsNewNode="True">
+                <LayoutGroup Id="Autof4a4fd73-8005-4225-b1a1-c255e022d2b2" ShowCaption="False" Caption="" Direction="Horizontal" Index="0" RelativeSize="20.833333333333332" IsNewNode="True">
+                  <LayoutItem Id="Pengguna" ViewItem="Pengguna" Index="0" RelativeSize="50" IsNewNode="True" />
+                  <LayoutItem Id="PemilikSOP" ViewItem="PemilikSOP" Index="1" RelativeSize="50" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="Auto6c7d8281-7ab2-4612-b55d-000b312280c8" ShowCaption="False" Caption="Auto6c7d8281-7ab2-4612-b55d-000b312280c8(9)" Direction="Horizontal" Index="1" RelativeSize="26.388888888888889" IsNewNode="True">
                   <LayoutItem Id="SatuanHasil" ViewItem="SatuanHasil" Index="0" RelativeSize="50" IsNewNode="True" />
                   <LayoutItem Id="TugasFungsi" ViewItem="TugasFungsi" Index="1" RelativeSize="50" IsNewNode="True" />
                 </LayoutGroup>
-                <LayoutGroup Id="Auto902801d6-eb29-4e6b-94eb-49a973671b70" ShowCaption="False" Caption="" Index="2" RelativeSize="50" IsNewNode="True">
-                  <LayoutGroup Id="Autof7d8b374-e4e3-4905-8749-288e25de0b9e" ShowCaption="False" Caption="" Direction="Horizontal" Index="0" RelativeSize="50" IsNewNode="True">
-                    <LayoutItem Id="JumlahOutput" ViewItem="JumlahOutput" Index="0" RelativeSize="30" IsNewNode="True" />
-                    <LayoutItem Id="JumlahKegiatan" ViewItem="JumlahKegiatan" Index="1" RelativeSize="30" IsNewNode="True" />
-                    <LayoutItem Id="TotalWaktu" ViewItem="TotalWaktu" Index="2" RelativeSize="30" IsNewNode="True" />
+                <LayoutGroup Id="Auto902801d6-eb29-4e6b-94eb-49a973671b70" ShowCaption="False" Caption="Auto902801d6-eb29-4e6b-94eb-49a973671b70(12)" Index="2" RelativeSize="52.777777777777779" IsNewNode="True">
+                  <LayoutGroup Id="Autof7d8b374-e4e3-4905-8749-288e25de0b9e" ShowCaption="False" Caption="Autof7d8b374-e4e3-4905-8749-288e25de0b9e(13)" Direction="Horizontal" Index="0" RelativeSize="50" IsNewNode="True">
+                    <LayoutItem Id="JumlahOutput" ViewItem="JumlahOutput" Index="0" RelativeSize="33.2967032967033" IsNewNode="True" />
+                    <LayoutItem Id="JumlahKegiatan" ViewItem="JumlahKegiatan" Index="1" RelativeSize="33.406593406593409" IsNewNode="True" />
+                    <LayoutItem Id="TotalWaktu" ViewItem="TotalWaktu" Index="2" RelativeSize="33.2967032967033" IsNewNode="True" />
                   </LayoutGroup>
-                  <LayoutGroup Id="Auto39b3de14-54e5-4a8b-be8b-69d627fd1391" ShowCaption="False" Caption="" Direction="Horizontal" Index="1" RelativeSize="50" IsNewNode="True">
-                    <LayoutItem Id="TanggalPembuatan" ViewItem="TanggalPembuatan" Index="0" RelativeSize="30" IsNewNode="True" />
-                    <LayoutItem Id="TanggalRevisi" ViewItem="TanggalRevisi" Index="1" RelativeSize="30" IsNewNode="True" />
-                    <LayoutItem Id="TanggalBerlaku" ViewItem="TanggalBerlaku" Index="2" RelativeSize="30" IsNewNode="True" />
+                  <LayoutGroup Id="Auto39b3de14-54e5-4a8b-be8b-69d627fd1391" ShowCaption="False" Caption="Auto39b3de14-54e5-4a8b-be8b-69d627fd1391(17)" Direction="Horizontal" Index="1" RelativeSize="50" IsNewNode="True">
+                    <LayoutItem Id="TanggalPembuatan" ViewItem="TanggalPembuatan" Index="0" RelativeSize="33.2967032967033" IsNewNode="True" />
+                    <LayoutItem Id="TanggalRevisi" ViewItem="TanggalRevisi" Index="1" RelativeSize="33.406593406593409" IsNewNode="True" />
+                    <LayoutItem Id="TanggalBerlaku" ViewItem="TanggalBerlaku" Index="2" RelativeSize="33.2967032967033" IsNewNode="True" />
                   </LayoutGroup>
                 </LayoutGroup>
               </LayoutGroup>
-              <LayoutItem Id="BerkasSOP" ViewItem="BerkasSOP" Index="2" RelativeSize="18.9873417721519" IsNewNode="True" />
+              <LayoutItem Id="BerkasSOP" ViewItem="BerkasSOP" Index="2" RelativeSize="15.596330275229358" IsNewNode="True" />
             </LayoutGroup>
             <LayoutGroup Id="SOP" RelativeSize="100" Removed="True">
               <LayoutGroup Id="SOP_col1" RelativeSize="50.625">
@@ -436,11 +439,11 @@
               </LayoutGroup>
             </LayoutGroup>
           </LayoutGroup>
-          <LayoutGroup Id="SizeableEditors" Caption="SizeableEditors" RelativeSize="36.815920398009951">
+          <LayoutGroup Id="SizeableEditors" Caption="SizeableEditors" RelativeSize="38.959764474975465">
             <LayoutItem Id="Keterangan" Index="0" RelativeSize="100" />
             <LayoutItem Id="NamaSOP" Removed="True" />
           </LayoutGroup>
-          <TabbedGroup Id="Tabs" RelativeSize="36.981757877280266">
+          <TabbedGroup Id="Tabs" RelativeSize="39.646712463199215">
             <LayoutGroup Id="Kegiatan" RelativeSize="100">
               <LayoutItem Id="Kegiatan" RelativeSize="100" />
             </LayoutGroup>
@@ -449,6 +452,9 @@
             </LayoutGroup>
             <LayoutGroup Id="KorelasiJabatan" RelativeSize="100">
               <LayoutItem Id="KorelasiJabatan" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="DokumenTerkait" RelativeSize="100">
+              <LayoutItem Id="DokumenTerkait" RelativeSize="100" />
             </LayoutGroup>
           </TabbedGroup>
         </LayoutGroup>

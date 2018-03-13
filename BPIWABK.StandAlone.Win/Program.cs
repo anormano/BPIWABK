@@ -33,6 +33,7 @@ namespace BPIWABK.StandAlone.Win
             StandAloneWindowsFormsApplication winApplication = new StandAloneWindowsFormsApplication();
             // Refer to the https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112680.aspx help article for more details on how to provide a custom splash form.
             //winApplication.SplashScreen = new DevExpress.ExpressApp.Win.Utils.DXSplashScreen("YourSplashImage.png");
+            winApplication.LinkNewObjectToParentImmediately = true;
             SecurityAdapterHelper.Enable();
             if (ConfigurationManager.ConnectionStrings["ConnectionString"] != null)
             {

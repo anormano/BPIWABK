@@ -19,6 +19,7 @@ namespace BPIWABK.Module.BusinessObjects.Master
     [DefaultClassOptions]
     [ImageName("BO_StateMachine")]
     [DefaultProperty("NamaSOP")]
+    [FileAttachment("BerkasSOP")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
     //[Persistent("DatabaseTableName")]
     // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
@@ -111,6 +112,7 @@ namespace BPIWABK.Module.BusinessObjects.Master
                 SetPropertyValue("TanggalPembuatan", ref tanggalPembuatan, value);
             }
         }
+
         DateTime tanggalRevisi;
         [VisibleInListView(false)]
         public DateTime TanggalRevisi
@@ -151,6 +153,14 @@ namespace BPIWABK.Module.BusinessObjects.Master
             {
                 SetPropertyValue("Pengguna", ref pengguna, value);
             }
+        }
+
+        SatuanTugas pemilikSOP;
+        [RuleRequiredField]
+        public SatuanTugas PemilikSOP
+        {
+            get => pemilikSOP;
+            set => SetPropertyValue(nameof(PemilikSOP), ref pemilikSOP, value);
         }
 
         [Association("SOP-Kegiatan"), Aggregated]
@@ -211,12 +221,12 @@ namespace BPIWABK.Module.BusinessObjects.Master
             }
         }
 
-        [PersistentAlias("Kegiatan.Sum(Waktu)")]
-        public int TotalWaktu
+        [PersistentAlias("Kegiatan.Sum(WaktuMenit)")]
+        public int? TotalWaktu
         {
             get
             {
-                return Convert.ToInt16(EvaluateAlias("TotalWaktu"));
+                return (int?)EvaluateAlias("TotalWaktu");
             }
         }
 
@@ -229,6 +239,7 @@ namespace BPIWABK.Module.BusinessObjects.Master
                 return Convert.ToInt16(EvaluateAlias("JumlahKegiatan"));
             }
         }
+
         [VisibleInListView(false)]
         public int WaktuKerjaEfektif
         {

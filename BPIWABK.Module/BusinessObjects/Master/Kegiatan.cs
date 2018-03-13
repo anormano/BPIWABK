@@ -34,7 +34,12 @@ namespace BPIWABK.Module.BusinessObjects.Master
         {
             base.AfterConstruction();
             // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
+            if (SOP != null && SOP.PemilikSOP != null)
+            {
+                SatuanTugas satuanTugas = Session.GetObjectByKey<SatuanTugas>(SOP.PemilikSOP.Oid);
+            }
         }
+
         //private string _PersistentProperty;
         //[XafDisplayName("My display name"), ToolTip("My hint message")]
         //[ModelDefault("EditMask", "(000)-00"), Index(0), VisibleInListView(false)]
@@ -150,6 +155,7 @@ namespace BPIWABK.Module.BusinessObjects.Master
         }
 
         int waktu;
+        [VisibleInListView(false)]
         public int Waktu
         {
             get
@@ -162,13 +168,20 @@ namespace BPIWABK.Module.BusinessObjects.Master
             }
         }
 
-        public string waktuKegiatan;
+        string waktuKegiatan;
+        [VisibleInDetailView(false)]
         public string WaktuKegiatan
         {
             get
             {
                 switch (SatuanWaktu)
                 {
+                    case SatuanWaktu.Minggu:
+                        waktuKegiatan = string.Format("{0} Minggu", Waktu);
+                        break;
+                    case SatuanWaktu.Bulan:
+                        waktuKegiatan = string.Format("{0} Bulan", Waktu);
+                        break;
                     case SatuanWaktu.Hari:
                         waktuKegiatan = string.Format("{0} Hari Kerja", Waktu);
                         break;
@@ -204,6 +217,12 @@ namespace BPIWABK.Module.BusinessObjects.Master
                     case SatuanWaktu.Menit:
                         waktuMenit = Waktu * 1;
                         break;
+                    case SatuanWaktu.Minggu:
+                        waktuMenit = Waktu * 10080;
+                        break;
+                    case SatuanWaktu.Bulan:
+                        waktuMenit = Waktu * 43800;
+                        break;
                     default:
                         return 0;
                 }
@@ -213,12 +232,12 @@ namespace BPIWABK.Module.BusinessObjects.Master
         }
 
         SatuanWaktu satuanWaktu;
+        [VisibleInListView(false)]
         public SatuanWaktu SatuanWaktu
         {
             get => satuanWaktu;
             set => SetPropertyValue(nameof(SatuanWaktu), ref satuanWaktu, value);
         }
-
 
         string keterangan;
         [Size(SizeAttribute.Unlimited)]
