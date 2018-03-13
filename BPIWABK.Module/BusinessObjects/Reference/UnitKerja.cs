@@ -25,7 +25,7 @@ namespace BPIWABK.Module.BusinessObjects.Reference
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
     //[Persistent("DatabaseTableName")]
     // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
-    public class UnitKerja : SatuanTugas
+    public class UnitKerja : XPLiteObject
     { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument113146.aspx).
         public UnitKerja(Session session)
             : base(session)
@@ -34,6 +34,8 @@ namespace BPIWABK.Module.BusinessObjects.Reference
         public override void AfterConstruction()
         {
             base.AfterConstruction();
+            // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
+            Eselon = Eselon.V;
         }
         //private string _PersistentProperty;
         //[XafDisplayName("My display name"), ToolTip("My hint message")]
@@ -49,6 +51,30 @@ namespace BPIWABK.Module.BusinessObjects.Reference
         //    // Trigger a custom business logic for the current record in the UI (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112619.aspx).
         //    this.PersistentProperty = "Paid";
         //}
+        int oid;
+        [Key(AutoGenerate = true)]
+        [VisibleInDetailView(false)]
+        [VisibleInListView(false)]
+        public int Oid
+        {
+            get => oid;
+            set => SetPropertyValue(nameof(Oid), ref oid, value);
+        }
+
+        string namaUnit;
+        [Size(SizeAttribute.DefaultStringMappingFieldSize)]
+        public string NamaUnit
+        {
+            get => namaUnit;
+            set => SetPropertyValue(nameof(NamaUnit), ref namaUnit, value);
+        }
+
+        Eselon eselon;
+        public Eselon Eselon
+        {
+            get => eselon;
+            set => SetPropertyValue(nameof(Eselon), ref eselon, value);
+        }
 
         string keterangan;
         [Size(SizeAttribute.Unlimited)]
@@ -66,9 +92,31 @@ namespace BPIWABK.Module.BusinessObjects.Reference
 
         }
 
+        UnitKerja induk;
+        [Association("UnitKerja-SubUnit")]
+        public UnitKerja Induk
+        {
+            get => induk;
+            set => SetPropertyValue(nameof(Induk), ref induk, value);
+        }
+
+        [Association("UnitKerja-SubUnit")]
+        public XPCollection<UnitKerja> SubUnit
+        {
+            get => GetCollection<UnitKerja>(nameof(SubUnit));
+        }
+
+
         public XPCollection<SOP> SOP
         {
             get => new XPCollection<SOP>(Session, CriteriaOperator.Parse("[Kegiatan][[PelaksanaKerja.Oid] = ?]", Oid));
+        }
+
+
+        public XPCollection<Kegiatan> Kegiatan
+        {
+            get => new XPCollection<Kegiatan>(Session, CriteriaOperator.Parse("PelaksanaKerja.Oid=?", Oid));
+            
         }
 
         [Association("SOP-KorelasiJabatan")]

@@ -54,70 +54,113 @@ namespace BPIWABK.Module.BusinessObjects.Master
         [RuleRequiredField]
         public int Oid
         {
-            get => oid;
-            set => SetPropertyValue(nameof(Oid), ref oid, value);
+            get
+            {
+                return oid;
+            }
+            set
+            {
+                SetPropertyValue("Oid", ref oid, value);
+            }
         }
 
         int urutan;
-        [RuleValueComparison(ValueComparisonType.GreaterThan, 0)]
+        [RuleValueComparison(ValueComparisonType.GreaterThan,0)]
         public int Urutan
         {
-            get => urutan;
-            set => SetPropertyValue(nameof(Urutan), ref urutan, value);
+            get
+            {
+                return urutan;
+            }
+            set
+            {
+                SetPropertyValue("Urutan", ref urutan, value);
+            }
         }
 
         SOP sOP;
         [Association("SOP-Kegiatan")]
         public SOP SOP
         {
-            get => sOP;
-            set => SetPropertyValue(nameof(SOP), ref sOP, value);
+            get
+            {
+                return sOP;
+            }
+            set
+            {
+                SetPropertyValue("SOP", ref sOP, value);
+            }
         }
 
-        string kelengkapan;
-        [Size(SizeAttribute.Unlimited)]
-        [EditorAlias(EditorAliases.HtmlPropertyEditor)]
-        public string Kelengkapan
+        InputKegiatan input;
+        public InputKegiatan Input
         {
-            get => kelengkapan;
-            set => SetPropertyValue(nameof(Kelengkapan), ref kelengkapan, value);
+            get
+            {
+                return input;
+            }
+            set
+            {
+                SetPropertyValue("Input", ref input, value);
+            }
         }
 
-        string output;
-        [Size(SizeAttribute.Unlimited)]
-        [EditorAlias(EditorAliases.HtmlPropertyEditor)]
-        public string Output
+        OutputKegiatan output;
+        public OutputKegiatan Output
         {
-            get => output;
-            set => SetPropertyValue(nameof(Output), ref output, value);
+            get
+            {
+                return output;
+            }
+            set
+            {
+                SetPropertyValue("Output", ref output, value);
+            }
         }
+
 
         string deskripsiKegiatan;
         [Size(SizeAttribute.Unlimited)]
         [EditorAlias(EditorAliases.HtmlPropertyEditor)]
         public string DeskripsiKegiatan
         {
-            get => deskripsiKegiatan;
-            set => SetPropertyValue(nameof(DeskripsiKegiatan), ref deskripsiKegiatan, value);
+            get
+            {
+                return deskripsiKegiatan;
+            }
+            set
+            {
+                SetPropertyValue("DeskripsiKegiatan", ref deskripsiKegiatan, value);
+            }
         }
 
-        UnitKerja pelaksanaKegiatan;
-        public UnitKerja PelaksanaKegiatan
+        UnitKerja pelaksanaKerja;
+        public UnitKerja PelaksanaKerja
         {
-            get => pelaksanaKegiatan;
-            set => SetPropertyValue(nameof(PelaksanaKegiatan), ref pelaksanaKegiatan, value);
+            get
+            {
+                return pelaksanaKerja;
+            }
+            set
+            {
+                SetPropertyValue("PelaksanaKerja", ref pelaksanaKerja, value);
+            }
         }
 
         int waktu;
-        [VisibleInListView(false), VisibleInLookupListView(false)]
         public int Waktu
         {
-            get => waktu;
-            set => SetPropertyValue(nameof(Waktu), ref waktu, value);
+            get
+            {
+                return waktu;
+            }
+            set
+            {
+                SetPropertyValue("Waktu", ref waktu, value);
+            }
         }
 
-        string waktuKegiatan;
-        [VisibleInDetailView(false)]
+        public string waktuKegiatan;
         public string WaktuKegiatan
         {
             get
@@ -168,20 +211,26 @@ namespace BPIWABK.Module.BusinessObjects.Master
         }
 
         SatuanWaktu satuanWaktu;
-        [VisibleInListView(false)]
         public SatuanWaktu SatuanWaktu
         {
             get => satuanWaktu;
             set => SetPropertyValue(nameof(SatuanWaktu), ref satuanWaktu, value);
         }
 
+
         string keterangan;
         [Size(SizeAttribute.Unlimited)]
         [EditorAlias(EditorAliases.HtmlPropertyEditor)]
         public string Keterangan
         {
-            get => keterangan;
-            set => SetPropertyValue(nameof(Keterangan), ref keterangan, value);
+            get
+            {
+                return keterangan;
+            }
+            set
+            {
+                SetPropertyValue("Keterangan", ref keterangan, value);
+            }
         }
     }
 }
