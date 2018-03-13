@@ -11,6 +11,7 @@ using DevExpress.ExpressApp.Model;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
 using DevExpress.Persistent.Base.General;
+using DevExpress.ExpressApp.Editors;
 
 namespace BPIWABK.Module.BusinessObjects.Reference
 {
@@ -48,6 +49,15 @@ namespace BPIWABK.Module.BusinessObjects.Reference
         {
             get => nama;
             set => SetPropertyValue(nameof(Nama), ref nama, value);
+        }
+
+        string desktripsi;
+        [Size(SizeAttribute.Unlimited)]
+        [EditorAlias(EditorAliases.HtmlPropertyEditor)]
+        public string Desktripsi
+        {
+            get => desktripsi;
+            set => SetPropertyValue(nameof(Desktripsi), ref desktripsi, value);
         }
 
         #region ITreeNode

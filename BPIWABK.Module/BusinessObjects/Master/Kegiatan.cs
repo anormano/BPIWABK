@@ -92,8 +92,9 @@ namespace BPIWABK.Module.BusinessObjects.Master
             }
         }
 
-        InputKegiatan input;
-        public InputKegiatan Input
+        String input;
+        [Size(SizeAttribute.Unlimited)]
+        public String Input
         {
             get
             {
@@ -105,8 +106,9 @@ namespace BPIWABK.Module.BusinessObjects.Master
             }
         }
 
-        OutputKegiatan output;
-        public OutputKegiatan Output
+        String output;
+        [Size(SizeAttribute.Unlimited)]
+        public String Output
         {
             get
             {
@@ -134,8 +136,8 @@ namespace BPIWABK.Module.BusinessObjects.Master
             }
         }
 
-        UnitKerja pelaksanaKerja;
-        public UnitKerja PelaksanaKerja
+        SatuanTugas pelaksanaKerja;
+        public SatuanTugas PelaksanaKerja
         {
             get
             {
