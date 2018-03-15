@@ -252,6 +252,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="DatabaseUpdate\BPIWABK.bak" />
+    <None Include="DatabaseUpdate\newdb.bak" />
     <None Include="DatabaseUpdate\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
