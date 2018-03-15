@@ -59,56 +59,32 @@ namespace BPIWABK.Module.BusinessObjects.Master
         [RuleRequiredField]
         public int Oid
         {
-            get
-            {
-                return oid;
-            }
-            set
-            {
-                SetPropertyValue("Oid", ref oid, value);
-            }
+            get => oid;
+            set => SetPropertyValue(nameof(Oid), ref oid, value);
         }
 
         int urutan;
         [RuleValueComparison(ValueComparisonType.GreaterThan,0)]
         public int Urutan
         {
-            get
-            {
-                return urutan;
-            }
-            set
-            {
-                SetPropertyValue("Urutan", ref urutan, value);
-            }
+            get => urutan;
+            set => SetPropertyValue(nameof(Urutan), ref urutan, value);
         }
 
         SOP sOP;
         [Association("SOP-Kegiatan")]
         public SOP SOP
         {
-            get
-            {
-                return sOP;
-            }
-            set
-            {
-                SetPropertyValue("SOP", ref sOP, value);
-            }
+            get => sOP;
+            set => SetPropertyValue(nameof(SOP), ref sOP, value);
         }
 
         String input;
         [Size(SizeAttribute.Unlimited)]
         public String Input
         {
-            get
-            {
-                return input;
-            }
-            set
-            {
-                SetPropertyValue("Input", ref input, value);
-            }
+            get => input;
+            set => SetPropertyValue(nameof(Input), ref input, value);
         }
 
         String output;

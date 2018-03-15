@@ -13,6 +13,7 @@ using DevExpress.Persistent.Validation;
 using DevExpress.Persistent.Base.General;
 using DevExpress.ExpressApp.Editors;
 using BPIWABK.Module.BusinessObjects.Master;
+using BPIWABK.Module.BusinessObjects.Administrative;
 
 namespace BPIWABK.Module.BusinessObjects.Reference
 {
@@ -52,13 +53,20 @@ namespace BPIWABK.Module.BusinessObjects.Reference
             set => SetPropertyValue(nameof(Nama), ref nama, value);
         }
 
-        string desktripsi;
+        Pegawai pejabat;
+        public Pegawai Pejabat
+        {
+            get => pejabat;
+            set => SetPropertyValue(nameof(Pejabat), ref pejabat, value);
+        }
+
+        string deskripsi;
         [Size(SizeAttribute.Unlimited)]
         [EditorAlias(EditorAliases.HtmlPropertyEditor)]
-        public string Desktripsi
+        public string Deskripsi
         {
-            get => desktripsi;
-            set => SetPropertyValue(nameof(Desktripsi), ref desktripsi, value);
+            get => deskripsi;
+            set => SetPropertyValue(nameof(Deskripsi), ref deskripsi, value);
         }
 
         public XPCollection<SOP> SOP
