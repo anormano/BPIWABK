@@ -1,11 +1,9 @@
 ﻿using System;
-using System;
 using System.Linq;
 using System.Text;
 using DevExpress.Xpo;
 using DevExpress.ExpressApp;
 using System.ComponentModel;
-using DevExpress.ExpressApp.DC;
 using DevExpress.Data.Filtering;
 using DevExpress.Persistent.Base;
 using System.Collections.Generic;
@@ -34,10 +32,13 @@ namespace BPIWABK.Module.BusinessObjects.Master
         {
             base.AfterConstruction();
             // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
-            if (SOP != null && SOP.PemilikSOP != null)
-            {
-                SatuanTugas satuanTugas = Session.GetObjectByKey<SatuanTugas>(SOP.PemilikSOP.Oid);
-            }
+            //if (SOP != null && SOP.PemilikSOP != null)
+            //{
+            //    UnitKerja satuanTugas = Session.GetObjectByKey<UnitKerja>(SOP.PemilikSOP.Kode);
+            //}
+            AlurKegiatan alurKegiatan = new AlurKegiatan(this.Session);
+            alurKegiatan.JenisAlur = JenisAlur.Lanjut;
+            AlurKegiatan = alurKegiatan;
         }
 
         //private string _PersistentProperty;
@@ -54,6 +55,7 @@ namespace BPIWABK.Module.BusinessObjects.Master
         //    // Trigger a custom business logic for the current record in the UI (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112619.aspx).
         //    this.PersistentProperty = "Paid";
         //}
+
         int oid;
         [Key(true)]
         [RuleRequiredField]
@@ -76,7 +78,29 @@ namespace BPIWABK.Module.BusinessObjects.Master
         public SOP SOP
         {
             get => sOP;
-            set => SetPropertyValue(nameof(SOP), ref sOP, value);
+            set
+            {
+                SetPropertyValue(nameof(SOP), ref sOP, value);
+                if (!IsLoading && this.Session.IsNewObject(this))
+                {
+                    PelaksanaKegiatan = Session.GetObjectByKey<UnitKerja>(value.PemilikSOP.Kode);
+                    Urutan = value.Kegiatan.Count;
+                }
+            }
+        }
+
+        public int JumlahOutput
+        {
+            get
+            {
+                int jumlahOutput = 0;
+                if (Output != null) {
+                    string outputString = Output;
+                    string[] outputData = outputString.Split(';');
+                    jumlahOutput = outputData.Length;
+                }
+                return jumlahOutput;
+            }
         }
 
         String input;
@@ -117,16 +141,16 @@ namespace BPIWABK.Module.BusinessObjects.Master
             }
         }
 
-        SatuanTugas pelaksanaKerja;
-        public SatuanTugas PelaksanaKerja
+        UnitKerja pelaksanaKegiatan;
+        public UnitKerja PelaksanaKegiatan
         {
             get
             {
-                return pelaksanaKerja;
+                return pelaksanaKegiatan;
             }
             set
             {
-                SetPropertyValue("PelaksanaKerja", ref pelaksanaKerja, value);
+                SetPropertyValue("PelaksanaKegiatan", ref pelaksanaKegiatan, value);
             }
         }
 
@@ -228,6 +252,14 @@ namespace BPIWABK.Module.BusinessObjects.Master
             {
                 SetPropertyValue("Keterangan", ref keterangan, value);
             }
+        }
+
+        AlurKegiatan alurKegiatan;
+        [Aggregated, ExpandObjectMembers(ExpandObjectMembers.Never), VisibleInListView(true)]
+        public AlurKegiatan AlurKegiatan
+        {
+            get => alurKegiatan;
+            set => SetPropertyValue(nameof(AlurKegiatan), ref alurKegiatan, value);
         }
     }
 }

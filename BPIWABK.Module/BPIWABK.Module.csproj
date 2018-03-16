@@ -212,6 +212,7 @@
     <Compile Include="BusinessObjects\Administrative\Seminar.cs" />
     <Compile Include="BusinessObjects\Administrative\Setelan.cs" />
     <Compile Include="BusinessObjects\Administrative\SKPengangkatan.cs" />
+    <Compile Include="BusinessObjects\Master\AlurKegiatan.cs" />
     <Compile Include="BusinessObjects\Master\Kegiatan.cs" />
     <Compile Include="BusinessObjects\Master\SOP.cs" />
     <Compile Include="BusinessObjects\Reference\Alat.cs" />

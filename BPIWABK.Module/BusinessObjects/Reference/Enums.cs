@@ -103,4 +103,12 @@ namespace BPIWABK.Module.BusinessObjects.Reference
         Minggu,
         Bulan
     }
+
+    public enum JenisAlur
+    {
+        Mulai,
+        Lanjut,
+        YaTidak,
+        Selesai
+    }
 }

@@ -33,6 +33,11 @@
     <SchemaModule Name="SystemModule" Version="17.2.6.0" IsNewNode="True" />
   </SchemaModules>
   <Views>
+    <DetailView Id="Kegiatan_DetailView">
+      <Items>
+        <PropertyEditor Id="PelaksanaKerja" LookupEditorMode="AllItemsWithSearch" />
+      </Items>
+    </DetailView>
     <ListView Id="Kegiatan_ListView" PreviewColumnName="DeskripsiKegiatan" />
     <ListView Id="Kegiatan_LookupListView" PreviewColumnName="DeskripsiKegiatan" />
     <DetailView Id="Pegawai_DetailView">

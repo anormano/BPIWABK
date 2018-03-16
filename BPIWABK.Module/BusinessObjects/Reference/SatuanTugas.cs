@@ -81,6 +81,7 @@ namespace BPIWABK.Module.BusinessObjects.Reference
 
         }
 
+
         #region ITreeNode
         IBindingList ITreeNode.Children => Satuan;
         ITreeNode ITreeNode.Parent => Induk;

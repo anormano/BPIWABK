@@ -155,9 +155,9 @@ namespace BPIWABK.Module.BusinessObjects.Master
             }
         }
 
-        SatuanTugas pemilikSOP;
+        UnitKerja pemilikSOP;
         [RuleRequiredField]
-        public SatuanTugas PemilikSOP
+        public UnitKerja PemilikSOP
         {
             get => pemilikSOP;
             set => SetPropertyValue(nameof(PemilikSOP), ref pemilikSOP, value);
@@ -197,27 +197,28 @@ namespace BPIWABK.Module.BusinessObjects.Master
             }
         }
 
-        [Association("SOP-KorelasiJabatan")]
-        public XPCollection<UnitKerja> KorelasiJabatan
-        {
-            get
-            {
-                return GetCollection<UnitKerja>("KorelasiJabatan");
-            }
-        }
+        //[Association("SOP-KorelasiJabatan")]
+        //public XPCollection<SatuanTugas> KorelasiJabatan
+        //{
+        //    get
+        //    {
+        //        return GetCollection<SatuanTugas>("KorelasiJabatan");
+        //    }
+        //}
 
-        int jumlahOutput;
         [VisibleInListView(false)]
-        [RuleValueComparison(ValueComparisonType.GreaterThan, 0)]
+        [PersistentAlias("Kegiatan.Sum(JumlahOutput)")]
         public int JumlahOutput
         {
             get
             {
-                return jumlahOutput;
-            }
-            set
-            {
-                SetPropertyValue("JumlahOutput", ref jumlahOutput, value);
+                if (Kegiatan.Count > 0)
+                {
+                    return (int)EvaluateAlias(nameof(JumlahOutput));
+                } else
+                {
+                    return 0;
+                }
             }
         }
 
