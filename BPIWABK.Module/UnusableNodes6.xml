@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Kegiatan_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="PelaksanaKerja" LookupEditorMode="AllItemsWithSearch" />
+      </Items>
+    </DetailView>
+    <DetailView Id="SOP_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="KorelasiJabatan" RelativeSize="100">
+              <LayoutItem Id="KorelasiJabatan" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="UnitKerja_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors" RelativeSize="40.829346092503989" Caption="Keterangan">
+            <LayoutItem Id="Keterangan" Index="0" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="UnitKerja">
+              <LayoutItem Id="NamaUnit" RelativeSize="37.2093023255814" />
+              <LayoutItem Id="Eselon" ViewItem="Eselon" Index="1" RelativeSize="50.047938638542668" Removed="True" />
+              <LayoutItem Id="TotalWaktuKerja" ViewItem="TotalWaktuKerja" />
+              <LayoutGroup Id="Auto47ac6acb-10da-4257-8c67-abc7ca2f82b5">
+                <LayoutItem Id="Eselon" ViewItem="Eselon" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="SOP" RelativeSize="100">
+              <LayoutItem Id="SOP" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="KorelasiSOP" RelativeSize="100">
+              <LayoutItem Id="KorelasiSOP" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

@@ -79,6 +79,7 @@
     <Reference Include="DevExpress.DataAccess.v17.2, Version=17.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="DevExpress.Diagram.v17.2.Core, Version=17.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.ExpressApp.AuditTrail.v17.2, Version=17.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
@@ -173,6 +174,8 @@
     <Reference Include="DevExpress.CodeParser.v17.2, Version=17.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="DevExpress.XtraDiagram.v17.2, Version=17.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
@@ -196,6 +199,7 @@
     <Reference Include="System.Drawing">
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
       <Private>False</Private>
@@ -229,7 +233,6 @@
     <Compile Include="BusinessObjects\Reference\PenggunaSOP.cs" />
     <Compile Include="BusinessObjects\Reference\Propinsi.cs" />
     <Compile Include="BusinessObjects\Reference\SatuanHasil.cs" />
-    <Compile Include="BusinessObjects\Reference\SatuanTugas.cs" />
     <Compile Include="BusinessObjects\Reference\TugasFungsi.cs" />
     <Compile Include="BusinessObjects\Reference\UnitKerja.cs" />
     <Compile Include="DatabaseUpdate\Updater.cs" />
@@ -303,6 +306,10 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="UnusableNodes4.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes7.xml">
       <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
       <SubType>Designer</SubType>
     </None>

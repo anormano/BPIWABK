@@ -12,6 +12,8 @@ using DevExpress.ExpressApp.Model;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
 using DevExpress.Persistent.Base.General;
+using BPIWABK.Module.BusinessObjects.Administrative;
+using BPIWABK.Module.BusinessObjects.Master;
 
 namespace BPIWABK.Module.BusinessObjects.Reference
 {
@@ -55,10 +57,33 @@ namespace BPIWABK.Module.BusinessObjects.Reference
 
         UnitKerja induk;
         [Association]
+        [VisibleInListView(false)]
         public UnitKerja Induk
         {
             get => induk;
             set => SetPropertyValue(nameof(Induk), ref induk, value);
+        }
+
+        Pegawai pejabat;
+        public Pegawai Pejabat
+        {
+            get => pejabat;
+            set => SetPropertyValue(nameof(Pejabat), ref pejabat, value);
+        }
+
+        [PersistentAlias("SOPTerkait.Count()")]
+        public int JumlahSOPTerkait
+        {
+            get
+            {
+                return (int)EvaluateAlias(nameof(JumlahSOPTerkait));
+            }
+        }
+
+        [ModelDefault("Caption", "SOP Terkait")]
+        public XPCollection<SOP> SOPTerkait
+        {
+            get => new XPCollection<SOP>(Session, CriteriaOperator.Parse("[Kegiatan][[PelaksanaKegiatan.Kode] = ?]", Kode));
         }
 
         [Association]

@@ -7,7 +7,7 @@
           <Item Id="SOP_ListView" Index="0" />
           <Item Id="DetailSaya" Caption="Detail Saya" ObjectKey="@CurrentUserID" ViewId="Pegawai_DetailView" ImageName="BO_MyDetails" Index="1" IsNewNode="True" />
           <DashboardNavigationItem Id="@6a6c8eaf-8e8f-49a4-bd17-229a384286da" DashboardTitle="Statistik Pegawai Non PNS" Caption="Statistik Pegawai Non PNS" IsNewNode="True" />
-          <Item Id="PegawainNonPNS" Caption="Pegawain Non-PNS" ViewId="Pegawai_ListView" IsNewNode="True" />
+          <Item Id="PegawaiNonPNS" Caption="Pegawai Non-PNS" ViewId="Pegawai_ListView" IsNewNode="True" />
         </Items>
       </Item>
       <Item Id="Referensi" Index="1" />
@@ -33,11 +33,6 @@
     <SchemaModule Name="SystemModule" Version="17.2.6.0" IsNewNode="True" />
   </SchemaModules>
   <Views>
-    <DetailView Id="Kegiatan_DetailView">
-      <Items>
-        <PropertyEditor Id="PelaksanaKerja" LookupEditorMode="AllItemsWithSearch" />
-      </Items>
-    </DetailView>
     <ListView Id="Kegiatan_ListView" PreviewColumnName="DeskripsiKegiatan" />
     <ListView Id="Kegiatan_LookupListView" PreviewColumnName="DeskripsiKegiatan" />
     <DetailView Id="Pegawai_DetailView">
@@ -455,9 +450,6 @@
             <LayoutGroup Id="Peralatan" RelativeSize="100">
               <LayoutItem Id="Peralatan" RelativeSize="100" />
             </LayoutGroup>
-            <LayoutGroup Id="KorelasiJabatan" RelativeSize="100">
-              <LayoutItem Id="KorelasiJabatan" RelativeSize="100" />
-            </LayoutGroup>
             <LayoutGroup Id="DokumenTerkait" RelativeSize="100">
               <LayoutItem Id="DokumenTerkait" RelativeSize="100" />
             </LayoutGroup>
@@ -475,28 +467,16 @@
         <LayoutGroup Id="Main" RelativeSize="100">
           <LayoutGroup Id="SimpleEditors" RelativeSize="13.716108452950559">
             <LayoutGroup Id="UnitKerja" Direction="Vertical" RelativeSize="100" Caption="UnitKerja">
-              <LayoutItem Id="Induk" ViewItem="Induk" Index="0" RelativeSize="49.952061361457332" Removed="True" />
-              <LayoutItem Id="NamaUnit" RelativeSize="37.2093023255814" />
               <LayoutGroup Id="Auto47ac6acb-10da-4257-8c67-abc7ca2f82b5" ShowCaption="False" Caption="" Direction="Horizontal" Index="1" RelativeSize="27.906976744186046" IsNewNode="True">
                 <LayoutItem Id="Induk" ViewItem="Induk" Index="0" RelativeSize="49.952061361457332" IsNewNode="True" />
                 <LayoutItem Id="Eselon" ViewItem="Eselon" Index="1" RelativeSize="50.047938638542668" IsNewNode="True" />
               </LayoutGroup>
-              <LayoutItem Id="Eselon" ViewItem="Eselon" Index="1" RelativeSize="50.047938638542668" Removed="True" />
               <LayoutItem Id="TotalWaktuKerja" ViewItem="TotalWaktuKerja" Index="2" RelativeSize="34.883720930232556" IsNewNode="True" Removed="True" />
             </LayoutGroup>
-          </LayoutGroup>
-          <LayoutGroup Id="SizeableEditors" RelativeSize="40.829346092503989" Caption="Keterangan">
-            <LayoutItem Id="Keterangan" Index="0" RelativeSize="100" />
           </LayoutGroup>
           <TabbedGroup Id="Tabs" RelativeSize="45.454545454545453">
             <LayoutGroup Id="SubUnit" RelativeSize="100">
               <LayoutItem Id="SubUnit" RelativeSize="100" />
-            </LayoutGroup>
-            <LayoutGroup Id="SOP" RelativeSize="100">
-              <LayoutItem Id="SOP" RelativeSize="100" />
-            </LayoutGroup>
-            <LayoutGroup Id="KorelasiSOP" RelativeSize="100">
-              <LayoutItem Id="KorelasiSOP" RelativeSize="100" />
             </LayoutGroup>
           </TabbedGroup>
         </LayoutGroup>

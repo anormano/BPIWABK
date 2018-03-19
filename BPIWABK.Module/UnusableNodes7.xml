@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="UnitKerja_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="UnitKerja">
+              <LayoutItem Id="Induk" ViewItem="Induk" Index="0" RelativeSize="49.952061361457332" Removed="True" />
+              <LayoutItem Id="TotalWaktuKerja" ViewItem="TotalWaktuKerja" />
+              <LayoutGroup Id="Auto47ac6acb-10da-4257-8c67-abc7ca2f82b5">
+                <LayoutItem Id="Eselon" ViewItem="Eselon" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>
