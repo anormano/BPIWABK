@@ -40,7 +40,7 @@ namespace BPIWABK.Module.BusinessObjects.Reference
         [RuleRequiredField]
         [RuleUniqueValue]
         [Key]
-        [VisibleInDetailView(true) ,VisibleInListView(true)]
+        [VisibleInDetailView(true), VisibleInListView(true)]
         public string Kode
         {
             get => kode;
@@ -71,7 +71,20 @@ namespace BPIWABK.Module.BusinessObjects.Reference
             set => SetPropertyValue(nameof(Pejabat), ref pejabat, value);
         }
 
+        [PersistentAlias("UraianTugas.Sum([WaktuMenit])")]
+        public int JumlahWaktuKerja
+        {
+            get
+            {
+                int jumlahWaktuKerja = 0;
+                if (UraianTugas.Count > 0)
+                    jumlahWaktuKerja = (int)EvaluateAlias(nameof(JumlahWaktuKerja));
+                return jumlahWaktuKerja;
+            }
+        }
+
         [PersistentAlias("SOPTerkait.Count()")]
+        [ModelDefault("Caption", "Jumlah SOP Terkait")]
         public int JumlahSOPTerkait
         {
             get
@@ -84,6 +97,11 @@ namespace BPIWABK.Module.BusinessObjects.Reference
         public XPCollection<SOP> SOPTerkait
         {
             get => new XPCollection<SOP>(Session, CriteriaOperator.Parse("[Kegiatan][[PelaksanaKegiatan.Kode] = ?]", Kode));
+        }
+
+        public XPCollection<Kegiatan> UraianTugas
+        {
+            get => new XPCollection<Kegiatan>(Session, CriteriaOperator.Parse("[PelaksanaKegiatan.Kode] = ?", Kode));
         }
 
         [Association]

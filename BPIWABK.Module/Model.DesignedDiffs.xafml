@@ -462,25 +462,15 @@
         <SortProperty Id="SortUrutan" PropertyName="Urutan" IsNewNode="True" />
       </Sorting>
     </ListView>
-    <DetailView Id="UnitKerja_DetailView">
-      <Layout>
-        <LayoutGroup Id="Main" RelativeSize="100">
-          <LayoutGroup Id="SimpleEditors" RelativeSize="13.716108452950559">
-            <LayoutGroup Id="UnitKerja" Direction="Vertical" RelativeSize="100" Caption="UnitKerja">
-              <LayoutGroup Id="Auto47ac6acb-10da-4257-8c67-abc7ca2f82b5" ShowCaption="False" Caption="" Direction="Horizontal" Index="1" RelativeSize="27.906976744186046" IsNewNode="True">
-                <LayoutItem Id="Induk" ViewItem="Induk" Index="0" RelativeSize="49.952061361457332" IsNewNode="True" />
-                <LayoutItem Id="Eselon" ViewItem="Eselon" Index="1" RelativeSize="50.047938638542668" IsNewNode="True" />
-              </LayoutGroup>
-              <LayoutItem Id="TotalWaktuKerja" ViewItem="TotalWaktuKerja" Index="2" RelativeSize="34.883720930232556" IsNewNode="True" Removed="True" />
-            </LayoutGroup>
-          </LayoutGroup>
-          <TabbedGroup Id="Tabs" RelativeSize="45.454545454545453">
-            <LayoutGroup Id="SubUnit" RelativeSize="100">
-              <LayoutItem Id="SubUnit" RelativeSize="100" />
-            </LayoutGroup>
-          </TabbedGroup>
-        </LayoutGroup>
-      </Layout>
-    </DetailView>
+    <ListView Id="UnitKerja_UraianTugas_ListView" PreviewColumnName="DeskripsiKegiatan">
+      <Columns>
+        <ColumnInfo Id="AlurKegiatan" Index="-1" />
+        <ColumnInfo Id="PelaksanaKegiatan" Index="-1" />
+        <ColumnInfo Id="Urutan" Index="-1" />
+        <ColumnInfo Id="JumlahOutput" Index="0" Width="125" />
+        <ColumnInfo Id="SOP" Index="1" SortOrder="Ascending" GroupIndex="0" />
+        <ColumnInfo Id="WaktuKegiatan" Index="2" Width="162" />
+      </Columns>
+    </ListView>
   </Views>
 </Application>
