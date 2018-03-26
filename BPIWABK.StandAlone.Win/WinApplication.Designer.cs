@@ -29,7 +29,7 @@
             this.module4 = new BPIWABK.StandAlone.Module.Win.StandAloneWindowsFormsModule();
             this.securityModule1 = new DevExpress.ExpressApp.Security.SecurityModule();
             this.securityStrategyComplex1 = new DevExpress.ExpressApp.Security.SecurityStrategyComplex();
-            this.authenticationStandard1 = new DevExpress.ExpressApp.Security.AuthenticationStandard();
+            this.securityStrategyComplex1.SupportNavigationPermissionsForTypes = false;
             this.auditTrailModule = new DevExpress.ExpressApp.AuditTrail.AuditTrailModule();
             this.objectsModule = new DevExpress.ExpressApp.Objects.BusinessClassLibraryCustomizationModule();
             this.chartModule = new DevExpress.ExpressApp.Chart.ChartModule();
@@ -40,6 +40,9 @@
             this.dashboardsWindowsFormsModule = new DevExpress.ExpressApp.Dashboards.Win.DashboardsWindowsFormsModule();
             this.fileAttachmentsWindowsFormsModule = new DevExpress.ExpressApp.FileAttachments.Win.FileAttachmentsWindowsFormsModule();
             this.htmlPropertyEditorWindowsFormsModule = new DevExpress.ExpressApp.HtmlPropertyEditor.Win.HtmlPropertyEditorWindowsFormsModule();
+            this.kpiModule = new DevExpress.ExpressApp.Kpi.KpiModule();
+            this.notificationsModule = new DevExpress.ExpressApp.Notifications.NotificationsModule();
+            this.notificationsWindowsFormsModule = new DevExpress.ExpressApp.Notifications.Win.NotificationsWindowsFormsModule();
             this.pivotChartModuleBase = new DevExpress.ExpressApp.PivotChart.PivotChartModuleBase();
             this.pivotChartWindowsFormsModule = new DevExpress.ExpressApp.PivotChart.Win.PivotChartWindowsFormsModule();
             this.pivotGridModule = new DevExpress.ExpressApp.PivotGrid.PivotGridModule();
@@ -51,46 +54,38 @@
             this.validationModule = new DevExpress.ExpressApp.Validation.ValidationModule();
             this.validationWindowsFormsModule = new DevExpress.ExpressApp.Validation.Win.ValidationWindowsFormsModule();
             this.viewVariantsModule = new DevExpress.ExpressApp.ViewVariantsModule.ViewVariantsModule();
+            this.authenticationStandard1 = new DevExpress.ExpressApp.Security.AuthenticationStandard();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // securityStrategyComplex1
             // 
             this.securityStrategyComplex1.Authentication = this.authenticationStandard1;
-            this.securityStrategyComplex1.RoleType = typeof(BPIWABK.Module.BusinessObjects.Administrative.Peran);
-            this.securityStrategyComplex1.SupportNavigationPermissionsForTypes = false;
-            this.securityStrategyComplex1.UserType = typeof(BPIWABK.Module.BusinessObjects.Administrative.Pegawai);
+            this.securityStrategyComplex1.RoleType = typeof(DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyRole);
+            this.securityStrategyComplex1.UserType = typeof(DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser);
+            // 
+            // securityModule1
+            // 
+            this.securityModule1.UserType = typeof(DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser);
             // 
             // authenticationStandard1
             // 
             this.authenticationStandard1.LogonParametersType = typeof(DevExpress.ExpressApp.Security.AuthenticationStandardLogonParameters);
-            // 
+            //
             // auditTrailModule
-            // 
+            //
             this.auditTrailModule.AuditDataItemPersistentType = typeof(DevExpress.Persistent.BaseImpl.AuditDataItemPersistent);
-            // 
+            //
             // dashboardsModule
-            // 
+            //
             this.dashboardsModule.DashboardDataType = typeof(DevExpress.Persistent.BaseImpl.DashboardData);
-            // 
-            // dashboardsWindowsFormsModule
-            // 
             this.dashboardsWindowsFormsModule.DesignerFormStyle = DevExpress.XtraBars.Ribbon.RibbonFormStyle.Ribbon;
-            // 
-            // pivotChartModuleBase
-            // 
-            this.pivotChartModuleBase.DataAccessMode = DevExpress.ExpressApp.CollectionSourceDataAccessMode.Client;
-            this.pivotChartModuleBase.ShowAdditionalNavigation = false;
-            // 
+            //
             // reportsModuleV2
-            // 
+            //
             this.reportsModuleV2.EnableInplaceReports = true;
             this.reportsModuleV2.ReportDataType = typeof(DevExpress.Persistent.BaseImpl.ReportDataV2);
+            this.reportsModuleV2.ShowAdditionalNavigation = false;
             this.reportsModuleV2.ReportStoreMode = DevExpress.ExpressApp.ReportsV2.ReportStoreModes.XML;
-            // 
-            // validationModule
-            // 
-            this.validationModule.AllowValidationDetailsAccess = true;
-            this.validationModule.IgnoreWarningAndInformationRules = false;
             // 
             // StandAloneWindowsFormsApplication
             // 
@@ -98,34 +93,38 @@
             this.CheckCompatibilityType = DevExpress.ExpressApp.CheckCompatibilityType.DatabaseSchema;
             this.Modules.Add(this.module1);
             this.Modules.Add(this.module2);
-            this.Modules.Add(this.auditTrailModule);
-            this.Modules.Add(this.objectsModule);
-            this.Modules.Add(this.chartModule);
-            this.Modules.Add(this.cloneObjectModule);
-            this.Modules.Add(this.conditionalAppearanceModule);
-            this.Modules.Add(this.dashboardsModule);
-            this.Modules.Add(this.pivotChartModuleBase);
-            this.Modules.Add(this.pivotGridModule);
-            this.Modules.Add(this.reportsModuleV2);
-            this.Modules.Add(this.treeListEditorsModuleBase);
-            this.Modules.Add(this.validationModule);
-            this.Modules.Add(this.viewVariantsModule);
             this.Modules.Add(this.module3);
-            this.Modules.Add(this.chartWindowsFormsModule);
-            this.Modules.Add(this.dashboardsWindowsFormsModule);
-            this.Modules.Add(this.fileAttachmentsWindowsFormsModule);
-            this.Modules.Add(this.htmlPropertyEditorWindowsFormsModule);
-            this.Modules.Add(this.pivotChartWindowsFormsModule);
-            this.Modules.Add(this.pivotGridWindowsFormsModule);
-            this.Modules.Add(this.reportsWindowsFormsModuleV2);
-            this.Modules.Add(this.treeListEditorsWindowsFormsModule);
-            this.Modules.Add(this.validationWindowsFormsModule);
             this.Modules.Add(this.module4);
             this.Modules.Add(this.securityModule1);
             this.Security = this.securityStrategyComplex1;
+            this.Modules.Add(this.auditTrailModule);
+            this.Modules.Add(this.objectsModule);
+            this.Modules.Add(this.chartModule);
+            this.Modules.Add(this.chartWindowsFormsModule);
+            this.Modules.Add(this.cloneObjectModule);
+            this.Modules.Add(this.conditionalAppearanceModule);
+            this.Modules.Add(this.dashboardsModule);
+            this.Modules.Add(this.dashboardsWindowsFormsModule);
+            this.Modules.Add(this.fileAttachmentsWindowsFormsModule);
+            this.Modules.Add(this.htmlPropertyEditorWindowsFormsModule);
+            this.Modules.Add(this.kpiModule);
+            this.Modules.Add(this.notificationsModule);
+            this.Modules.Add(this.notificationsWindowsFormsModule);
+            this.Modules.Add(this.pivotChartModuleBase);
+            this.Modules.Add(this.pivotChartWindowsFormsModule);
+            this.Modules.Add(this.pivotGridModule);
+            this.Modules.Add(this.pivotGridWindowsFormsModule);
+            this.Modules.Add(this.reportsModuleV2);
+            this.Modules.Add(this.reportsWindowsFormsModuleV2);
+            this.Modules.Add(this.treeListEditorsModuleBase);
+            this.Modules.Add(this.treeListEditorsWindowsFormsModule);
+            this.Modules.Add(this.validationModule);
+            this.Modules.Add(this.validationWindowsFormsModule);
+            this.Modules.Add(this.viewVariantsModule);
             this.UseOldTemplates = false;
             this.DatabaseVersionMismatch += new System.EventHandler<DevExpress.ExpressApp.DatabaseVersionMismatchEventArgs>(this.StandAloneWindowsFormsApplication_DatabaseVersionMismatch);
             this.CustomizeLanguagesList += new System.EventHandler<DevExpress.ExpressApp.CustomizeLanguagesListEventArgs>(this.StandAloneWindowsFormsApplication_CustomizeLanguagesList);
+
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -149,6 +148,9 @@
         private DevExpress.ExpressApp.Dashboards.Win.DashboardsWindowsFormsModule dashboardsWindowsFormsModule;
         private DevExpress.ExpressApp.FileAttachments.Win.FileAttachmentsWindowsFormsModule fileAttachmentsWindowsFormsModule;
         private DevExpress.ExpressApp.HtmlPropertyEditor.Win.HtmlPropertyEditorWindowsFormsModule htmlPropertyEditorWindowsFormsModule;
+        private DevExpress.ExpressApp.Kpi.KpiModule kpiModule;
+        private DevExpress.ExpressApp.Notifications.NotificationsModule notificationsModule;
+        private DevExpress.ExpressApp.Notifications.Win.NotificationsWindowsFormsModule notificationsWindowsFormsModule;
         private DevExpress.ExpressApp.PivotChart.PivotChartModuleBase pivotChartModuleBase;
         private DevExpress.ExpressApp.PivotChart.Win.PivotChartWindowsFormsModule pivotChartWindowsFormsModule;
         private DevExpress.ExpressApp.PivotGrid.PivotGridModule pivotGridModule;

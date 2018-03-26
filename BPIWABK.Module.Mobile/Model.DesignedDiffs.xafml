@@ -18,8 +18,8 @@
     </Items>
   </NavigationItems>
   <SchemaModules>
-    <SchemaModule Name="CloneObjectModule" Version="17.2.6.0" IsNewNode="True" />
-    <SchemaModule Name="SystemModule" Version="17.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="CloneObjectModule" Version="17.2.7.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="17.2.7.0" IsNewNode="True" />
   </SchemaModules>
   <Views>
     <DetailView Id="AboutInfo_DetailView" MobileVisible="True" />

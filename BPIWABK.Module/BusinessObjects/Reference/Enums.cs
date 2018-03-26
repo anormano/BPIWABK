@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DevExpress.ExpressApp.DC;
+using DevExpress.ExpressApp.Utils;
 
 namespace BPIWABK.Module.BusinessObjects.Reference
 {
@@ -11,8 +13,34 @@ namespace BPIWABK.Module.BusinessObjects.Reference
 
     }
 
+    public enum PenilaianKinerja
+    {
+        [XafDisplayName("(Kosong)")]
+        Kosong,
+        [XafDisplayName("1 - Buruk")]
+        Buruk,
+        [XafDisplayName("2 - Cukup")]
+        Cukup,
+        [XafDisplayName("3 - Baik")]
+        Baik,
+        [XafDisplayName("4 - Sangat Baik")]
+        SangatBaik
+    }
+
+    public enum Kepangkatan
+    {
+        Kosong,
+        Fungsional,
+        Staf,
+        EselonIV,
+        EselonIII,
+        EselonII,
+        EselonI,
+        Menteri
+    }
     public enum Eselon
     {
+        [XafDisplayName("(Kosong)")]
         Kosong = 0,
         I = 1,
         II = 2,

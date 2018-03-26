@@ -1,4 +1,5 @@
-﻿using BPIWABK.Module.BusinessObjects.Reference;
+﻿using BPIWABK.Module.BusinessObjects.Master;
+using BPIWABK.Module.BusinessObjects.Reference;
 using DevExpress.Data.Filtering;
 using DevExpress.ExpressApp.ConditionalAppearance;
 using DevExpress.ExpressApp.Editors;
@@ -434,6 +435,15 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
         {
             get => rekeningKoran;
             set => SetPropertyValue(nameof(RekeningKoran), ref rekeningKoran, value);
+        }
+
+        [Association("Pegawai-PenilaianKinerja"), Aggregated]
+        public XPCollection<Kinerja> PenilaianKinerja
+        {
+            get
+            {
+                return GetCollection<Kinerja>(nameof(PenilaianKinerja));
+            }
         }
 
         [Association("Pegawai-SK"), DevExpress.Xpo.Aggregated]

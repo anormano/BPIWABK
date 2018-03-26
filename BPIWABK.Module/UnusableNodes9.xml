@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Kinerja_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Aspek Penilaian">
+              <LayoutGroup Id="Aspek Non Teknis Pekerjaan">
+                <LayoutItem Id="Inistiatif" ViewItem="Inistiatif" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Kinerja">
+              <LayoutGroup Id="Kinerja_col1">
+                <LayoutItem Id="Inistiatif" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

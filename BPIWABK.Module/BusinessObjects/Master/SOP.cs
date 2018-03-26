@@ -44,7 +44,7 @@ namespace BPIWABK.Module.BusinessObjects.Master
         //    set { SetPropertyValue("PersistentProperty", ref _PersistentProperty, value); }
         //}
 
-        [Action(Caption = "Buat Diagram", ConfirmationMessage = "Gambar diagram yang telah ada akan di ganti, lanjutkan?", ImageName = "Attention", AutoCommit = true)]
+        [Action(Caption = "Buat Diagram", ConfirmationMessage = "Gambar diagram yang telah ada akan di ganti, lanjutkan?", ImageName = "Attention", AutoCommit = true, TargetObjectsCriteria = "Kegiatan.Count() > 0")]
         public void ActionMethod()
         {
             // Trigger a custom business logic for the current record in the UI (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112619.aspx).
