@@ -56,8 +56,24 @@ namespace BPIWABK.Module.BusinessObjects.Master
             set => SetPropertyValue(nameof(Pegawai), ref pegawai, value);
         }
 
+        string periodePenilaian;
+        [VisibleInDetailView(false)]
+        public string PeriodePenilaian
+        {
+            get
+            {
+                periodePenilaian = string.Empty;
+                if (PeriodePenilaianMulai != DateTime.MinValue && PeriodePenilaianAkhir != DateTime.MinValue)
+                {
+                    periodePenilaian = string.Format("{0:MMM/YYYY} - {1:MMM/YYYY}", PeriodePenilaianMulai, PeriodePenilaianAkhir);
+                }
+                return periodePenilaian;
+            }
+        }
+
         DateTime periodePenilaianMulai;
         [RuleRequiredField]
+        [VisibleInListView(false)]
         public DateTime PeriodePenilaianMulai
         {
             get => periodePenilaianMulai;
@@ -66,10 +82,11 @@ namespace BPIWABK.Module.BusinessObjects.Master
 
         DateTime periodePenilaianAKhir;
         [RuleRequiredField]
-        public DateTime PeriodePenilaianAKhir
+        [VisibleInListView(false)]
+        public DateTime PeriodePenilaianAkhir
         {
             get => periodePenilaianAKhir;
-            set => SetPropertyValue(nameof(PeriodePenilaianAKhir), ref periodePenilaianAKhir, value);
+            set => SetPropertyValue(nameof(PeriodePenilaianAkhir), ref periodePenilaianAKhir, value);
         }
 
         PenilaianKinerja pemahaman;

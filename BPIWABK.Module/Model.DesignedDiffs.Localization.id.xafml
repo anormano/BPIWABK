@@ -412,6 +412,7 @@
         <LocalizationItem Name="PermissionIsDenied" Value="Perijinan di tolak" />
       </LocalizationGroup>
       <LocalizationGroup Name="UserVisibleExceptions">
+        <LocalizationItem Name="LogonAttemptsAmountedToLimitWin" Value="Setelah tiga kali gagal untuk login, aplikasi akan ditutup sekarang. Harap hubungi administrator mengenai detail logain anda." />
         <LocalizationGroup Name="Validation">
           <LocalizationItem Name="ActionErrorMessageHeaderFormat" Value="Permasalahan terdeksi pada saat validasi data. Harap baca informasi dibawah ini untuk mengetahui permasalahannya dan bagaimana anda dapat memperbaikinya." />
           <LocalizationItem Name="AllContextsErrorMessageHeader" Value="Permasalahan terdeksi pada saat validasi data. Harap baca informasi dibawah ini untuk mengetahui permasalahannya dan bagaimana anda dapat memperbaikinya." />
