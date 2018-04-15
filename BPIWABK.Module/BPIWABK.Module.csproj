@@ -234,6 +234,7 @@
     <Compile Include="BusinessObjects\Reference\PenggunaSOP.cs" />
     <Compile Include="BusinessObjects\Reference\Propinsi.cs" />
     <Compile Include="BusinessObjects\Reference\SatuanHasil.cs" />
+    <Compile Include="BusinessObjects\Reference\SatuanKerja.cs" />
     <Compile Include="BusinessObjects\Reference\TugasFungsi.cs" />
     <Compile Include="BusinessObjects\Reference\UnitKerja.cs" />
     <Compile Include="DatabaseUpdate\Updater.cs" />
@@ -319,6 +320,10 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="UnusableNodes9.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes_id.xml">
       <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
       <SubType>Designer</SubType>
     </None>

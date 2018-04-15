@@ -121,7 +121,6 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
         }
 
         Jurusan jurusan;
-        [RuleRequiredField]
         public Jurusan Jurusan
         {
             get => jurusan;

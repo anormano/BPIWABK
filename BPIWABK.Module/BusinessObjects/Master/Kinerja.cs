@@ -19,6 +19,7 @@ namespace BPIWABK.Module.BusinessObjects.Master
     [DefaultClassOptions]
     //[ImageName("BO_Contact")]
     [DefaultProperty("PeriodePenilaian")]
+    [RuleCombinationOfPropertiesIsUnique("TahunPenilaian,Pegawai")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
     //[Persistent("DatabaseTableName")]
     // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
@@ -32,6 +33,7 @@ namespace BPIWABK.Module.BusinessObjects.Master
         {
             base.AfterConstruction();
             // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
+            TahunPenilaian = DateTime.Now.Year;
         }
         //private string _PersistentProperty;
         //[XafDisplayName("My display name"), ToolTip("My hint message")]
@@ -63,30 +65,21 @@ namespace BPIWABK.Module.BusinessObjects.Master
             get
             {
                 periodePenilaian = string.Empty;
-                if (PeriodePenilaianMulai != DateTime.MinValue && PeriodePenilaianAkhir != DateTime.MinValue)
+                if (!IsLoading)
                 {
-                    periodePenilaian = string.Format("{0:MMM/YYYY} - {1:MMM/YYYY}", PeriodePenilaianMulai, PeriodePenilaianAkhir);
+                    DateTime mulai = new DateTime(TahunPenilaian, 1, 2);
+                    DateTime akhir = new DateTime(TahunPenilaian, 12, 31);
+                    periodePenilaian = string.Format("{0:dd/MMM/yyyy} - {1:dd/MMM/yyyy}", mulai, akhir);
                 }
                 return periodePenilaian;
             }
         }
 
-        DateTime periodePenilaianMulai;
-        [RuleRequiredField]
-        [VisibleInListView(false)]
-        public DateTime PeriodePenilaianMulai
+        int tahunPenilaian;
+        public int TahunPenilaian
         {
-            get => periodePenilaianMulai;
-            set => SetPropertyValue(nameof(PeriodePenilaianMulai), ref periodePenilaianMulai, value);
-        }
-
-        DateTime periodePenilaianAKhir;
-        [RuleRequiredField]
-        [VisibleInListView(false)]
-        public DateTime PeriodePenilaianAkhir
-        {
-            get => periodePenilaianAKhir;
-            set => SetPropertyValue(nameof(PeriodePenilaianAkhir), ref periodePenilaianAKhir, value);
+            get => tahunPenilaian;
+            set => SetPropertyValue(nameof(TahunPenilaian), ref tahunPenilaian, value);
         }
 
         PenilaianKinerja pemahaman;

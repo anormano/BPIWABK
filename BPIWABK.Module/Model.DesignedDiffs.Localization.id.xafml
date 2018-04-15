@@ -439,7 +439,6 @@
   </NavigationItems>
   <Validation>
     <Contexts>
-      <ValidationContext Id="Accept" Caption="Terima" />
       <ValidationContext Id="Save" Caption="Simpan" />
     </Contexts>
     <ErrorMessageTemplates>
@@ -481,6 +480,19 @@
         <ColumnInfo Id="DisplayName" Caption="Nama" />
       </Columns>
     </ListView>
+    <DetailView Id="Pegawai_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Informasi Kepegawaian">
+              <LayoutGroup Id="@8f6f70d6-6e1a-4602-964f-ea0ebccfe087">
+                <LayoutGroup Id="@ebc6f671-663c-49a9-a515-af48a6782bcd" Caption="@ebc6f671-663c-49a9-a515-af48a6782bcd" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <DetailView Id="PermissionPolicyNavigationPermissionObject_DetailView">
       <Layout>
         <LayoutGroup Id="Main">

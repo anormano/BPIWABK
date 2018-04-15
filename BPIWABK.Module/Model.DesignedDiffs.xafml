@@ -2,15 +2,44 @@
 <Application Title="Sistem Informasi Ketatalaksanaan BPIW" PreferredLanguage="id" Company="Badan Pengembangan Infrastruktur Wilayah" Copyright="Copyright &amp;copy; 2017 Badan Pengembangan Infrastruktur Wilayah -  Kementerian PUPR" Description="Sistem informasi pengelolaan ketatalaksanaan di lingkungan BPIW Kementerian Pekerjaan Umum dan Perumahan Rakyat">
   <NavigationItems>
     <Items>
-      <Item Id="Menu Utama" Index="0" ImageName="BO_Folder">
+      <Item Id="Pegawai Non-PNS" Index="0" IsNewNode="True">
+        <Items IsNewNode="True">
+          <DashboardNavigationItem Id="Statistik Pegawai Non PNS" DashboardTitle="Statistik Pegawai Non PNS" Caption="Statistik Pegawai Non PNS" Index="0" IsNewNode="True" />
+          <Item Id="Daftar Pegawai Non PNS" Caption="Daftar Pegawai Non PNS" ViewId="Pegawai_ListView" Index="1" IsNewNode="True" />
+          <Item Id="Kinerja_ListView" ViewId="Kinerja_ListView" ObjectKey="" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="Menu Utama" Index="1" ImageName="BO_Folder" Caption="SOP">
         <Items>
           <Item Id="SOP_ListView" Index="0" />
           <Item Id="DetailSaya" Caption="Detail Saya" ObjectKey="@CurrentUserID" ViewId="Pegawai_DetailView" ImageName="BO_MyDetails" Index="1" IsNewNode="True" />
-          <DashboardNavigationItem Id="@6a6c8eaf-8e8f-49a4-bd17-229a384286da" DashboardTitle="Statistik Pegawai Non PNS" Caption="Statistik Pegawai Non PNS" IsNewNode="True" />
-          <Item Id="PegawaiNonPNS" Caption="Pegawai Non-PNS" ViewId="Pegawai_ListView" IsNewNode="True" />
+          <Item Id="Alat_ListView" ViewId="Alat_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="AlurKegiatan_ListView" ViewId="AlurKegiatan_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="InputKegiatan_ListView" ViewId="InputKegiatan_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="OutputKegiatan_ListView" ViewId="OutputKegiatan_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="SatuanHasil_ListView" ViewId="SatuanHasil_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="TugasFungsi_ListView" ViewId="TugasFungsi_ListView" ObjectKey="" IsNewNode="True" />
         </Items>
       </Item>
-      <Item Id="Referensi" Index="1" />
+      <Item Id="Referensi" Index="1">
+        <Items>
+          <Item Id="Alat_ListView" Removed="True" />
+          <Item Id="Bank_ListView" ViewId="Bank_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="InputKegiatan_ListView" Removed="True" />
+          <Item Id="Jabatan_ListView" ViewId="Jabatan_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="Jurusan_ListView" ViewId="Jurusan_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="Kabupaten_ListView" ViewId="Kabupaten_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="Kecamatan_ListView" ViewId="Kecamatan_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="LembagaPendidikan_ListView" ViewId="LembagaPendidikan_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="OutputKegiatan_ListView" Removed="True" />
+          <Item Id="Pegawai_ListView" ViewId="Pegawai_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="Propinsi_ListView" ViewId="Propinsi_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="SatuanHasil_ListView" Removed="True" />
+          <Item Id="SatuanKerja_ListView" ViewId="SatuanKerja_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="TugasFungsi_ListView" Removed="True" />
+          <Item Id="UnitKerja_ListView" ViewId="UnitKerja_ListView" ObjectKey="" IsNewNode="True" />
+        </Items>
+      </Item>
       <Item Id="Reports" Index="2">
         <Items>
           <Item Id="ReportsV2" Index="0" />
@@ -21,6 +50,18 @@
       <Item Id="Default" Index="3">
         <Items>
           <Item Id="@9b03c77f-3286-4f87-908a-2b2a7676c5bd" ViewId="Setelan_DetailView" IsNewNode="True" />
+          <Item Id="AlurKegiatan_ListView" Removed="True" />
+          <Item Id="Bank_ListView" Removed="True" />
+          <Item Id="Jabatan_ListView" Removed="True" />
+          <Item Id="Jurusan_ListView" Removed="True" />
+          <Item Id="Kabupaten_ListView" Removed="True" />
+          <Item Id="Kecamatan_ListView" Removed="True" />
+          <Item Id="Kinerja_ListView" Removed="True" />
+          <Item Id="LembagaPendidikan_ListView" Removed="True" />
+          <Item Id="Pegawai_ListView" Removed="True" />
+          <Item Id="Propinsi_ListView" Removed="True" />
+          <Item Id="SatuanKerja_ListView" Removed="True" />
+          <Item Id="UnitKerja_ListView" Removed="True" />
         </Items>
       </Item>
     </Items>
@@ -89,6 +130,7 @@
         <PropertyEditor Id="KabupatenTinggal" Caption="Kabupaten" />
         <PropertyEditor Id="KecamatanTinggal" Caption="Kecamatan" />
         <PropertyEditor Id="PropinsiTinggal" Caption="Propinsi" />
+        <PropertyEditor Id="SatuanKerja" LookupEditorMode="AllItemsWithSearch" />
       </Items>
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
@@ -96,13 +138,13 @@
             <LayoutGroup Id="Item4" ShowCaption="True" Caption="Informasi Umum" CaptionLocation="Top" Index="0" RelativeSize="42.984014209591471" Direction="Vertical" IsNewNode="True">
               <LayoutGroup Id="Main" ShowCaption="False" Index="0" RelativeSize="100" IsNewNode="True">
                 <LayoutGroup Id="Top" Index="0" Direction="Horizontal" ShowCaption="False" RelativeSize="100" IsNewNode="True">
-                  <LayoutGroup Id="LeftCol" ShowCaption="False" Caption="Auto8f94c890-09bd-4c21-83e2-16efa2bb450c(5)" Index="0" RelativeSize="49.941107184923439" IsNewNode="True">
+                  <LayoutGroup Id="LeftCol" ShowCaption="False" Caption="Auto8f94c890-09bd-4c21-83e2-16efa2bb450c(5)" Index="0" RelativeSize="49.852941176470587" IsNewNode="True">
                     <LayoutItem Id="Foto" ViewItem="Foto" Index="0" RelativeSize="15.384615384615385" IsNewNode="True" />
                     <LayoutItem Id="Telepon" ViewItem="Telepon" Index="1" RelativeSize="11.538461538461538" IsNewNode="True" />
                     <LayoutItem Id="Handphone" ViewItem="Handphone" Index="2" RelativeSize="11.538461538461538" IsNewNode="True" />
                     <LayoutItem Id="Email" ViewItem="Email" Index="3" RelativeSize="61.53846153846154" IsNewNode="True" />
                   </LayoutGroup>
-                  <LayoutGroup Id="RightCol" RelativeSize="50.058892815076561" ShowCaption="False" Index="1" IsNewNode="True">
+                  <LayoutGroup Id="RightCol" RelativeSize="50.147058823529413" ShowCaption="False" Index="1" IsNewNode="True">
                     <LayoutItem Id="NamaLengkap" ViewItem="NamaLengkap" Index="0" RelativeSize="15.384615384615385" IsNewNode="True" />
                     <LayoutItem Id="JenisKelamin" ViewItem="JenisKelamin" Index="1" RelativeSize="11.538461538461538" IsNewNode="True" />
                     <LayoutItem Id="TempatLahir" ViewItem="TempatLahir" Index="2" RelativeSize="11.538461538461538" IsNewNode="True" />
@@ -117,23 +159,23 @@
             </LayoutGroup>
             <LayoutGroup Id="Informasi Kepegawaian" ShowCaption="True" Index="1" RelativeSize="27.708703374777976" Direction="Vertical" IsNewNode="True">
               <LayoutGroup Id="@8f6f70d6-6e1a-4602-964f-ea0ebccfe087" Direction="Horizontal" ShowCaption="False" Index="0" RelativeSize="47.692307692307693" IsNewNode="True">
-                <LayoutGroup Id="@59f60f11-c762-4a06-a578-17c5c7c8dd3c" ShowCaption="False" Index="0" RelativeSize="49.941107184923439" IsNewNode="True">
+                <LayoutGroup Id="@59f60f11-c762-4a06-a578-17c5c7c8dd3c" ShowCaption="False" Index="0" RelativeSize="49.852941176470587" IsNewNode="True">
                   <LayoutItem Id="NomorInduk" ViewItem="NomorInduk" Index="0" RelativeSize="51.612903225806448" IsNewNode="True" />
                   <LayoutItem Id="StatusKepegawaian" ViewItem="StatusKepegawaian" Index="1" RelativeSize="48.387096774193552" IsNewNode="True" />
                 </LayoutGroup>
-                <LayoutGroup Id="@ebc6f671-663c-49a9-a515-af48a6782bcd" ShowCaption="False" Index="1" RelativeSize="50.058892815076561" IsNewNode="True">
+                <LayoutGroup Id="@ebc6f671-663c-49a9-a515-af48a6782bcd" ShowCaption="False" Index="1" RelativeSize="50.147058823529413" IsNewNode="True">
                   <LayoutItem Id="Jabatan" ViewItem="Jabatan" Index="0" RelativeSize="51.612903225806448" IsNewNode="True" />
-                  <LayoutItem Id="UnitKerja" ViewItem="UnitKerja" Index="1" RelativeSize="48.387096774193552" IsNewNode="True" />
+                  <LayoutItem Id="SatuanKerja" ViewItem="SatuanKerja" Index="1" RelativeSize="48.387096774193552" IsNewNode="True" />
                 </LayoutGroup>
               </LayoutGroup>
               <LayoutGroup Id="@dfc8b376-4f41-4f20-ad30-501ead660917" Direction="Vertical" ShowCaption="False" Index="1" RelativeSize="52.307692307692307" IsNewNode="True">
                 <LayoutGroup Id="@69e83ef4-d337-4f17-92b1-a574337d2a6e" Direction="Horizontal" ShowCaption="False" Index="0" RelativeSize="48.529411764705884" IsNewNode="True">
-                  <LayoutItem Id="SKPengangkatanPertama" ViewItem="SKPengangkatanPertama" Index="0" RelativeSize="49.941107184923439" IsNewNode="True" />
-                  <LayoutItem Id="TahunSKPengangkatanPertama" ViewItem="TahunSKPengangkatanPertama" Index="1" RelativeSize="50.058892815076561" IsNewNode="True" />
+                  <LayoutItem Id="SKPengangkatanPertama" ViewItem="SKPengangkatanPertama" Index="0" RelativeSize="49.852941176470587" IsNewNode="True" />
+                  <LayoutItem Id="TahunSKPengangkatanPertama" ViewItem="TahunSKPengangkatanPertama" Index="1" RelativeSize="50.147058823529413" IsNewNode="True" />
                 </LayoutGroup>
                 <LayoutGroup Id="@7f33377f-f6ae-4af5-b2d5-48233bbdd27c" Direction="Horizontal" ShowCaption="False" Index="1" RelativeSize="51.470588235294116" IsNewNode="True">
-                  <LayoutItem Id="SKPengangkatanTerakhir" ViewItem="SKPengangkatanTerakhir" Index="0" RelativeSize="49.941107184923439" IsNewNode="True" />
-                  <LayoutItem Id="TahunSKPengangkatanTerakhir" ViewItem="TahunSKPengangkatanTerakhir" Index="1" RelativeSize="50.058892815076561" IsNewNode="True" />
+                  <LayoutItem Id="SKPengangkatanTerakhir" ViewItem="SKPengangkatanTerakhir" Index="0" RelativeSize="49.852941176470587" IsNewNode="True" />
+                  <LayoutItem Id="TahunSKPengangkatanTerakhir" ViewItem="TahunSKPengangkatanTerakhir" Index="1" RelativeSize="50.147058823529413" IsNewNode="True" />
                 </LayoutGroup>
               </LayoutGroup>
             </LayoutGroup>
@@ -185,14 +227,14 @@
               </LayoutGroup>
             </LayoutGroup>
             <LayoutGroup Id="Identitas" ShowCaption="True" Direction="Horizontal" Index="2" RelativeSize="29.307282415630549" IsNewNode="True">
-              <LayoutGroup Id="Left" RelativeSize="49.941107184923439" ShowCaption="False" Index="0" IsNewNode="True">
+              <LayoutGroup Id="Left" RelativeSize="49.852941176470587" ShowCaption="False" Index="0" IsNewNode="True">
                 <LayoutItem Id="NomorKTP" ViewItem="NomorKTP" Index="0" RelativeSize="23.529411764705884" IsNewNode="True" />
                 <LayoutItem Id="KTP" ViewItem="KTP" Index="1" RelativeSize="17.647058823529413" IsNewNode="True" />
                 <LayoutItem Id="Bank" ViewItem="Bank" Index="2" RelativeSize="17.647058823529413" IsNewNode="True" />
                 <LayoutItem Id="NomorRekening" ViewItem="NomorRekening" Index="3" RelativeSize="17.647058823529413" IsNewNode="True" />
                 <LayoutItem Id="RekeningKoran" ViewItem="RekeningKoran" Index="4" RelativeSize="23.529411764705884" IsNewNode="True" />
               </LayoutGroup>
-              <LayoutGroup Id="Right" RelativeSize="50.058892815076561" ShowCaption="False" Index="1" IsNewNode="True">
+              <LayoutGroup Id="Right" RelativeSize="50.147058823529413" ShowCaption="False" Index="1" IsNewNode="True">
                 <LayoutItem Id="NomorNPWP" ViewItem="NomorNPWP" Index="0" RelativeSize="23.529411764705884" IsNewNode="True" />
                 <LayoutItem Id="NPWP" ViewItem="NPWP" Index="1" RelativeSize="76.470588235294116" IsNewNode="True" />
               </LayoutGroup>
@@ -206,13 +248,13 @@
           <LayoutGroup Id="SizeableEditors" Caption="SizeableEditors" RelativeSize="58.858858858858859" Direction="Vertical">
             <LayoutGroup Id="Item3" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="0" RelativeSize="21.632653061224488" Caption="Informasi Kontak" IsNewNode="True">
               <LayoutGroup Id="Autof8b00e49-f309-4c2b-9e34-344dae4201d9" ShowCaption="False" Caption="Autof8b00e49-f309-4c2b-9e34-344dae4201d9(31)" Direction="Horizontal" Index="0" RelativeSize="99.4535519125683" IsNewNode="True">
-                <LayoutGroup Id="Item1" ShowCaption="True" Caption="KTP" CaptionLocation="Top" Index="0" RelativeSize="47.58539458186101" IsNewNode="True">
+                <LayoutGroup Id="Item1" ShowCaption="True" Caption="KTP" CaptionLocation="Top" Index="0" RelativeSize="47.5" IsNewNode="True">
                   <LayoutItem Id="Alamat" ViewItem="Alamat" Index="0" RelativeSize="43.661971830985912" IsNewNode="True" />
                   <LayoutItem Id="Propinsi" ViewItem="Propinsi" Index="1" RelativeSize="16.901408450704224" IsNewNode="True" />
                   <LayoutItem Id="Kabupaten" ViewItem="Kabupaten" Index="2" RelativeSize="16.901408450704224" IsNewNode="True" />
                   <LayoutItem Id="Kecamatan" ViewItem="Kecamatan" Index="3" RelativeSize="22.535211267605632" IsNewNode="True" />
                 </LayoutGroup>
-                <LayoutGroup Id="Item2" ShowCaption="True" Caption="Tempat Tinggal" CaptionLocation="Top" Index="1" RelativeSize="52.41460541813899" IsNewNode="True">
+                <LayoutGroup Id="Item2" ShowCaption="True" Caption="Tempat Tinggal" CaptionLocation="Top" Index="1" RelativeSize="52.5" IsNewNode="True">
                   <LayoutItem Id="AlamatTinggal" ViewItem="AlamatTinggal" Index="0" RelativeSize="43.661971830985912" IsNewNode="True" />
                   <LayoutItem Id="PropinsiTinggal" ViewItem="PropinsiTinggal" Index="1" RelativeSize="16.901408450704224" IsNewNode="True" />
                   <LayoutItem Id="KabupatenTinggal" ViewItem="KabupatenTinggal" Index="2" RelativeSize="16.901408450704224" IsNewNode="True" />
@@ -246,8 +288,8 @@
             <LayoutGroup Id="PermissionPolicyUser" ShowCaption="True" Caption="Informasi Keamanan" Index="0" RelativeSize="100" IsNewNode="True">
               <LayoutItem Id="UserName" ViewItem="UserName" Index="0" RelativeSize="40.506329113924053" IsNewNode="True" />
               <LayoutGroup Id="Autoa376ef6c-af8d-4c5f-8bf3-8c80394617c6" ShowCaption="False" Caption="Autoa376ef6c-af8d-4c5f-8bf3-8c80394617c6(50)" Direction="Horizontal" Index="1" RelativeSize="45.569620253164558" IsNewNode="True">
-                <LayoutItem Id="IsActive" ViewItem="IsActive" Index="0" RelativeSize="47.573964497041423" IsNewNode="True" />
-                <LayoutItem Id="ChangePasswordOnFirstLogon" ViewItem="ChangePasswordOnFirstLogon" Index="1" RelativeSize="52.426035502958577" IsNewNode="True" />
+                <LayoutItem Id="IsActive" ViewItem="IsActive" Index="0" RelativeSize="47.485207100591715" IsNewNode="True" />
+                <LayoutItem Id="ChangePasswordOnFirstLogon" ViewItem="ChangePasswordOnFirstLogon" Index="1" RelativeSize="52.514792899408285" IsNewNode="True" />
               </LayoutGroup>
               <LayoutGroup Id="Autoeb7265c6-112c-4989-86b8-414f6a4afa0b" ShowCaption="False" Caption="Autoeb7265c6-112c-4989-86b8-414f6a4afa0b(45)" Direction="Horizontal" Index="2" RelativeSize="13.924050632911392" IsNewNode="True" />
             </LayoutGroup>

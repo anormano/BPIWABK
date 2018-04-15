@@ -70,11 +70,11 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
             set => SetPropertyValue(nameof(StatusKepegawaian), ref statusKepegawaian, value);
         }
 
-        UnitKerja unitKerja;
-        public UnitKerja UnitKerja
+        EselonIV satuanKerja;
+        public EselonIV SatuanKerja
         {
-            get => unitKerja;
-            set => SetPropertyValue(nameof(UnitKerja), ref unitKerja, value);
+            get => satuanKerja;
+            set => SetPropertyValue(nameof(SatuanKerja), ref satuanKerja, value);
         }
 
         Jabatan jabatan;
