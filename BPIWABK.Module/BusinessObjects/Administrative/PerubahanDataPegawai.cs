@@ -120,6 +120,7 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
             get => tempatLahir;
             set => SetPropertyValue(nameof(TempatLahir), ref tempatLahir, value);
         }
+
         [VisibleInListView(false)]
         public string TempatLahirAwal
         {

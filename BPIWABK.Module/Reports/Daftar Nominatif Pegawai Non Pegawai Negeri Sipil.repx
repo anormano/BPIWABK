@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<XtraReportsLayoutSerializer SerializerVersion="17.2.7.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="xtraReport1" DisplayName="Daftar Nominatif Pegawai Non Pegawai Negeri Sipil" Landscape="true" Margins="25, 25, 25, 39" PaperKind="A4" PageWidth="1169" PageHeight="827" Version="17.2" FilterString="[TahunSKPengangkatanTerakhir] = ?TahunPengangkatan" DataSource="#Ref-0" Font="Arial, 6pt">
+<XtraReportsLayoutSerializer SerializerVersion="17.2.8.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v17.2, Version=17.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="xtraReport1" DisplayName="Daftar Nominatif Pegawai Non Pegawai Negeri Sipil" Landscape="true" Margins="25, 25, 25, 39" PaperKind="A4" PageWidth="1169" PageHeight="827" Version="17.2" FilterString="[TahunSKPengangkatanTerakhir] = ?TahunPengangkatan" DataSource="#Ref-0" Font="Arial, 6pt">
   <Extensions>
     <Item1 Ref="2" Key="DataSerializationExtension" Value="XtraReport" />
     <Item2 Ref="3" Key="DataEditorExtension" Value="XtraReport" />
