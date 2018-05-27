@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="UnitKerja_UraianTugas_ListView" PreviewColumnName="DeskripsiKegiatan">
+      <Columns Id="Columns">
+        <ColumnInfo Id="AlurKegiatan" Index="-1" />
+        <ColumnInfo Id="PelaksanaKegiatan" Index="-1" />
+        <ColumnInfo Id="Urutan" Index="-1" />
+        <ColumnInfo Id="JumlahOutput" Index="0" Width="125" />
+        <ColumnInfo Id="SOP" Index="1" SortOrder="Ascending" GroupIndex="0" />
+        <ColumnInfo Id="WaktuKegiatan" Index="2" Width="162" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Pegawai_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="SatuanKerja" LookupEditorMode="AllItemsWithSearch" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Informasi Kepegawaian">
+              <LayoutGroup Id="@8f6f70d6-6e1a-4602-964f-ea0ebccfe087">
+                <LayoutGroup Id="@ebc6f671-663c-49a9-a515-af48a6782bcd">
+                  <LayoutItem Id="SatuanKerja" ViewItem="SatuanKerja" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Referensi">
+        <Items Id="Items">
+          <Item Id="SatuanKerja_ListView" ViewId="SatuanKerja_ListView" />
+        </Items>
+      </Item>
+      <Item Id="Default">
+        <Items Id="Items">
+          <Item Id="SatuanKerja_ListView" Removed="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

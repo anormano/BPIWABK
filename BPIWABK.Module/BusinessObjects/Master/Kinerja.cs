@@ -76,6 +76,8 @@ namespace BPIWABK.Module.BusinessObjects.Master
         }
 
         int tahunPenilaian;
+        [ModelDefault("EditMask", "D")]
+        [ModelDefault("DisplayFormat", "D")]
         public int TahunPenilaian
         {
             get => tahunPenilaian;

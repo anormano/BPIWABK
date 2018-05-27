@@ -18,7 +18,7 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
     [CurrentUserDisplayImage("Foto")]
     [ImageName("BO_Contact")]
     [DefaultProperty("NamaLengkap")]
-    [Appearance("HideRoles", TargetItems = "Roles", Visibility = ViewItemVisibility.Hide, Criteria = "Not Roles[IsAdministrative = True]")]
+    //[Appearance("HideRoles", TargetItems = "Roles", Visibility = ViewItemVisibility.Hide, Criteria = "Not Roles[IsAdministrative = True]")]
     public class Pegawai : PermissionPolicyUser
     {
         public Pegawai(Session session)
@@ -62,19 +62,19 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
             set => SetPropertyValue(nameof(NamaLengkap), ref namaLengkap, value);
         }
 
-        StatusKepegawaian statusKepegawaian;
+        StatusKepegawaian? statusKepegawaian;
         [VisibleInListView(false)]
-        public StatusKepegawaian StatusKepegawaian
+        public StatusKepegawaian? StatusKepegawaian
         {
             get => statusKepegawaian;
             set => SetPropertyValue(nameof(StatusKepegawaian), ref statusKepegawaian, value);
         }
 
-        EselonIV satuanKerja;
-        public EselonIV SatuanKerja
+        EselonIV unitKerja;
+        public EselonIV UnitKerja
         {
-            get => satuanKerja;
-            set => SetPropertyValue(nameof(SatuanKerja), ref satuanKerja, value);
+            get => unitKerja;
+            set => SetPropertyValue(nameof(UnitKerja), ref unitKerja, value);
         }
 
         Jabatan jabatan;
@@ -102,6 +102,8 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
 
 
         [VisibleInListView(false), VisibleInDetailView(false)]
+        [ModelDefault("EditMask", "D")]
+        [ModelDefault("DisplayFormat", "D")]
         public int Umur
         {
             get
@@ -232,33 +234,33 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
             set => SetPropertyValue(nameof(KecamatanTinggal), ref kecamatanTinggal, value);
         }
         
-        StatusPernikahan statusPernikahan;
+        StatusPernikahan? statusPernikahan;
         [VisibleInListView(false)]
-        public StatusPernikahan StatusPernikahan
+        public StatusPernikahan? StatusPernikahan
         {
             get => statusPernikahan;
             set => SetPropertyValue(nameof(StatusPernikahan), ref statusPernikahan, value);
         }
 
-        JenisKelamin jenisKelamin;
+        JenisKelamin? jenisKelamin;
         [VisibleInListView(false)]
-        public JenisKelamin JenisKelamin
+        public JenisKelamin? JenisKelamin
         {
             get => jenisKelamin;
             set => SetPropertyValue(nameof(JenisKelamin), ref jenisKelamin, value);
         }
 
-        Agama agama;
+        Agama? agama;
         [VisibleInListView(false)]
-        public Agama Agama
+        public Agama? Agama
         {
             get => agama;
             set => SetPropertyValue(nameof(Agama), ref agama, value);
         }
 
-        GolonganDarah golonganDarah;
+        GolonganDarah? golonganDarah;
         [VisibleInListView(false)]
-        public GolonganDarah GolonganDarah
+        public GolonganDarah? GolonganDarah
         {
             get => golonganDarah;
             set => SetPropertyValue(nameof(GolonganDarah), ref golonganDarah, value);
@@ -325,6 +327,8 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
         }
 
         [VisibleInListView(false)]
+        [ModelDefault("EditMask", "D")]
+        [ModelDefault("DisplayFormat", "D")]
         public int? TahunLulus
         {
             get
@@ -360,7 +364,8 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
 
         [ModelDefault("Caption", "Tahun Awal")]
         [VisibleInListView(false)]
-        //[ModelDefault("DisplayFormat", "{O:#}")]
+        [ModelDefault("EditMask", "D")]
+        [ModelDefault("DisplayFormat", "D")]
         public int? TahunSKPengangkatanPertama
         {
             get
@@ -395,6 +400,8 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
 
         [ModelDefault("Caption", "Tahun Terkini")]
         [VisibleInListView(false)]
+        [ModelDefault("EditMask", "D")]
+        [ModelDefault("DisplayFormat", "D")]
         public int? TahunSKPengangkatanTerakhir
         {
             get
@@ -478,5 +485,6 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
         {
             get => GetCollection<Seminar>(nameof(SeminarSeminar));
         }
+
     }
 }

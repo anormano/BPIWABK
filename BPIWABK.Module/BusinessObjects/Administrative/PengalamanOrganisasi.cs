@@ -83,6 +83,8 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
         }
 
         int tahunMulai;
+        [ModelDefault("EditMask", "D")]
+        [ModelDefault("DisplayFormat", "D")]
         public int TahunMulai
         {
             get => tahunMulai;
@@ -97,6 +99,8 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
         }
 
         int tahunSelesai;
+        [ModelDefault("EditMask", "D")]
+        [ModelDefault("DisplayFormat", "D")]
         public int TahunSelesai
         {
             get => tahunSelesai;

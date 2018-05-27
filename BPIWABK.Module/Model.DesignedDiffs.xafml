@@ -60,7 +60,6 @@
           <Item Id="LembagaPendidikan_ListView" Removed="True" />
           <Item Id="Pegawai_ListView" Removed="True" />
           <Item Id="Propinsi_ListView" Removed="True" />
-          <Item Id="SatuanKerja_ListView" Removed="True" />
           <Item Id="UnitKerja_ListView" Removed="True" />
         </Items>
       </Item>
@@ -130,7 +129,6 @@
         <PropertyEditor Id="KabupatenTinggal" Caption="Kabupaten" />
         <PropertyEditor Id="KecamatanTinggal" Caption="Kecamatan" />
         <PropertyEditor Id="PropinsiTinggal" Caption="Propinsi" />
-        <PropertyEditor Id="SatuanKerja" LookupEditorMode="AllItemsWithSearch" />
       </Items>
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
@@ -555,16 +553,6 @@
       <Sorting>
         <SortProperty Id="SortUrutan" PropertyName="Urutan" IsNewNode="True" />
       </Sorting>
-    </ListView>
-    <ListView Id="UnitKerja_UraianTugas_ListView" PreviewColumnName="DeskripsiKegiatan">
-      <Columns>
-        <ColumnInfo Id="AlurKegiatan" Index="-1" />
-        <ColumnInfo Id="PelaksanaKegiatan" Index="-1" />
-        <ColumnInfo Id="Urutan" Index="-1" />
-        <ColumnInfo Id="JumlahOutput" Index="0" Width="125" />
-        <ColumnInfo Id="SOP" Index="1" SortOrder="Ascending" GroupIndex="0" />
-        <ColumnInfo Id="WaktuKegiatan" Index="2" Width="162" />
-      </Columns>
     </ListView>
   </Views>
 </Application>

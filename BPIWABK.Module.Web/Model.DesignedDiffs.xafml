@@ -6,4 +6,28 @@
     <SchemaModule Name="SystemAspNetModule" Version="17.2.8.0" IsNewNode="True" />
     <SchemaModule Name="SystemModule" Version="17.2.8.0" IsNewNode="True" />
   </SchemaModules>
+  <Views>
+    <DetailView Id="Kinerja_DetailView">
+      <Items>
+        <PropertyEditor Id="Inisiatif" PropertyEditorType="Editors.RadioButtonListEnumPropertyEditor" />
+        <PropertyEditor Id="Kedisiplinan" PropertyEditorType="Editors.RadioButtonListEnumPropertyEditor" />
+        <PropertyEditor Id="Kerapihan" PropertyEditorType="Editors.RadioButtonListEnumPropertyEditor" />
+        <PropertyEditor Id="Kerjasama" PropertyEditorType="Editors.RadioButtonListEnumPropertyEditor" />
+        <PropertyEditor Id="Kesesuaian" PropertyEditorType="Editors.RadioButtonListEnumPropertyEditor" />
+        <PropertyEditor Id="Kesopanan" PropertyEditorType="Editors.RadioButtonListEnumPropertyEditor" />
+        <PropertyEditor Id="Ketaatan" PropertyEditorType="Editors.RadioButtonListEnumPropertyEditor" />
+        <PropertyEditor Id="Ketanggapan" PropertyEditorType="Editors.RadioButtonListEnumPropertyEditor" />
+        <PropertyEditor Id="Ketepatan" PropertyEditorType="Editors.RadioButtonListEnumPropertyEditor" />
+        <PropertyEditor Id="Loyalitas" PropertyEditorType="Editors.RadioButtonListEnumPropertyEditor" />
+        <PropertyEditor Id="Pemahaman" PropertyEditorType="Editors.RadioButtonListEnumPropertyEditor" />
+        <PropertyEditor Id="Perilaku" PropertyEditorType="Editors.RadioButtonListEnumPropertyEditor" />
+        <PropertyEditor Id="TanggungJawab" PropertyEditorType="Editors.RadioButtonListEnumPropertyEditor" />
+      </Items>
+    </DetailView>
+    <DetailView Id="Pegawai_DetailView">
+      <Items>
+        <PropertyEditor Id="JenisKelamin" PropertyEditorType="Editors.RadioButtonListEnumPropertyEditor" />
+      </Items>
+    </DetailView>
+  </Views>
 </Application>

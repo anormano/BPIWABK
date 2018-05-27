@@ -15,8 +15,6 @@ namespace BPIWABK.Module.BusinessObjects.Reference
 
     public enum PenilaianKinerja
     {
-        [XafDisplayName("(Kosong)")]
-        Kosong,
         [XafDisplayName("1 - Buruk")]
         Buruk,
         [XafDisplayName("2 - Cukup")]
@@ -51,7 +49,6 @@ namespace BPIWABK.Module.BusinessObjects.Reference
 
     public enum StatusKepegawaian
     {
-        Kosong,
         Honorer,
         Kontraktual,
         PNS
@@ -59,7 +56,6 @@ namespace BPIWABK.Module.BusinessObjects.Reference
 
     public enum StatusPernikahan
     {
-        Kosong,
         TidakKawin,
         Kawin,
         Cerai
@@ -67,14 +63,12 @@ namespace BPIWABK.Module.BusinessObjects.Reference
 
     public enum JenisKelamin
     {
-        Kosong,
         LakiLaki,
         Perempuan
     }
 
     public enum GolonganDarah
     {
-        Kosong,
         A,
         B,
         AB,
@@ -98,7 +92,6 @@ namespace BPIWABK.Module.BusinessObjects.Reference
 
     public enum Agama
     {
-        Kosong,
         Buddha,
         Hindu,
         Islam,

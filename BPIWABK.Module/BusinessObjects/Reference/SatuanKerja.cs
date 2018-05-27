@@ -23,9 +23,9 @@ namespace BPIWABK.Module.BusinessObjects.Reference
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
     //[Persistent("DatabaseTableName")]
     // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
-    public abstract class SatuanKerja : XPLiteObject, ITreeNode
+    public abstract class UnitKerja : XPLiteObject, ITreeNode
     { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument113146.aspx).
-        public SatuanKerja(Session session)
+        public UnitKerja(Session session)
             : base(session)
         {
         }
@@ -101,7 +101,7 @@ namespace BPIWABK.Module.BusinessObjects.Reference
         #endregion
     }
 
-    public class Kementerian : SatuanKerja
+    public class Kementerian : UnitKerja
     {
         public Kementerian(Session session) : base(session) { }
         public Kementerian(Session session, string nama) : base(session)
@@ -114,7 +114,7 @@ namespace BPIWABK.Module.BusinessObjects.Reference
         public XPCollection<EselonI> EselonI => GetCollection<EselonI>(nameof(EselonI));
     }
 
-    public class EselonI : SatuanKerja
+    public class EselonI : UnitKerja
     {
         public EselonI(Session session) : base(session) { }
         public EselonI(Session session, string nama) : base(session)
@@ -134,7 +134,7 @@ namespace BPIWABK.Module.BusinessObjects.Reference
         public XPCollection<EselonII> EselonII => GetCollection<EselonII>(nameof(EselonII));
     }
 
-    public class EselonII : SatuanKerja
+    public class EselonII : UnitKerja
     {
         EselonI eselonI;
         protected override ITreeNode Induk => eselonI;
@@ -154,7 +154,7 @@ namespace BPIWABK.Module.BusinessObjects.Reference
         public XPCollection<EselonIII> EselonIII => GetCollection<EselonIII>(nameof(EselonIII));
     }
 
-    public class EselonIII : SatuanKerja
+    public class EselonIII : UnitKerja
     {
         EselonII eselonII;
         protected override ITreeNode Induk => eselonII;
@@ -174,7 +174,7 @@ namespace BPIWABK.Module.BusinessObjects.Reference
         public XPCollection<EselonIV> EselonIV => GetCollection<EselonIV>(nameof(EselonIV));
     }
 
-    public class EselonIV : SatuanKerja
+    public class EselonIV : UnitKerja
     {
         EselonIII eselonIII;
         protected override ITreeNode Induk => eselonIII;
@@ -196,7 +196,7 @@ namespace BPIWABK.Module.BusinessObjects.Reference
         public XPCollection<StafPelaksana> StafPelaksana => GetCollection<StafPelaksana>(nameof(StafPelaksana));
     }
 
-    public class StafPelaksana : SatuanKerja
+    public class StafPelaksana : UnitKerja
     {
         EselonIV eselonIV;
         protected override ITreeNode Induk => eselonIV;

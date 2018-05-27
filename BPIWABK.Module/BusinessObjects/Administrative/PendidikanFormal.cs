@@ -55,6 +55,8 @@ namespace BPIWABK.Module.BusinessObjects.Administrative
 
         int tahunLulus;
         [RuleRequiredField]
+        [ModelDefault("EditMask", "D")]
+        [ModelDefault("DisplayFormat", "D")]
         public int TahunLulus
         {
             get => tahunLulus;

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Referensi">
+        <Items Id="Items">
+          <Item Id="SatuanKerja_ListView" ViewId="SatuanKerja_ListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Views Id="Views">
+    <DetailView Id="Pegawai_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Informasi Kepegawaian">
+              <LayoutGroup Id="@8f6f70d6-6e1a-4602-964f-ea0ebccfe087">
+                <LayoutGroup Id="@ebc6f671-663c-49a9-a515-af48a6782bcd">
+                  <LayoutItem Id="SatuanKerja" ViewItem="SatuanKerja" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

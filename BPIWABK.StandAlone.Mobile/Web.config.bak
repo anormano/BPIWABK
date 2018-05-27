@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Note: As an alternative to hand editing this file you can use the
+    web admin tool to configure settings for your application. Use
+    the Project->ASP.NET Configuration option in Visual Studio.
+    A full list of settings and comments can be found in
+    machine.config.comments usually located in
+    \Windows\Microsoft.Net\Framework\v2.x\Config
+-->
+<configuration>
+  <appSettings>
+    <add key="Modules" value="" />
+    <add key="EnableDiagnosticActions" value="False" />
+    <add key="Languages" value="id" />
+  </appSettings>
+  <connectionStrings>
+    <add name="EasyTestConnectionString" connectionString="Integrated Security=SSPI;Pooling=false;Data Source=(localdb)\mssqllocaldb;Initial Catalog=BPIWABKEasyTest" />
+    <add name="ConnectionString" connectionString="Integrated Security=SSPI;Pooling=false;Data Source=(localdb)\mssqllocaldb;Initial Catalog=bpiwabk" />
+    <!--
+    Use the following connection string to connect to a Jet (Microsoft Access) database:
+    <add name="ConnectionString" connectionString="Provider=Microsoft.Jet.OLEDB.4.0;Password=;User ID=Admin;Data Source=BPIWABK.mdb;Mode=Share Deny None;"/>
+    -->
+  </connectionStrings>
+  <system.diagnostics>
+    <switches>
+      <!-- Use the one of predefined values: 0-Off, 1-Errors, 2-Warnings, 3-Info, 4-Verbose. The default value is 3. -->
+      <add name="eXpressAppFramework" value="3" />
+      <!--
+      <add name="XPO" value="3" />
+    -->
+    </switches>
+  </system.diagnostics>
+  <system.web>
+    <compilation debug="true">
+      <assemblies>
+      </assemblies>
+    </compilation>
+    <machineKey validationKey="0F2D38E9A6E4035E587ADC5F77AA58973FE3A4BD4778EFAE25A68E84B46DA4804722F90925FD3CD3CF9A042D32EB81AC69180CE83F153686223FDD447F8D3ED6,IsolateApps" decryptionKey="29A63F4C020D668F03F94C10055606CE8B80F753E92E1CE69D20278B171CC192,IsolateApps" />
+    <httpHandlers>
+      <add verb="*" path="Static*" type="DevExpress.ExpressApp.Mobile.StaticResourcesHttpHandler, DevExpress.ExpressApp.Mobile.v17.2, Version=17.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    </httpHandlers>
+  </system.web>
+  <system.serviceModel>
+    <bindings>
+      <webHttpBinding>
+        <binding name="msgSize" maxReceivedMessageSize="2147483647" />
+      </webHttpBinding>
+    </bindings>
+    <services>
+      <service name="BPIWABK.StandAlone.Mobile.DataService">
+        <endpoint address="" behaviorConfiguration="" binding="webHttpBinding" bindingConfiguration="msgSize" contract="System.Data.Services.IRequestHandler" />
+      </service>
+      <service name="BPIWABK.StandAlone.Mobile.MetadataService">
+        <endpoint address="" behaviorConfiguration="web" binding="webHttpBinding" bindingConfiguration="" contract="DevExpress.ExpressApp.Mobile.Services.IMobileMetadataService" />
+      </service>
+      <service name="BPIWABK.StandAlone.Mobile.DownloadReportService">
+        <endpoint address="" behaviorConfiguration="web" binding="webHttpBinding" bindingConfiguration="msgSize" contract="DevExpress.ExpressApp.ReportsV2.Mobile.IXafDownloadReportService" />
+      </service>
+    </services>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior>
+          <!-- To avoid disclosing metadata information, set the value below to false and remove the metadata endpoint above before deployment -->
+          <serviceMetadata httpGetEnabled="false" />
+          <!-- To receive exception details in faults for debugging purposes, set the value below to true.  Set to false before deployment to avoid disclosing exception information -->
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+      </serviceBehaviors>
+      <endpointBehaviors>
+        <behavior name="web">
+          <webHttp />
+        </behavior>
+      </endpointBehaviors>
+    </behaviors>
+    <serviceHostingEnvironment aspNetCompatibilityEnabled="true" multipleSiteBindingsEnabled="true" />
+  </system.serviceModel>
+  <system.webServer>
+    <validation validateIntegratedModeConfiguration="false" />
+    <httpRedirect enabled="true" httpResponseStatus="Permanent">
+      <add wildcard="/" destination="Static" />
+    </httpRedirect>
+    <handlers>
+      <add name="MobileResources" verb="GET" path="Static*" type="BPIWABK.StandAlone.Mobile.ResourcesHttpHandler" />
+    </handlers>
+  </system.webServer>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Data.Edm" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.7.0.0" newVersion="5.7.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Data.OData" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.7.0.0" newVersion="5.7.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Data.Services" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.7.0.0" newVersion="5.7.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Data.Services.Client" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.7.0.0" newVersion="5.7.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Spatial" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.6.4.0" newVersion="5.6.4.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-8.0.0.0" newVersion="8.0.0.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+</configuration>
